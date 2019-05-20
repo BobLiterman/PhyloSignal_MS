@@ -1,7 +1,7 @@
 # Code for Literman and Schwartz (2019)  
 
 ## 1) Acquiring study data  
-In this manuscript, we investigated how phylogenetic signal was distributed across the genomes of three focal mammal clades. The species and their shortened names are listed below, with the reference species for each dataset indicated in **bold**. SRR numbers for all species can be found in **Data_and_Tables/SRR_Table.csv**.  
+In this manuscript, we investigated how phylogenetic signal was distributed across the genomes of three focal mammal clades. The species and their shortened names are listed below, with the reference species for each dataset indicated in **bold**. SRR numbers for all species can be found in **Data_and_Tables/SRR_Table.csv**. All reads are Illumina paired-end reads from WGS-type sequencing.  
 
 - Catarrhine primates  (*Primates*)  
   - Colobus angolensis (ColAng)  
@@ -64,10 +64,13 @@ All reads were trimmed using BBDuk v.37.41 using the following command:
 ```
 bbduk.sh maxns=0 ref=adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=<LEFT_READ> in2=<RIGHT_READ> out=<TRIM_LEFT> out2=<TRIM_RIGHT> k=23 mink=11 hdist=1 hdist2=0 ktrim=r
 ```
-Read trimming scripts and output can be found in Data_Processing_Scripts/Trim_Scripts. While reads were trimmed using these scripts for the manuscript, if using the **Automated Instructions** we provide a wrapper script which will automate the FastQC/trimming process.  
-- **Data_Processing_Scripts/sisrs_read_trimmer.py**
+Read trimming scripts and output can be found in **Data_Processing_Scripts/Trim_Scripts**. While reads were trimmed using these scripts for the manuscript, if using the **Automated Instructions** we provide a wrapper script which will automate the FastQC/trimming process (**Data_Processing_Scripts/sisrs_read_trimmer.py**)
+```
+#For 20 processors...
+python sisrs_read_trimmer.py 20
+```
 
-## 4) Read pooling and subsetting  
+## 4) Read subsetting  
 
 The SISRS pipeline identifies orthologous loci through a 'composite genome' assembly step. The first step for this assembly is to subset the reads of each species so that ideally:  
 
@@ -87,6 +90,7 @@ python sisrs_read_subsetter.py 350000000
 ```
 
 Subset schemes used in this study can be found in **Data_and_Tables/Subset_Schemes**  
+Output from subsetting can be found in **Data_Processing_Scripts/Subset_Output**  
 
 ## 5) Composite genome assembly  
 
@@ -104,4 +108,70 @@ $ mpirun -n 160 Ray -k 31 {-s <READ_FILE>} -o <OUTPUT_DIR>
 
 Ray assembly scripts can be found in **Data_Processing_Scripts/Ray_Scripts**  
 
-## 6) Running independent SISRS steps
+## 6) Running independent SISRS steps  
+
+The next step of SISRS involves converting this single composite genome to multiple, taxon-specific ortholog sequences. This involves a few key steps:  
+
+1) Map reads from each taxon onto composite genome  
+2) Replace the composite base with the most common taxon-specific base  
+3) Re-map the reads onto the new corrected genome, but for any site with less than 3 reads of coverage or more than 1 possible base, replace with 'N'  
+
+The script **Data_Processing_Scripts/sisrs_setup_run.py** will do the following:  
+- Rename Ray contigs to include 'SISRS_' prefix, build a Bowtie2 index, and move to analysis folder  
+- Generate scripts to perform Steps 1-3 above  
+
+```
+#For 20 processors, minimum read coverage of 3 reads, and 100% intraspecies homozygosity at each called site:
+python sisrs_setup_run.py 20 3 1
+```
+Running this script will prepare the composite genome, then generate a separate SISRS script for each taxon (TAXA), the skeleton of which is below:  
+```
+#!/bin/sh
+bowtie2 -p PROCESSORS -N 1 --local -x BOWTIE2-INDEX -U READS | samtools view -Su -@ PROCESSORS -F 4 - | samtools sort -@ PROCESSORS - -o SISRS_DIR/TAXA/TAXA_Temp.bam
+
+samtools view -@ PROCESSORS -H SISRS_DIR/TAXA/TAXA_Temp.bam > SISRS_DIR/TAXA/TAXA_Header.sam
+
+samtools view -@ PROCESSORS SISRS_DIR/TAXA/TAXA_Temp.bam | grep -v "XS:" | cat SISRS_DIR/TAXA/TAXA_Header.sam - | samtools view -@ PROCESSORS -b - > SISRS_DIR/TAXA/TAXA.bam
+
+rm SISRS_DIR/TAXA/TAXA_Temp.bam
+rm SISRS_DIR/TAXA/TAXA_Header.sam
+
+samtools mpileup -f COMPOSITE_GENOME SISRS_DIR/TAXA/TAXA.bam > SISRS_DIR/TAXA/TAXA.pileups
+
+python SCRIPT_DIR/specific_genome.py SISRS_DIR/TAXA COMPOSITE_GENOME
+
+samtools faidx SISRS_DIR/TAXA/contigs.fa
+bowtie2-build SISRS_DIR/TAXA/contigs.fa SISRS_DIR/TAXA/contigs -p PROCESSORS
+
+bowtie2 -p PROCESSORS -N 1 --local -x SISRS_DIR/TAXA/contigs -U READS | samtools view -Su -@ PROCESSORS -F 4 - | samtools sort -@ PROCESSORS - -o SISRS_DIR/TAXA/TAXA_Temp.bam
+
+samtools view -@ PROCESSORS -H SISRS_DIR/TAXA/TAXA_Temp.bam > SISRS_DIR/TAXA/TAXA_Header.sam
+samtools view -@ PROCESSORS SISRS_DIR/TAXA/TAXA_Temp.bam | grep -v "XS:" | cat SISRS_DIR/TAXA/TAXA_Header.sam - | samtools view -@ PROCESSORS -b - > SISRS_DIR/TAXA/TAXA.bam
+
+rm SISRS_DIR/TAXA/TAXA_Temp.bam
+rm SISRS_DIR/TAXA/TAXA_Header.sam
+
+samtools index SISRS_DIR/TAXA/TAXA.bam
+
+samtools mpileup -f COMPOSITE_GENOME SISRS_DIR/TAXA/TAXA.bam > SISRS_DIR/TAXA/TAXA.pileups
+
+python SCRIPT_DIR/get_pruned_dict.py SISRS_DIR/TAXA COMPOSITE_DIR MINREAD THRESHOLD
+```
+
+These scripts and their output can be found in **Data_Processing_Scripts/SISRS_Run_Scripts**  
+
+**NOTE:** These scripts are independent of one another and depending on data size can take hours or days to run with 20 processors. If you have access to an HPC system with multiple nodes, it is advised to run these scripts in parallel to save time. If you do not have access to an HPC-type system, the script **Data_Processing_Scripts/sisrs_run.py** will run each script sequentially.  
+- However you run the scripts, ensure the output is written to 'out_TAXA_SISRS' and the error is written to 'err_TAXA_SISRS' (e.g. out_HomSap_SISRS; err_HomSap_SISRS)  
+
+## 7) Output SISRS alignments
+
+The final step of the SISRS pipeline takes the output from each species and creates a series of alignments:  
+- All variable sites
+- All variable sites without singletons (parsimony-informative sites)
+- All biallelic parsimony-informative sites
+
+Running the script **Data_Processing_Scripts/sisrs_output.py** will generate these alignments both with and without gap positions, and with a number of species allowed to be missing (0 in this study)
+```
+#To output gapped and ungapped alignments with 0 taxa allowed missing
+python sisrs_output.py 0
+```

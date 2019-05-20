@@ -1,0 +1,35 @@
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+557758740 reads; of these:
+  557758740 (100.00%) were unpaired; of these:
+    280562923 (50.30%) aligned 0 times
+    108666166 (19.48%) aligned exactly 1 time
+    168529651 (30.22%) aligned >1 times
+49.70% overall alignment rate
+[bam_sort_core] merging from 140 files...
+[mpileup] 1 samples in 1 input files
+<mpileup> Set max per-file depth to 8000
+Building a SMALL index
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+557758740 reads; of these:
+  557758740 (100.00%) were unpaired; of these:
+    234059911 (41.96%) aligned 0 times
+    96980285 (17.39%) aligned exactly 1 time
+    226718544 (40.65%) aligned >1 times
+58.04% overall alignment rate
+[bam_sort_core] merging from 160 files...
+[mpileup] 1 samples in 1 input files
+<mpileup> Set max per-file depth to 8000

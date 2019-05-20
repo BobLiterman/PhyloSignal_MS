@@ -1,0 +1,10 @@
+Executing jgi.ReformatReads [in=/net/fs03.cluster.com/data3/schwartzlab/bob/Rerun_Mammals/Primates/Reads/TrimReads/CalJac/CalJac_SRR1272418_Trim_1.fastq.gz, in2=/net/fs03.cluster.com/data3/schwartzlab/bob/Rerun_Mammals/Primates/Reads/TrimReads/CalJac/CalJac_SRR1272418_Trim_2.fastq.gz, out=/net/fs03.cluster.com/data3/schwartzlab/bob/Rerun_Mammals/Primates/Reads/SubsetReads/CalJac_SRR1272418_GenomeReads_1.fastq.gz, out2=/net/fs03.cluster.com/data3/schwartzlab/bob/Rerun_Mammals/Primates/Reads/SubsetReads/CalJac_SRR1272418_GenomeReads_2.fastq.gz, samplebasestarget=972222222, ow=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Input:                  	141868594 reads          	13556429230 bases
+Output:                 	10174242 reads (7.17%) 	972222295 bases (7.17%)
+
+Time:                         	293.915 seconds.
+Reads Processed:        141m 	482.69k reads/sec
+Bases Processed:      13556m 	46.12m bases/sec

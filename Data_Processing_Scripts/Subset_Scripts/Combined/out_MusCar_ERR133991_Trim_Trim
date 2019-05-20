@@ -1,0 +1,11 @@
+java -ea -Xmx200m -cp /home/literman/Programs/bbmap/current/ jgi.ReformatReads in=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/TrimReads/MusCar/MusCar_ERR133991_Trim_1.fastq.gz in2=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/TrimReads/MusCar/MusCar_ERR133991_Trim_2.fastq.gz out=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/SubsetReads/MusCar_ERR133991_GenomeReads_1.fastq.gz out2=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/SubsetReads/MusCar_ERR133991_GenomeReads_2.fastq.gz samplebasestarget=243055555.5 ow=t
+Executing jgi.ReformatReads [in=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/TrimReads/MusCar/MusCar_ERR133991_Trim_1.fastq.gz, in2=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/TrimReads/MusCar/MusCar_ERR133991_Trim_2.fastq.gz, out=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/SubsetReads/MusCar_ERR133991_GenomeReads_1.fastq.gz, out2=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/SubsetReads/MusCar_ERR133991_GenomeReads_2.fastq.gz, samplebasestarget=243055555.5, ow=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Input:                  	231838650 reads          	23117699432 bases
+Output:                 	2437572 reads (1.05%) 	243055548 bases (1.05%)
+
+Time:                         	538.943 seconds.
+Reads Processed:        231m 	430.17k reads/sec
+Bases Processed:      23117m 	42.89m bases/sec

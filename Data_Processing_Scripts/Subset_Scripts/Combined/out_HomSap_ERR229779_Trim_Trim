@@ -1,0 +1,11 @@
+java -ea -Xmx200m -cp /home/literman/Programs/bbmap/current/ jgi.ReformatReads in=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/TrimReads/HomSap/HomSap_ERR229779_Trim_1.fastq.gz in2=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/TrimReads/HomSap/HomSap_ERR229779_Trim_2.fastq.gz out=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/SubsetReads/HomSap_ERR229779_GenomeReads_1.fastq.gz out2=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/SubsetReads/HomSap_ERR229779_GenomeReads_2.fastq.gz samplebasestarget=243055555.5 ow=t
+Executing jgi.ReformatReads [in=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/TrimReads/HomSap/HomSap_ERR229779_Trim_1.fastq.gz, in2=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/TrimReads/HomSap/HomSap_ERR229779_Trim_2.fastq.gz, out=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/SubsetReads/HomSap_ERR229779_GenomeReads_1.fastq.gz, out2=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/SubsetReads/HomSap_ERR229779_GenomeReads_2.fastq.gz, samplebasestarget=243055555.5, ow=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Input:                  	146195652 reads          	14576558922 bases
+Output:                 	2437598 reads (1.67%) 	243055601 bases (1.67%)
+
+Time:                         	369.013 seconds.
+Reads Processed:        146m 	396.18k reads/sec
+Bases Processed:      14576m 	39.50m bases/sec

@@ -1,0 +1,11 @@
+java -ea -Xmx200m -cp /home/literman/Programs/bbmap/current/ jgi.ReformatReads in=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/TrimReads/ApoUra/ApoUra_ERR1101669_Trim_1.fastq.gz in2=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/TrimReads/ApoUra/ApoUra_ERR1101669_Trim_2.fastq.gz out=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/SubsetReads/ApoUra_ERR1101669_GenomeReads_1.fastq.gz out2=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/SubsetReads/ApoUra_ERR1101669_GenomeReads_2.fastq.gz samplebasestarget=972222222 ow=t
+Executing jgi.ReformatReads [in=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/TrimReads/ApoUra/ApoUra_ERR1101669_Trim_1.fastq.gz, in2=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/TrimReads/ApoUra/ApoUra_ERR1101669_Trim_2.fastq.gz, out=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/SubsetReads/ApoUra_ERR1101669_GenomeReads_1.fastq.gz, out2=/data3/schwartzlab/bob/Rerun_Mammals/Combined/Reads/SubsetReads/ApoUra_ERR1101669_GenomeReads_2.fastq.gz, samplebasestarget=972222222, ow=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Input:                  	774153452 reads          	77392289175 bases
+Output:                 	9725040 reads (1.26%) 	972222310 bases (1.26%)
+
+Time:                         	1618.547 seconds.
+Reads Processed:        774m 	478.30k reads/sec
+Bases Processed:      77392m 	47.82m bases/sec

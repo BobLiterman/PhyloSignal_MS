@@ -1,0 +1,10 @@
+Executing jgi.ReformatReads [in=/net/fs03.cluster.com/data3/schwartzlab/bob/Rerun_Mammals/Cetartiodactyla/Reads/TrimReads/CapHir/CapHir_ERR315506_Trim_1.fastq.gz, in2=/net/fs03.cluster.com/data3/schwartzlab/bob/Rerun_Mammals/Cetartiodactyla/Reads/TrimReads/CapHir/CapHir_ERR315506_Trim_2.fastq.gz, out=/net/fs03.cluster.com/data3/schwartzlab/bob/Rerun_Mammals/Cetartiodactyla/Reads/SubsetReads/CapHir_ERR315506_GenomeReads_1.fastq.gz, out2=/net/fs03.cluster.com/data3/schwartzlab/bob/Rerun_Mammals/Cetartiodactyla/Reads/SubsetReads/CapHir_ERR315506_GenomeReads_2.fastq.gz, samplebasestarget=972222222, ow=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Input:                  	383092782 reads          	38305036865 bases
+Output:                 	9723174 reads (2.54%) 	972222225 bases (2.54%)
+
+Time:                         	845.328 seconds.
+Reads Processed:        383m 	453.19k reads/sec
+Bases Processed:      38305m 	45.31m bases/sec

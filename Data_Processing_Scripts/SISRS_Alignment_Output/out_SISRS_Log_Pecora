@@ -1,0 +1,263 @@
+
+Read Mapping and SISRS Site Selection:
+
+BalMys Composite Genome Mapping:
+
+  1067322792 (100.00%) were unpaired; of these:
+    687299760 (64.39%) aligned 0 times
+    178182593 (16.69%) aligned exactly 1 time
+    201840439 (18.91%) aligned >1 times
+35.61% overall alignment rate
+
+BalMys Specific Genome Mapping:
+
+  1067322792 (100.00%) were unpaired; of these:
+    568265598 (53.24%) aligned 0 times
+    184654661 (17.30%) aligned exactly 1 time
+    314402533 (29.46%) aligned >1 times
+46.76% overall alignment rate
+
+BalMys SISRS Site Selection:
+
+Of 524476971 positions, BalMys has good calls for 306275555 sites (58.40%). There were 218201416 N calls (41.60%).
+Of 218201416 Ns, BalMys lost 10441049 via homozygosity threshold, 18644123 from low coverage, and 319891 from both. 188796353 sites had no pileup data.
+
+BisBis Composite Genome Mapping:
+
+  653740300 (100.00%) were unpaired; of these:
+    361794789 (55.34%) aligned 0 times
+    136336412 (20.85%) aligned exactly 1 time
+    155609099 (23.80%) aligned >1 times
+44.66% overall alignment rate
+
+BisBis Specific Genome Mapping:
+
+  653740300 (100.00%) were unpaired; of these:
+    285274862 (43.64%) aligned 0 times
+    116698189 (17.85%) aligned exactly 1 time
+    251767249 (38.51%) aligned >1 times
+56.36% overall alignment rate
+
+BisBis SISRS Site Selection:
+
+Of 524476971 positions, BisBis has good calls for 347606004 sites (66.28%). There were 176870967 N calls (33.72%).
+Of 176870967 Ns, BisBis lost 8777810 via homozygosity threshold, 32065468 from low coverage, and 293571 from both. 135734118 sites had no pileup data.
+
+BosTau Composite Genome Mapping:
+
+  624156612 (100.00%) were unpaired; of these:
+    343175258 (54.98%) aligned 0 times
+    134739926 (21.59%) aligned exactly 1 time
+    146241428 (23.43%) aligned >1 times
+45.02% overall alignment rate
+
+BosTau Specific Genome Mapping:
+
+  624156612 (100.00%) were unpaired; of these:
+    276133248 (44.24%) aligned 0 times
+    115887777 (18.57%) aligned exactly 1 time
+    232135587 (37.19%) aligned >1 times
+55.76% overall alignment rate
+
+BosTau SISRS Site Selection:
+
+Of 524476971 positions, BosTau has good calls for 352002307 sites (67.11%). There were 172474664 N calls (32.89%).
+Of 172474664 Ns, BosTau lost 10130113 via homozygosity threshold, 31568886 from low coverage, and 359608 from both. 130416057 sites had no pileup data.
+
+BubBub Composite Genome Mapping:
+
+  896140842 (100.00%) were unpaired; of these:
+    513922964 (57.35%) aligned 0 times
+    186460780 (20.81%) aligned exactly 1 time
+    195757098 (21.84%) aligned >1 times
+42.65% overall alignment rate
+
+BubBub Specific Genome Mapping:
+
+  896140842 (100.00%) were unpaired; of these:
+    417798055 (46.62%) aligned 0 times
+    165748736 (18.50%) aligned exactly 1 time
+    312594051 (34.88%) aligned >1 times
+53.38% overall alignment rate
+
+BubBub SISRS Site Selection:
+
+Of 524476971 positions, BubBub has good calls for 363550074 sites (69.32%). There were 160926897 N calls (30.68%).
+Of 160926897 Ns, BubBub lost 11761239 via homozygosity threshold, 21843247 from low coverage, and 272550 from both. 127049861 sites had no pileup data.
+
+CapAeg Composite Genome Mapping:
+
+  1135699834 (100.00%) were unpaired; of these:
+    641474130 (56.48%) aligned 0 times
+    234666521 (20.66%) aligned exactly 1 time
+    259559183 (22.85%) aligned >1 times
+43.52% overall alignment rate
+
+CapAeg Specific Genome Mapping:
+
+  1135699834 (100.00%) were unpaired; of these:
+    511783128 (45.06%) aligned 0 times
+    202906890 (17.87%) aligned exactly 1 time
+    421009816 (37.07%) aligned >1 times
+54.94% overall alignment rate
+
+CapAeg SISRS Site Selection:
+
+Of 524476971 positions, CapAeg has good calls for 367716184 sites (70.11%). There were 156760787 N calls (29.89%).
+Of 156760787 Ns, CapAeg lost 13929773 via homozygosity threshold, 20169366 from low coverage, and 225848 from both. 122435800 sites had no pileup data.
+
+CapHir Composite Genome Mapping:
+
+  1146089872 (100.00%) were unpaired; of these:
+    659167088 (57.51%) aligned 0 times
+    239101204 (20.86%) aligned exactly 1 time
+    247821580 (21.62%) aligned >1 times
+42.49% overall alignment rate
+
+CapHir Specific Genome Mapping:
+
+  1146089872 (100.00%) were unpaired; of these:
+    537877936 (46.93%) aligned 0 times
+    213561053 (18.63%) aligned exactly 1 time
+    394650883 (34.43%) aligned >1 times
+53.07% overall alignment rate
+
+CapHir SISRS Site Selection:
+
+Of 524476971 positions, CapHir has good calls for 370984274 sites (70.73%). There were 153492697 N calls (29.27%).
+Of 153492697 Ns, CapHir lost 13817638 via homozygosity threshold, 16647978 from low coverage, and 192749 from both. 122834332 sites had no pileup data.
+
+ElaDav Composite Genome Mapping:
+
+  557758740 (100.00%) were unpaired; of these:
+    280562923 (50.30%) aligned 0 times
+    108666166 (19.48%) aligned exactly 1 time
+    168529651 (30.22%) aligned >1 times
+49.70% overall alignment rate
+
+ElaDav Specific Genome Mapping:
+
+  557758740 (100.00%) were unpaired; of these:
+    234059911 (41.96%) aligned 0 times
+    96980285 (17.39%) aligned exactly 1 time
+    226718544 (40.65%) aligned >1 times
+58.04% overall alignment rate
+
+ElaDav SISRS Site Selection:
+
+Of 524476971 positions, ElaDav has good calls for 334990304 sites (63.87%). There were 189486667 N calls (36.13%).
+Of 189486667 Ns, ElaDav lost 9191515 via homozygosity threshold, 41713968 from low coverage, and 442413 from both. 138138771 sites had no pileup data.
+
+GirTip Composite Genome Mapping:
+
+  360137100 (100.00%) were unpaired; of these:
+    201356641 (55.91%) aligned 0 times
+    84905333 (23.58%) aligned exactly 1 time
+    73875126 (20.51%) aligned >1 times
+44.09% overall alignment rate
+
+GirTip Specific Genome Mapping:
+
+  360137100 (100.00%) were unpaired; of these:
+    165476155 (45.95%) aligned 0 times
+    77920106 (21.64%) aligned exactly 1 time
+    116740839 (32.42%) aligned >1 times
+54.05% overall alignment rate
+
+GirTip SISRS Site Selection:
+
+Of 524476971 positions, GirTip has good calls for 316277595 sites (60.30%). There were 208199376 N calls (39.70%).
+Of 208199376 Ns, GirTip lost 6114765 via homozygosity threshold, 47370228 from low coverage, and 451796 from both. 154262587 sites had no pileup data.
+
+HipAmp Composite Genome Mapping:
+
+  899154902 (100.00%) were unpaired; of these:
+    613765860 (68.26%) aligned 0 times
+    146566112 (16.30%) aligned exactly 1 time
+    138822930 (15.44%) aligned >1 times
+31.74% overall alignment rate
+
+HipAmp Specific Genome Mapping:
+
+  899154902 (100.00%) were unpaired; of these:
+    520313834 (57.87%) aligned 0 times
+    163507180 (18.18%) aligned exactly 1 time
+    215333888 (23.95%) aligned >1 times
+42.13% overall alignment rate
+
+HipAmp SISRS Site Selection:
+
+Of 524476971 positions, HipAmp has good calls for 289129579 sites (55.13%). There were 235347392 N calls (44.87%).
+Of 235347392 Ns, HipAmp lost 10622328 via homozygosity threshold, 19111687 from low coverage, and 355251 from both. 205258126 sites had no pileup data.
+
+OdoVir Composite Genome Mapping:
+
+  647782278 (100.00%) were unpaired; of these:
+    365373583 (56.40%) aligned 0 times
+    127791343 (19.73%) aligned exactly 1 time
+    154617352 (23.87%) aligned >1 times
+43.60% overall alignment rate
+
+OdoVir Specific Genome Mapping:
+
+  647782278 (100.00%) were unpaired; of these:
+    302761033 (46.74%) aligned 0 times
+    117425539 (18.13%) aligned exactly 1 time
+    227595706 (35.13%) aligned >1 times
+53.26% overall alignment rate
+
+OdoVir SISRS Site Selection:
+
+Of 524476971 positions, OdoVir has good calls for 347415567 sites (66.24%). There were 177061404 N calls (33.76%).
+Of 177061404 Ns, OdoVir lost 10800289 via homozygosity threshold, 32096789 from low coverage, and 411130 from both. 133753196 sites had no pileup data.
+
+OkaJoh Composite Genome Mapping:
+
+  361346474 (100.00%) were unpaired; of these:
+    186267860 (51.55%) aligned 0 times
+    82902660 (22.94%) aligned exactly 1 time
+    92175954 (25.51%) aligned >1 times
+48.45% overall alignment rate
+
+OkaJoh Specific Genome Mapping:
+
+  361346474 (100.00%) were unpaired; of these:
+    152155856 (42.11%) aligned 0 times
+    73384161 (20.31%) aligned exactly 1 time
+    135806457 (37.58%) aligned >1 times
+57.89% overall alignment rate
+
+OkaJoh SISRS Site Selection:
+
+Of 524476971 positions, OkaJoh has good calls for 310361645 sites (59.18%). There were 214115326 N calls (40.82%).
+Of 214115326 Ns, OkaJoh lost 6083636 via homozygosity threshold, 48748772 from low coverage, and 469260 from both. 158813658 sites had no pileup data.
+
+OviAri Composite Genome Mapping:
+
+  639371766 (100.00%) were unpaired; of these:
+    372362644 (58.24%) aligned 0 times
+    132385757 (20.71%) aligned exactly 1 time
+    134623365 (21.06%) aligned >1 times
+41.76% overall alignment rate
+
+OviAri Specific Genome Mapping:
+
+  639371766 (100.00%) were unpaired; of these:
+    306568770 (47.95%) aligned 0 times
+    118023402 (18.46%) aligned exactly 1 time
+    214779594 (33.59%) aligned >1 times
+52.05% overall alignment rate
+
+OviAri SISRS Site Selection:
+
+Of 524476971 positions, OviAri has good calls for 352460757 sites (67.20%). There were 172016214 N calls (32.80%).
+Of 172016214 Ns, OviAri lost 13381199 via homozygosity threshold, 30081569 from low coverage, and 428327 from both. 128125119 sites had no pileup data.
+
+SISRS Alignment Filtering:
+
+85083658 total variable sites (alignment.nex)
+47698420 variable sites are singletons
+33500141 total biallelic sites excluding singletons (alignment_bi.nex)
+37385238 total variable sites excluding singletons (alignment_pi.nex)
+With 0 taxa allowed to be missing, 33500141 sites from alignment_bi.nex (10 allowed missing) are reduced to 11044256 sites (22455885 sites or 67.03% lost)
+With 0 taxa allowed to be missing, and with no gaps allowed, 33500141 sites from alignment_bi.nex (10 allowed missing) are reduced to 10890450 sites (22609691 sites or 67.49% lost)

@@ -1,0 +1,263 @@
+
+Read Mapping and SISRS Site Selection:
+
+ApoSyl Composite Genome Mapping:
+
+  629443300 (100.00%) were unpaired; of these:
+    354615244 (56.34%) aligned 0 times
+    142614728 (22.66%) aligned exactly 1 time
+    132213328 (21.00%) aligned >1 times
+43.66% overall alignment rate
+
+ApoSyl Specific Genome Mapping:
+
+  629443300 (100.00%) were unpaired; of these:
+    272955543 (43.36%) aligned 0 times
+    132894200 (21.11%) aligned exactly 1 time
+    223593557 (35.52%) aligned >1 times
+56.64% overall alignment rate
+
+ApoSyl SISRS Site Selection:
+
+Of 1022381442 positions, ApoSyl has good calls for 409425734 sites (40.05%). There were 612955708 N calls (59.95%).
+Of 612955708 Ns, ApoSyl lost 12609834 via homozygosity threshold, 54072501 from low coverage, and 821575 from both. 545451798 sites had no pileup data.
+
+ApoUra Composite Genome Mapping:
+
+  774153452 (100.00%) were unpaired; of these:
+    443008828 (57.22%) aligned 0 times
+    166337507 (21.49%) aligned exactly 1 time
+    164807117 (21.29%) aligned >1 times
+42.78% overall alignment rate
+
+ApoUra Specific Genome Mapping:
+
+  774153452 (100.00%) were unpaired; of these:
+    341886820 (44.16%) aligned 0 times
+    175644010 (22.69%) aligned exactly 1 time
+    256622622 (33.15%) aligned >1 times
+55.84% overall alignment rate
+
+ApoUra SISRS Site Selection:
+
+Of 1022381442 positions, ApoUra has good calls for 432638483 sites (42.32%). There were 589742959 N calls (57.68%).
+Of 589742959 Ns, ApoUra lost 13136657 via homozygosity threshold, 42313561 from low coverage, and 631357 from both. 533661384 sites had no pileup data.
+
+EllLut Composite Genome Mapping:
+
+  595420322 (100.00%) were unpaired; of these:
+    431653920 (72.50%) aligned 0 times
+    86419666 (14.51%) aligned exactly 1 time
+    77346736 (12.99%) aligned >1 times
+27.50% overall alignment rate
+
+EllLut Specific Genome Mapping:
+
+  595420322 (100.00%) were unpaired; of these:
+    369223156 (62.01%) aligned 0 times
+    101392759 (17.03%) aligned exactly 1 time
+    124804407 (20.96%) aligned >1 times
+37.99% overall alignment rate
+
+EllLut SISRS Site Selection:
+
+Of 1022381442 positions, EllLut has good calls for 234757421 sites (22.96%). There were 787624021 N calls (77.04%).
+Of 787624021 Ns, EllLut lost 9752880 via homozygosity threshold, 27487141 from low coverage, and 589643 from both. 749794357 sites had no pileup data.
+
+MasCou Composite Genome Mapping:
+
+  986838640 (100.00%) were unpaired; of these:
+    495423033 (50.20%) aligned 0 times
+    243701577 (24.70%) aligned exactly 1 time
+    247714030 (25.10%) aligned >1 times
+49.80% overall alignment rate
+
+MasCou Specific Genome Mapping:
+
+  986838640 (100.00%) were unpaired; of these:
+    378259483 (38.33%) aligned 0 times
+    255912749 (25.93%) aligned exactly 1 time
+    352666408 (35.74%) aligned >1 times
+61.67% overall alignment rate
+
+MasCou SISRS Site Selection:
+
+Of 1022381442 positions, MasCou has good calls for 458271719 sites (44.82%). There were 564109723 N calls (55.18%).
+Of 564109723 Ns, MasCou lost 16202876 via homozygosity threshold, 41139130 from low coverage, and 701023 from both. 506066694 sites had no pileup data.
+
+MerUng Composite Genome Mapping:
+
+  913951860 (100.00%) were unpaired; of these:
+    549787208 (60.15%) aligned 0 times
+    190673711 (20.86%) aligned exactly 1 time
+    173490941 (18.98%) aligned >1 times
+39.85% overall alignment rate
+
+MerUng Specific Genome Mapping:
+
+  913951860 (100.00%) were unpaired; of these:
+    459988722 (50.33%) aligned 0 times
+    202306436 (22.14%) aligned exactly 1 time
+    251656702 (27.54%) aligned >1 times
+49.67% overall alignment rate
+
+MerUng SISRS Site Selection:
+
+Of 1022381442 positions, MerUng has good calls for 385280263 sites (37.68%). There were 637101179 N calls (62.32%).
+Of 637101179 Ns, MerUng lost 13034806 via homozygosity threshold, 25511393 from low coverage, and 434821 from both. 598120159 sites had no pileup data.
+
+MusCar Composite Genome Mapping:
+
+  900978678 (100.00%) were unpaired; of these:
+    499314081 (55.42%) aligned 0 times
+    180461143 (20.03%) aligned exactly 1 time
+    221203454 (24.55%) aligned >1 times
+44.58% overall alignment rate
+
+MusCar Specific Genome Mapping:
+
+  900978678 (100.00%) were unpaired; of these:
+    370887910 (41.17%) aligned 0 times
+    192188892 (21.33%) aligned exactly 1 time
+    337901876 (37.50%) aligned >1 times
+58.83% overall alignment rate
+
+MusCar SISRS Site Selection:
+
+Of 1022381442 positions, MusCar has good calls for 461388083 sites (45.13%). There were 560993359 N calls (54.87%).
+Of 560993359 Ns, MusCar lost 12831099 via homozygosity threshold, 40120825 from low coverage, and 612305 from both. 507429130 sites had no pileup data.
+
+MusMus Composite Genome Mapping:
+
+  1289718306 (100.00%) were unpaired; of these:
+    704649600 (54.64%) aligned 0 times
+    298741101 (23.16%) aligned exactly 1 time
+    286327605 (22.20%) aligned >1 times
+45.36% overall alignment rate
+
+MusMus Specific Genome Mapping:
+
+  1289718306 (100.00%) were unpaired; of these:
+    538385138 (41.74%) aligned 0 times
+    285483285 (22.14%) aligned exactly 1 time
+    465849883 (36.12%) aligned >1 times
+58.26% overall alignment rate
+
+MusMus SISRS Site Selection:
+
+Of 1022381442 positions, MusMus has good calls for 478167512 sites (46.77%). There were 544213930 N calls (53.23%).
+Of 544213930 Ns, MusMus lost 16896941 via homozygosity threshold, 31932898 from low coverage, and 536067 from both. 494848024 sites had no pileup data.
+
+MusSpr Composite Genome Mapping:
+
+  1327046506 (100.00%) were unpaired; of these:
+    809106017 (60.97%) aligned 0 times
+    286604376 (21.60%) aligned exactly 1 time
+    231336113 (17.43%) aligned >1 times
+39.03% overall alignment rate
+
+MusSpr Specific Genome Mapping:
+
+  1327046506 (100.00%) were unpaired; of these:
+    588182889 (44.32%) aligned 0 times
+    309376934 (23.31%) aligned exactly 1 time
+    429486683 (32.36%) aligned >1 times
+55.68% overall alignment rate
+
+MusSpr SISRS Site Selection:
+
+Of 1022381442 positions, MusSpr has good calls for 479883898 sites (46.94%). There were 542497544 N calls (53.06%).
+Of 542497544 Ns, MusSpr lost 17825612 via homozygosity threshold, 31000508 from low coverage, and 532456 from both. 493138968 sites had no pileup data.
+
+PerLeu Composite Genome Mapping:
+
+  446138060 (100.00%) were unpaired; of these:
+    302726981 (67.86%) aligned 0 times
+    67718744 (15.18%) aligned exactly 1 time
+    75692335 (16.97%) aligned >1 times
+32.14% overall alignment rate
+
+PerLeu Specific Genome Mapping:
+
+  446138060 (100.00%) were unpaired; of these:
+    251192275 (56.30%) aligned 0 times
+    82621781 (18.52%) aligned exactly 1 time
+    112324004 (25.18%) aligned >1 times
+43.70% overall alignment rate
+
+PerLeu SISRS Site Selection:
+
+Of 1022381442 positions, PerLeu has good calls for 262384064 sites (25.66%). There were 759997378 N calls (74.34%).
+Of 759997378 Ns, PerLeu lost 9949001 via homozygosity threshold, 44492053 from low coverage, and 937650 from both. 704618674 sites had no pileup data.
+
+PsaObe Composite Genome Mapping:
+
+  505313162 (100.00%) were unpaired; of these:
+    274482038 (54.32%) aligned 0 times
+    115156544 (22.79%) aligned exactly 1 time
+    115674580 (22.89%) aligned >1 times
+45.68% overall alignment rate
+
+PsaObe Specific Genome Mapping:
+
+  505313162 (100.00%) were unpaired; of these:
+    228645511 (45.25%) aligned 0 times
+    120957949 (23.94%) aligned exactly 1 time
+    155709702 (30.81%) aligned >1 times
+54.75% overall alignment rate
+
+PsaObe SISRS Site Selection:
+
+Of 1022381442 positions, PsaObe has good calls for 369211290 sites (36.11%). There were 653170152 N calls (63.89%).
+Of 653170152 Ns, PsaObe lost 9588388 via homozygosity threshold, 40580837 from low coverage, and 691312 from both. 602309615 sites had no pileup data.
+
+RatNit Composite Genome Mapping:
+
+  392813784 (100.00%) were unpaired; of these:
+    227898488 (58.02%) aligned 0 times
+    80368577 (20.46%) aligned exactly 1 time
+    84546719 (21.52%) aligned >1 times
+41.98% overall alignment rate
+
+RatNit Specific Genome Mapping:
+
+  392813784 (100.00%) were unpaired; of these:
+    186762830 (47.54%) aligned 0 times
+    87750133 (22.34%) aligned exactly 1 time
+    118300821 (30.12%) aligned >1 times
+52.46% overall alignment rate
+
+RatNit SISRS Site Selection:
+
+Of 1022381442 positions, RatNit has good calls for 395708026 sites (38.70%). There were 626673416 N calls (61.30%).
+Of 626673416 Ns, RatNit lost 10752784 via homozygosity threshold, 64058547 from low coverage, and 947187 from both. 550914898 sites had no pileup data.
+
+RatNor Composite Genome Mapping:
+
+  520254542 (100.00%) were unpaired; of these:
+    300490427 (57.76%) aligned 0 times
+    108977417 (20.95%) aligned exactly 1 time
+    110786698 (21.29%) aligned >1 times
+42.24% overall alignment rate
+
+RatNor Specific Genome Mapping:
+
+  520254542 (100.00%) were unpaired; of these:
+    244452862 (46.99%) aligned 0 times
+    118681713 (22.81%) aligned exactly 1 time
+    157119967 (30.20%) aligned >1 times
+53.01% overall alignment rate
+
+RatNor SISRS Site Selection:
+
+Of 1022381442 positions, RatNor has good calls for 417520051 sites (40.84%). There were 604861391 N calls (59.16%).
+Of 604861391 Ns, RatNor lost 10184906 via homozygosity threshold, 49994027 from low coverage, and 645673 from both. 544036785 sites had no pileup data.
+
+SISRS Alignment Filtering:
+
+155467941 total variable sites (alignment.nex)
+89288017 variable sites are singletons
+58003231 total biallelic sites excluding singletons (alignment_bi.nex)
+66179924 total variable sites excluding singletons (alignment_pi.nex)
+With 0 taxa allowed to be missing, 58003231 sites from alignment_bi.nex (10 allowed missing) are reduced to 3808580 sites (54194651 sites or 93.43% lost)
+With 0 taxa allowed to be missing, and with no gaps allowed, 58003231 sites from alignment_bi.nex (10 allowed missing) are reduced to 3761214 sites (54242017 sites or 93.52% lost)

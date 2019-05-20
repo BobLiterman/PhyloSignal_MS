@@ -1,0 +1,31 @@
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+433883742 reads; of these:
+  433883742 (100.00%) were unpaired; of these:
+    245957517 (56.69%) aligned 0 times
+    95956812 (22.12%) aligned exactly 1 time
+    91969413 (21.20%) aligned >1 times
+43.31% overall alignment rate
+[bam_sort_core] merging from 100 files...
+[mpileup] 1 samples in 1 input files
+<mpileup> Set max per-file depth to 8000
+Building a SMALL index
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+Warning: gzbuffer added in zlib v1.2.3.5. Unable to change buffer size from default of 8192.
+433883742 reads; of these:
+  433883742 (100.00%) were unpaired; of these:
+    205989865 (47.48%) aligned 0 times
+    82625944 (19.04%) aligned exactly 1 time
+    145267933 (33.48%) aligned >1 times
+52.52% overall alignment rate
+[bam_sort_core] merging from 120 files...
+[mpileup] 1 samples in 1 input files
+<mpileup> Set max per-file depth to 8000

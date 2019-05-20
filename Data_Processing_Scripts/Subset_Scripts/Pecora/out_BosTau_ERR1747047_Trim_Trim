@@ -1,0 +1,10 @@
+Executing jgi.ReformatReads [in=/net/fs03.cluster.com/data3/schwartzlab/bob/Rerun_Mammals/Cetartiodactyla/Reads/TrimReads/BosTau/BosTau_ERR1747047_Trim_1.fastq.gz, in2=/net/fs03.cluster.com/data3/schwartzlab/bob/Rerun_Mammals/Cetartiodactyla/Reads/TrimReads/BosTau/BosTau_ERR1747047_Trim_2.fastq.gz, out=/net/fs03.cluster.com/data3/schwartzlab/bob/Rerun_Mammals/Cetartiodactyla/Reads/SubsetReads/BosTau_ERR1747047_GenomeReads_1.fastq.gz, out2=/net/fs03.cluster.com/data3/schwartzlab/bob/Rerun_Mammals/Cetartiodactyla/Reads/SubsetReads/BosTau_ERR1747047_GenomeReads_2.fastq.gz, samplebasestarget=1458333333, ow=t]
+
+Set INTERLEAVED to false
+Input is being processed as paired
+Input:                  	339311880 reads          	34103125669 bases
+Output:                 	14509850 reads (4.28%) 	1458333354 bases (4.28%)
+
+Time:                         	605.748 seconds.
+Reads Processed:        339m 	560.15k reads/sec
+Bases Processed:      34103m 	56.30m bases/sec

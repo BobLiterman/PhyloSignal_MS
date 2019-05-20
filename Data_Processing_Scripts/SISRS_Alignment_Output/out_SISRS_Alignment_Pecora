@@ -1,0 +1,6 @@
+85083658 total variable sites (alignment.nex)
+47698420 variable sites are singletons
+33500141 total biallelic sites excluding singletons (alignment_bi.nex)
+37385238 total variable sites excluding singletons (alignment_pi.nex)
+With 0 taxa allowed to be missing, 33500141 sites from alignment_bi.nex (10 allowed missing) are reduced to 11044256 sites (22455885 sites or 67.03% lost)
+With 0 taxa allowed to be missing, and with no gaps allowed, 33500141 sites from alignment_bi.nex (10 allowed missing) are reduced to 10890450 sites (22609691 sites or 67.49% lost)
