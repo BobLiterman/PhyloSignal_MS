@@ -175,3 +175,7 @@ Running the script **Data_Processing_Scripts/sisrs_output.py** will generate the
 #To output gapped and ungapped alignments with 0 taxa allowed missing
 python sisrs_output.py 0
 ```
+
+This script will also compile summary outputs assuming that individual SISRS runs have output in the form of out_TAXA_SISRS/err_TAXA_SISRS  
+
+The output from these scripts can be found in **Data_Processing_Scripts/SISRS_Alignment_Output**
