@@ -1,7 +1,7 @@
 # Code for Literman and Schwartz (2019)  
 
 ## Study Data  
-In this manuscript, we investigated how phylogenetic signal was distributed across the genomes of three focal mammal clades. The species and their shortened names are listed below, with the reference species for each dataset indicated in **bold**. SRR numbers for all species can be found in SRR_Table.csv.  
+In this manuscript, we investigated how phylogenetic signal was distributed across the genomes of three focal mammal clades. The species and their shortened names are listed below, with the reference species for each dataset indicated in **bold**. SRR numbers for all species can be found in Data_Tables/SRR_Table.csv.  
 
 - Catarrhine primates  (*Primates*)  
   - Colobus angolensis (ColAng)  

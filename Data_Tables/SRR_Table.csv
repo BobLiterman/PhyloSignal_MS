@@ -1,6 +1,6 @@
 Species Name,SISRS ID,SRR IDs
-Aotus nancymaae **,AotNan,SRR1692993; SRR1692996
-Callithrix jacchus **,CalJac,SRR1272418; SRR1272478; SRR1282349
+Aotus nancymaae (Outgroup),AotNan,SRR1692993; SRR1692996
+Callithrix jacchus (Outgroup),CalJac,SRR1272418; SRR1272478; SRR1282349
 Colobus angolensis,ColAng,SRR1687491; SRR1687495; SRR1687501
 Gorilla gorilla,GorGor,SRR748174; SRR748178
 Homo sapiens,HomSap,ERR229778; ERR229779; ERR229780; ERR229784
@@ -13,17 +13,17 @@ Papio anubis,PapAnu,SRR1516196; SRR1700532; SRR1700533
 Papio cynocephalus,PapCyn,SRR1513473; SRR1699449; SRR1699450
 Apodemus sylvaticus,ApoSyl,SRR2141382; SRR2141383; SRR2141384
 Apodemus uralensis,ApoUra,ERR1101669
-Ellobius lutescens **,EllLut,SRR3492263; SRR3497434
+Ellobius lutescens (Outgroup),EllLut,SRR3492263; SRR3497434
 Mastomys coucha,MasCou,SRR6031622; SRR6031623; SRR6031631
 Meriones unguiculatus,MerUng,SRR7041744; SRR7041746; SRR7041747
 Mus caroli,MusCar,ERR133990; ERR133991; ERR133992; ERR133993
 Mus musculus,MusMus,ERR1124330; ERR1124338
 Mus spretus,MusSpr,ERR1124346; ERR1124347
-Peromyscus leucopus **,PerLeu,SRR545958; SRR545959; SRR545960
+Peromyscus leucopus (Outgroup),PerLeu,SRR545958; SRR545959; SRR545960
 Psammomys obesus,PsaObe,SRR5067751; SRR5067752; SRR5067753
 Rattus nitidus,RatNit,SRR3948149; SRR3948152; SRR3948154
 Rattus norvegicus,RatNor,SRR1509316; SRR1509317
-Balaena mysticetus **,BalMys,SRR1685384
+Balaena mysticetus (Outgroup),BalMys,SRR1685384
 Bison bison,BisBis,SRR3509077; SRR3509078
 Bos taurus,BosTau,ERR1747046; ERR1747047
 Bubalis bubalis,BubBub,SRR4477891; SRR4477896; SRR4477899
@@ -31,7 +31,7 @@ Capra aegagrus,CapAeg,ERR470100; ERR470104; ERR470106
 Capra hircus,CapHir,ERR315506; ERR248918; ERR234319
 Elaphurus davidianus,ElaDav,SRR5762662; SRR5762663; SRR5762664; SRR5762668
 Giraffa tippelskirchi,GirTip,SRR3218457; SRR3218458
-Hippopotamus amphibius **,HipAmp,SRR5663646; SRR5663649
+Hippopotamus amphibius (Outgroup),HipAmp,SRR5663646; SRR5663649
 Odocoileus virginianus,OdoVir,SRR4069807; SRR4069809
 Okapia johnstoni,OkaJoh,SRR3217625; SRR3217884
 Ovis aries,OviAri,ERR2099815; ERR2099817
