@@ -1,8 +1,8 @@
 # Code Walkthrough for Literman and Schwartz (2019)  
 
 ## Please Note:  
-This repo is meant as a walkthrough for the analyses performed in Literman and Schwartz (2019).  
-**If you wish to re-run this pipeline using your own data**, please **do not use this repo**. See <RUN_REPO>
+This repo is meant as a specific walkthrough for the analyses performed in Literman and Schwartz (2019).  
+**If you wish to re-run this pipeline using your own data**, please <span style="color:red">**use scripts from the RUN_REPO**.</span>
 
 ## 1) Acquiring study data  
 In this manuscript, we investigated how phylogenetic signal was distributed across the genomes of three focal mammal clades. The species and their shortened analysis IDs are listed below, with the reference species for each dataset indicated in **bold**. SRR numbers for all species can be found in **Data_and_Tables/SRR_Table.csv**. All reads are Illumina paired-end reads from WGS-type sequencing.  
