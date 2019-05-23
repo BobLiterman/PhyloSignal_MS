@@ -87,7 +87,7 @@ For the combined analysis: 10X = 35Gb / 36 species ~ 972,222,222 bases per speci
 
 Reads for each dataset (Primates, Rodents, Pecora, Combined) were subset using the script **Data_Processing_Scripts/sisrs_read_subsetter.py**  
 ```
-python sisrs_read_subsetter.py 350000000
+python sisrs_read_subsetter.py 3500000000
 ```
 
 Subset schemes used in this study can be found in **Data_and_Tables/Subset_Schemes**  
