@@ -231,3 +231,38 @@ Each biallelic SISRS site splits the data into two sets of taxa. If the taxonomi
 If the taxonomic split does not agree with a split in the reference topology, that site is designated as '**discordant**', or providing non-historical phylogenetic signal.  
 
 ![alt text](Sample_Images/Bad_Split.png)  
+
+### 10) Site Annotation  
+
+Once sites were mapped to the reference genome, BEDTools was used to transfer annotations from the reference genome to the SISRS orthologs. In this way, each site can be annotated as one of the following locus types:  
+- Coding sequence (CDS). including all annotated transcript variants  
+- Five-prime UTR  
+- Three-prime UTR  
+- Intronic (gene region minus CDS/UTR)
+- Pseudogenes  
+- Long-noncoding RNA (lncRNA; none annotated in Pecora)  
+- Noncoding Genes (genes without annotated CDS; none annotated in Pecora)  
+- Small RNAs (smRNA; miRNAs + ncRNAs + rRNAs + scRNAs + smRNAs + snoRNAs + snRNAs + tRNAs + vaultRNAs)  
+- Intergenic/Unannotated  
+
+In some cases an individual SISRS site may have multiple annotations types, such as pseudogenes within introns, or alternative five prime UTR regions overlapping CDS.
+
+Sites were annotated using [**Data_Processing_Scripts/Post_SISRS_Scripts/Site_Annotation/post_sisrs_site_annotation.py**](Data_Processing_Scripts/Post_SISRS_Scripts/Site_Annotation/post_sisrs_site_annotation.py)  
+
+```
+# 20 refers to 20 processors
+
+# Primates
+python post_sisrs_site_annotation.py 20 HomSap
+
+# Rodents
+python post_sisrs_site_annotation.py 20 MusMus
+
+# Pecora
+python post_sisrs_site_annotation.py 20 BosTau
+
+# Combined
+python post_sisrs_site_annotation 20 HomSap
+```
+
+Annotation count data for each dataset and split can be found in [**Data_and_Tables/Annotation_Counts**](Data_and_Tables/Annotation_Counts)  
