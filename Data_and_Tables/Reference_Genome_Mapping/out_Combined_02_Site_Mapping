@@ -1,0 +1,12 @@
+
+Filtering out sites that map to the same genomic location...
+
+- Of 105,004,624 sites that could be genomically mapped, 1,790,697 sites mapped to overlapping reference positions and were removed.
+
+A genome map file for HomSap without overlapping sites was created at /data3/schwartzlab/bob/Rerun_Mammals/Combined/Post_SISRS_Processing/Whole_Genome_Mapping/WholeGenomeHomSap_Mapped_NonDup.bed
+
+Beginning site selection...
+
+- Of 339,721 requested sites from the SISRS_Biallelic_NoMissing dataset, 301,955 sites were able to be genomically mapped based off non-overlapping data from /data3/schwartzlab/bob/Rerun_Mammals/Combined/Post_SISRS_Processing/Whole_Genome_Mapping/WholeGenome_HomSap_Mapped.bed.
+- Created BED file for these sites at /data3/schwartzlab/bob/Rerun_Mammals/Combined/Post_SISRS_Processing/SISRS_Sites/HomSap_SISRS_Biallelic_NoMissing_Mapped_NonDup.bed
+- Created a loc list for these sites at /data3/schwartzlab/bob/Rerun_Mammals/Combined/Post_SISRS_Processing/SISRS_Sites/HomSap_SISRS_Biallelic_NoMissing_Mapped_NonDup_LocList.txt

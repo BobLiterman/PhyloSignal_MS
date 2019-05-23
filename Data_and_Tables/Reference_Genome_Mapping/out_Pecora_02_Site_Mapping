@@ -1,0 +1,12 @@
+
+Filtering out sites that map to the same genomic location...
+
+- Of 382,277,868 sites that could be genomically mapped, 33,987,978 sites mapped to overlapping reference positions and were removed.
+
+A genome map file for BosTau without overlapping sites was created at /data3/schwartzlab/bob/Rerun_Mammals/Cetartiodactyla/Post_SISRS_Processing/Whole_Genome_Mapping/WholeGenomeBosTau_Mapped_NonDup.bed
+
+Beginning site selection...
+
+- Of 11,044,256 requested sites from the SISRS_Biallelic_NoMissing dataset, 10,174,369 sites were able to be genomically mapped based off non-overlapping data from /data3/schwartzlab/bob/Rerun_Mammals/Cetartiodactyla/Post_SISRS_Processing/Whole_Genome_Mapping/WholeGenome_BosTau_Mapped.bed.
+- Created BED file for these sites at /data3/schwartzlab/bob/Rerun_Mammals/Cetartiodactyla/Post_SISRS_Processing/SISRS_Sites/BosTau_SISRS_Biallelic_NoMissing_Mapped_NonDup.bed
+- Created a loc list for these sites at /data3/schwartzlab/bob/Rerun_Mammals/Cetartiodactyla/Post_SISRS_Processing/SISRS_Sites/BosTau_SISRS_Biallelic_NoMissing_Mapped_NonDup_LocList.txt

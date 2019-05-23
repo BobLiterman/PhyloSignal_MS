@@ -1,0 +1,12 @@
+
+Filtering out sites that map to the same genomic location...
+
+- Of 394,341,091 sites that could be genomically mapped, 29,343,581 sites mapped to overlapping reference positions and were removed.
+
+A genome map file for MusMus without overlapping sites was created at /data3/schwartzlab/bob/Rerun_Mammals/Rodents/Post_SISRS_Processing/Whole_Genome_Mapping/WholeGenomeMusMus_Mapped_NonDup.bed
+
+Beginning site selection...
+
+- Of 3,808,580 requested sites from the SISRS_Biallelic_NoMissing dataset, 3,145,357 sites were able to be genomically mapped based off non-overlapping data from /data3/schwartzlab/bob/Rerun_Mammals/Rodents/Post_SISRS_Processing/Whole_Genome_Mapping/WholeGenome_MusMus_Mapped.bed.
+- Created BED file for these sites at /data3/schwartzlab/bob/Rerun_Mammals/Rodents/Post_SISRS_Processing/SISRS_Sites/MusMus_SISRS_Biallelic_NoMissing_Mapped_NonDup.bed
+- Created a loc list for these sites at /data3/schwartzlab/bob/Rerun_Mammals/Rodents/Post_SISRS_Processing/SISRS_Sites/MusMus_SISRS_Biallelic_NoMissing_Mapped_NonDup_LocList.txt
