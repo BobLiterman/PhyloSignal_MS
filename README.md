@@ -156,9 +156,6 @@ python SCRIPT_DIR/get_pruned_dict.py SISRS_DIR/TAXA COMPOSITE_DIR MINREAD THRESH
 
 These scripts and their output can be found in **Data_Processing_Scripts/SISRS_Run_Scripts**  
 
-**NOTE:** These scripts are independent of one another and depending on data size can take hours or days to run with 20 processors. If you have access to an HPC system with multiple nodes, it is advised to run these scripts in parallel to save time. If you do not have access to an HPC-type system, the script **Data_Processing_Scripts/sisrs_run.py** will run each script sequentially.  
-- However you run the scripts, ensure the output is written to 'out_TAXA_SISRS' and the error is written to 'err_TAXA_SISRS' (e.g. out_HomSap_SISRS; err_HomSap_SISRS)  
-
 ## 7) Output SISRS alignments
 
 The final step of the SISRS pipeline takes the output from each species and creates a series of alignments:  
