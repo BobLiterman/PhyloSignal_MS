@@ -1,6 +1,6 @@
 # Code Walkthrough for Literman and Schwartz (2019)  
 
-##Please Note:  
+## Please Note:  
 This repo is meant as a walkthrough for the analyses performed in Literman and Schwartz (2019).  
 **If you wish to re-run this pipeline using your own data**, please **do not use this repo**. See <RUN_REPO>
 
