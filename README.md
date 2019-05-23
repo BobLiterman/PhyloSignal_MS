@@ -160,7 +160,7 @@ samtools mpileup -f COMPOSITE_GENOME SISRS_DIR/TAXA/TAXA.bam > SISRS_DIR/TAXA/TA
 python SCRIPT_DIR/get_pruned_dict.py SISRS_DIR/TAXA COMPOSITE_DIR MINREAD THRESHOLD
 ```
 
-These scripts and their output can be found in **Data_Processing_Scripts/Independent_SISRS_Scripts**  
+These scripts and their output can be found in [**Data_Processing_Scripts/Independent_SISRS_Scripts**](Data_Processing_Scripts/Independent_SISRS_Scripts)
 
 ## 7) Output SISRS alignments
 
