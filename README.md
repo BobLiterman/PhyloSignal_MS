@@ -201,7 +201,7 @@ Annotation files were processed...
 Add stuff
 ```
 
-For each dataset (*Primates*,*Rodents*,*Pecora*,*Combined*), the reference species (*HomSap*,*MusMus*,*BosTau*,*HomSap*) orthologs were mapped against the reference genome using the [**Post_SISRS_Scripts/post_sisrs_reference.py**](*Post_SISRS_Scripts/post_sisrs_reference.py):  
+For each dataset (*Primates*, *Rodents*, *Pecora*, *Combined*), the reference species (*HomSap*, *MusMus*, *BosTau*, *HomSap*) orthologs were mapped against the reference genome using the [**Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_reference.py**](Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_reference.py):  
 ```
 #Primates with 20 processors
 python post_sisrs_reference.py 20 HomSap
