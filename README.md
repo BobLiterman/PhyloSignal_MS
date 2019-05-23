@@ -196,7 +196,7 @@ bowtie2-build Bos_taurus.UMD3.1.dna.chromosome.CANONICAL.fa BosTau_Ens92
 samtools faidx Bos_taurus.UMD3.1.dna.chromosome.CANONICAL.fa
 ```
 
-For each dataset (*Primates*, *Rodents*, *Pecora*, *Combined*), the reference species (*HomSap*, *MusMus*, *BosTau*, *HomSap*) orthologs were mapped against the reference genome using [**Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_reference.py**](Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_reference.py). This script:  
+For each dataset (*Primates*, *Rodents*, *Pecora*, *Combined*), the reference species (*HomSap*, *MusMus*, *BosTau*, *HomSap*) orthologs were mapped against the reference genome using [**Data_Processing_Scripts/Post_SISRS_Scripts/Reference_Genome_Mapping/post_sisrs_reference.py**](Data_Processing_Scripts/Post_SISRS_Scripts/Reference_Genome_Mapping/post_sisrs_reference.py). This script:  
 
 - Removes contigs that cannot be mapped to the reference (and therefore cannot be annotated)  
 - Removes contigs that multiply map (obscuring their evolutionary origin)  
@@ -220,14 +220,14 @@ python post_sisrs_reference.py 20 BosTau
 python post_sisrs_reference.py 20 HomSap
 ```
 
-The output from these scripts can be found in [**Data_and_Tables/Reference_Genome_Mapping**](Data_and_Tables/Reference_Genome_Mapping)  
+The output from these scripts can be found in [**Data_Processing_Scripts/Post_SISRS_Scripts/Reference_Genome_Mapping**](Data_Processing_Scripts/Post_SISRS_Scripts/Reference_Genome_Mapping)  
 
 ### 9) Identifying phylogenetic signal from alignments of biallelic SISRS sites  
 
-Each biallelic SISRS site splits the data into two sets of taxa. If the taxonomic splits agree with a split in the reference topology, that site is designated as 'concordant', or providing historical phylogenetic signal.  
+Each biallelic SISRS site splits the data into two sets of taxa. If the taxonomic splits agree with a split in the reference topology, that site is designated as '**concordant**', or providing historical phylogenetic signal.  
 
 ![alt text](Sample_Images/Good_Split.png)  
 
-If the taxonomic split does not agree with a split in the reference topology, that site is designated as 'discordant', or providing non-historical phylogenetic signal.  
+If the taxonomic split does not agree with a split in the reference topology, that site is designated as '**discordant**', or providing non-historical phylogenetic signal.  
 
 ![alt text](Sample_Images/Bad_Split.png)  
