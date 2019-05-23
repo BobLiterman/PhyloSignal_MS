@@ -6,7 +6,7 @@ This repo is meant as a specific walkthrough for the analyses performed in Liter
 **If you wish to re-run this pipeline using your own data, please refer to RUN_REPO**
 
 ## 1) Acquiring study data  
-In this manuscript, we investigated how phylogenetic signal was distributed across the genomes of three focal mammal clades. The species and their shortened analysis IDs are listed below, with the reference species for each dataset indicated in **bold**. SRR numbers for all species can be found in **Data_and_Tables/SRR_Table.csv**. All reads are Illumina paired-end reads from WGS-type sequencing.  
+In this manuscript, we investigated how phylogenetic signal was distributed across the genomes of three focal mammal clades. The species and their shortened analysis IDs are listed below, with the reference species for each dataset indicated in **bold**. SRR numbers for all species can be found in [**Data_and_Tables/SRR_Table.csv**](Data_and_Tables/SRR_Table.csv). All reads are Illumina paired-end reads from WGS-type sequencing.  
 
 - Catarrhine primates  (*Primates*)  
   - Colobus angolensis (ColAng)  
@@ -63,7 +63,7 @@ There was also an analysis will all 36 species combined (*Combined*).
 
 Read quality was assessed before and after trimming using FastQC v.0.11.5.  
 
-HTML output from FastQC can be found in **Data_and_Tables/FastQC**  
+HTML output from FastQC can be found in [**Data_and_Tables/FastQC**](Data_and_Tables/FastQC)  
 
 ## 3) Read trimming  
 
@@ -71,7 +71,7 @@ All reads were trimmed using BBDuk v.37.41 using the following command:
 ```
 bbduk.sh maxns=0 ref=adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=<RAW_LEFT> in2=<RAW_RIGHT> out=<TRIM_LEFT> out2=<TRIM_RIGHT> k=23 mink=11 hdist=1 hdist2=0 ktrim=r
 ```
-Read trimming scripts and output can be found in **Data_Processing_Scripts/Trim_Scripts**.
+Read trimming scripts and output can be found in [**Data_Processing_Scripts/Trim_Scripts**](Data_Processing_Scripts/Trim_Scripts)  
 
 ## 4) Read subsetting  
 
@@ -87,17 +87,17 @@ For the three focal datasets (Primtes, Rodents, and Pecora):
 
 For the combined analysis: 10X = 35Gb / 36 species ~ 972,222,222 bases per species
 
-Reads for each dataset (Primates, Rodents, Pecora, Combined) were subset using the script **Data_Processing_Scripts/sisrs_read_subsetter.py**  
+Reads for each dataset (Primates, Rodents, Pecora, Combined) were subset using the script [**Data_Processing_Scripts/sisrs_read_subsetter.py**](Data_Processing_Scripts/sisrs_read_subsetter.py)  
 ```
 python sisrs_read_subsetter.py 3500000000
 ```
 
-Subset schemes used in this study can be found in **Data_and_Tables/Subset_Schemes**  
-Output from subsetting can be found in **Data_and_Tables/Subset_Schemes/Subset_Output**  
+Subset schemes used in this study can be found in [**Data_and_Tables/Subset_Schemes**](Data_and_Tables/Subset_Schemes)  
+Output from subsetting can be found in [**Data_and_Tables/Subset_Schemes/Subset_Output**](Data_and_Tables/Subset_Schemes/Subset_Output)  
 
 ## 5) Composite genome assembly  
 
-This manuscript uses Ray (https://github.com/sebhtml/ray) to assemble composite genomes. Ray commands were generated automatically by **Data_Processing_Scripts/sisrs_ray_composite.py**  
+This manuscript uses Ray (https://github.com/sebhtml/ray) to assemble composite genomes. Ray commands were generated automatically by [**Data_Processing_Scripts/sisrs_ray_composite.py**](Data_Processing_Scripts/sisrs_ray_composite.py)  
 
 ```
 #To run on 8 nodes with 20 processors per node  
@@ -108,7 +108,7 @@ $ mpirun -n 160 Ray -k 31 {-s <READ_FILE>} -o <OUTPUT_DIR>
 # Where each subset read file is indicated with a -s flag (e.g. not using paired-end information)
 ```
 
-Ray assembly scripts can be found in **Data_Processing_Scripts/Ray_Scripts**  
+Ray assembly scripts can be found in [**Data_Processing_Scripts/Ray_Scripts**](Data_Processing_Scripts/Ray_Scripts)  
 
 ## 6) Running independent SISRS steps  
 
@@ -118,7 +118,7 @@ The next step of SISRS involves converting this single composite genome to multi
 2) Replace the composite base with the most common taxon-specific base  
 3) Re-map the reads onto the new corrected genome, but for any site with less than 3 reads of coverage or more than 1 possible base, replace with 'N'  
 
-The script **Data_Processing_Scripts/sisrs_setup_run.py** will do the following:  
+The script [**Data_Processing_Scripts/sisrs_setup_run.py**](Data_Processing_Scripts/sisrs_setup_run.py) will do the following:  
 - Rename Ray contigs to include 'SISRS_' prefix, build a Bowtie2 index, and move to analysis folder  
 - Generate scripts to perform Steps 1-3 above  
 
@@ -160,7 +160,7 @@ samtools mpileup -f COMPOSITE_GENOME SISRS_DIR/TAXA/TAXA.bam > SISRS_DIR/TAXA/TA
 python SCRIPT_DIR/get_pruned_dict.py SISRS_DIR/TAXA COMPOSITE_DIR MINREAD THRESHOLD
 ```
 
-These scripts and their output can be found in [**Data_Processing_Scripts/Independent_SISRS_Scripts**](Data_Processing_Scripts/Independent_SISRS_Scripts)
+These scripts and their output can be found in [**Data_Processing_Scripts/Independent_SISRS_Scripts**](Data_Processing_Scripts/Independent_SISRS_Scripts)  
 
 ## 7) Output SISRS alignments
 
@@ -169,9 +169,9 @@ The final step of the SISRS pipeline takes the output from each species and crea
 - All variable sites without singletons (parsimony-informative sites)
 - All biallelic parsimony-informative sites
 
-Running the script **Data_Processing_Scripts/sisrs_output.py** will generate these alignments both with and without gap positions, and with a number of species allowed to be missing (0 in this study). This script will also compile summary outputs.
+Running the script [**Data_Processing_Scripts/sisrs_output.py**](Data_Processing_Scripts/sisrs_output.py) will generate these alignments both with and without gap positions, and with a number of species allowed to be missing (0 in this study). This script will also compile summary outputs.
 ```
 #To output gapped and ungapped alignments with 0 taxa allowed missing
 python sisrs_output.py 0
 ```
-The output from these scripts can be found in **Data_and_Tables/SISRS_Alignment_Output**
+The output from these scripts can be found in [**Data_and_Tables/SISRS_Alignment_Output**](Data_and_Tables/SISRS_Alignment_Output)  
