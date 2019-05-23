@@ -78,7 +78,7 @@ The SISRS pipeline identifies orthologous loci through a 'composite genome' asse
 1) Each species is represented in the assembly by the same total number of bases.  
 2) Within each species, bases are sampled evenly across read sets.    
 3) The pooled base count across species is ~10X genomic coverage.  
-  - For this study, we used 3.5Gb as a genome size estimate for all groups.  
+  - For this study, we used 3.5Gb as a rough genome size estimate for all groups.  
 
 For the three focal datasets (Primtes, Rodents, and Pecora):  
 - 10X = 35Gb / 12 species ~ 2,916,666,667 bases per species  
