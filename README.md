@@ -1,7 +1,7 @@
 # Code for Literman and Schwartz (2019)  
 
 ## 1) Acquiring study data  
-In this manuscript, we investigated how phylogenetic signal was distributed across the genomes of three focal mammal clades. The species and their shortened names are listed below, with the reference species for each dataset indicated in **bold**. SRR numbers for all species can be found in **Data_and_Tables/SRR_Table.csv**. All reads are Illumina paired-end reads from WGS-type sequencing.  
+In this manuscript, we investigated how phylogenetic signal was distributed across the genomes of three focal mammal clades. The species and their shortened analysis IDs are listed below, with the reference species for each dataset indicated in **bold**. SRR numbers for all species can be found in **Data_and_Tables/SRR_Table.csv**. All reads are Illumina paired-end reads from WGS-type sequencing.  
 
 - Catarrhine primates  (*Primates*)  
   - Colobus angolensis (ColAng)  
@@ -62,13 +62,9 @@ HTML output from FastQC can be found in **Data_and_Tables/FastQC**
 
 All reads were trimmed using BBDuk v.37.41 using the following command:  
 ```
-bbduk.sh maxns=0 ref=adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=<LEFT_READ> in2=<RIGHT_READ> out=<TRIM_LEFT> out2=<TRIM_RIGHT> k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+bbduk.sh maxns=0 ref=adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=<RAW_LEFT> in2=<RAW_RIGHT> out=<TRIM_LEFT> out2=<TRIM_RIGHT> k=23 mink=11 hdist=1 hdist2=0 ktrim=r
 ```
-Read trimming scripts and output can be found in **Data_Processing_Scripts/Trim_Scripts**. While reads were trimmed using these scripts for the manuscript, if using the **Automated Instructions** we provide a wrapper script which will automate the FastQC/trimming process (**Data_Processing_Scripts/sisrs_read_trimmer.py**)
-```
-#For 20 processors...
-python sisrs_read_trimmer.py 20
-```
+Read trimming scripts and output can be found in **Data_Processing_Scripts/Trim_Scripts**.
 
 ## 4) Read subsetting  
 

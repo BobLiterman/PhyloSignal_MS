@@ -1,0 +1,836 @@
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BalMys_SRR1685384_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BalMys_SRR1685384_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BalMys_SRR1685384_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BalMys_SRR1685384_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BalMys_SRR1685384_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BalMys_SRR1685384_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BalMys_SRR1685384_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BalMys_SRR1685384_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29035m, used=1101m
+
+Added 187335 kmers; time: 	0.122 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.213 seconds.
+Processing time:   		4156.396 seconds.
+
+Input:                  	1402530110 reads 		141655541110 bases.
+QTrimmed:               	179749627 reads (12.82%) 	10469713335 bases (7.39%)
+KTrimmed:               	4882850 reads (0.35%) 	364638911 bases (0.26%)
+Low quality discards:   	258877798 reads (18.46%) 	23948320003 bases (16.91%)
+Total Removed:          	335207318 reads (23.90%) 	34782672249 bases (24.55%)
+Result:                 	1067322792 reads (76.10%) 	106872868861 bases (75.45%)
+
+Time:   			4156.745 seconds.
+Reads Processed:       1402m 	337.41k reads/sec
+Bases Processed:     141655m 	34.08m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29988m -Xms29988m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BisBis_SRR3509077_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BisBis_SRR3509077_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BisBis_SRR3509077_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BisBis_SRR3509077_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BisBis_SRR3509077_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BisBis_SRR3509077_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BisBis_SRR3509077_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BisBis_SRR3509077_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30134m, free=28876m, used=1258m
+
+Added 187335 kmers; time: 	0.125 seconds.
+Memory: max=30134m, free=27461m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.188 seconds.
+Processing time:   		851.795 seconds.
+
+Input:                  	275176336 reads 		27517633600 bases.
+QTrimmed:               	19340134 reads (7.03%) 	867816055 bases (3.15%)
+KTrimmed:               	48597 reads (0.02%) 	712657 bases (0.00%)
+Low quality discards:   	31857876 reads (11.58%) 	2895151159 bases (10.52%)
+Total Removed:          	36334172 reads (13.20%) 	3763679871 bases (13.68%)
+Result:                 	238842164 reads (86.80%) 	23753953729 bases (86.32%)
+
+Time:   			852.126 seconds.
+Reads Processed:        275m 	322.93k reads/sec
+Bases Processed:      27517m 	32.29m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BisBis_SRR3509078_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BisBis_SRR3509078_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BisBis_SRR3509078_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BisBis_SRR3509078_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BisBis_SRR3509078_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BisBis_SRR3509078_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BisBis_SRR3509078_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BisBis_SRR3509078_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29035m, used=1101m
+
+Added 187335 kmers; time: 	0.119 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.197 seconds.
+Processing time:   		1810.101 seconds.
+
+Input:                  	504689002 reads 		50468900200 bases.
+QTrimmed:               	48279538 reads (9.57%) 	2283956393 bases (4.53%)
+KTrimmed:               	89123 reads (0.02%) 	1279280 bases (0.00%)
+Low quality discards:   	77037140 reads (15.26%) 	6956149461 bases (13.78%)
+Total Removed:          	89790866 reads (17.79%) 	9241385134 bases (18.31%)
+Result:                 	414898136 reads (82.21%) 	41227515066 bases (81.69%)
+
+Time:   			1810.430 seconds.
+Reads Processed:        504m 	278.77k reads/sec
+Bases Processed:      50468m 	27.88m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BosTau_ERR1747046_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BosTau_ERR1747046_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BosTau_ERR1747046_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BosTau_ERR1747046_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BosTau_ERR1747046_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BosTau_ERR1747046_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BosTau_ERR1747046_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BosTau_ERR1747046_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29035m, used=1101m
+
+Added 187335 kmers; time: 	0.119 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.144 seconds.
+Processing time:   		808.238 seconds.
+
+Input:                  	312034482 reads 		31293532558 bases.
+QTrimmed:               	8524370 reads (2.73%) 	468447140 bases (1.50%)
+KTrimmed:               	40282 reads (0.01%) 	1577101 bases (0.01%)
+Low quality discards:   	24110952 reads (7.73%) 	2203771912 bases (7.04%)
+Total Removed:          	27189750 reads (8.71%) 	2673796153 bases (8.54%)
+Result:                 	284844732 reads (91.29%) 	28619736405 bases (91.46%)
+
+Time:   			808.514 seconds.
+Reads Processed:        312m 	385.94k reads/sec
+Bases Processed:      31293m 	38.70m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BosTau_ERR1747047_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BosTau_ERR1747047_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BosTau_ERR1747047_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BosTau_ERR1747047_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BosTau_ERR1747047_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BosTau_ERR1747047_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BosTau_ERR1747047_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BosTau_ERR1747047_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29035m, used=1101m
+
+Added 187335 kmers; time: 	0.120 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.185 seconds.
+Processing time:   		847.832 seconds.
+
+Input:                  	368804442 reads 		37008247257 bases.
+QTrimmed:               	9324153 reads (2.53%) 	508246388 bases (1.37%)
+KTrimmed:               	38481 reads (0.01%) 	1438312 bases (0.00%)
+Low quality discards:   	26200494 reads (7.10%) 	2395436888 bases (6.47%)
+Total Removed:          	29492562 reads (8.00%) 	2905121588 bases (7.85%)
+Result:                 	339311880 reads (92.00%) 	34103125669 bases (92.15%)
+
+Time:   			848.148 seconds.
+Reads Processed:        368m 	434.83k reads/sec
+Bases Processed:      37008m 	43.63m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BubBub_SRR4477891_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BubBub_SRR4477891_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BubBub_SRR4477891_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BubBub_SRR4477891_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BubBub_SRR4477891_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BubBub_SRR4477891_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BubBub_SRR4477891_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BubBub_SRR4477891_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29193m, used=943m
+
+Added 187335 kmers; time: 	0.114 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.105 seconds.
+Processing time:   		988.151 seconds.
+
+Input:                  	354409588 reads 		35611565135 bases.
+QTrimmed:               	60847356 reads (17.17%) 	2243668109 bases (6.30%)
+KTrimmed:               	12562 reads (0.00%) 	570666 bases (0.00%)
+Low quality discards:   	105160038 reads (29.67%) 	10040494309 bases (28.19%)
+Total Removed:          	118902376 reads (33.55%) 	12284733084 bases (34.50%)
+Result:                 	235507212 reads (66.45%) 	23326832051 bases (65.50%)
+
+Time:   			988.382 seconds.
+Reads Processed:        354m 	358.58k reads/sec
+Bases Processed:      35611m 	36.03m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BubBub_SRR4477896_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BubBub_SRR4477896_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BubBub_SRR4477896_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BubBub_SRR4477896_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BubBub_SRR4477896_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BubBub_SRR4477896_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BubBub_SRR4477896_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BubBub_SRR4477896_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29035m, used=1101m
+
+Added 187335 kmers; time: 	0.124 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.143 seconds.
+Processing time:   		1208.052 seconds.
+
+Input:                  	411567556 reads 		41360491323 bases.
+QTrimmed:               	40113401 reads (9.75%) 	3281188323 bases (7.93%)
+KTrimmed:               	18436 reads (0.00%) 	844842 bases (0.00%)
+Low quality discards:   	51375190 reads (12.48%) 	4661677806 bases (11.27%)
+Total Removed:          	77246794 reads (18.77%) 	7943710971 bases (19.21%)
+Result:                 	334320762 reads (81.23%) 	33416780352 bases (80.79%)
+
+Time:   			1208.339 seconds.
+Reads Processed:        411m 	340.61k reads/sec
+Bases Processed:      41360m 	34.23m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BubBub_SRR4477899_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BubBub_SRR4477899_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BubBub_SRR4477899_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BubBub_SRR4477899_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BubBub_SRR4477899_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/BubBub_SRR4477899_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BubBub_SRR4477899_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/BubBub_SRR4477899_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29035m, used=1101m
+
+Added 187335 kmers; time: 	0.125 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.151 seconds.
+Processing time:   		1113.689 seconds.
+
+Input:                  	381418558 reads 		38328592989 bases.
+QTrimmed:               	27735965 reads (7.27%) 	2253259264 bases (5.88%)
+KTrimmed:               	20447 reads (0.01%) 	930557 bases (0.00%)
+Low quality discards:   	37789738 reads (9.91%) 	3442774789 bases (8.98%)
+Total Removed:          	55105690 reads (14.45%) 	5696964610 bases (14.86%)
+Result:                 	326312868 reads (85.55%) 	32631628379 bases (85.14%)
+
+Time:   			1113.978 seconds.
+Reads Processed:        381m 	342.39k reads/sec
+Bases Processed:      38328m 	34.41m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapAeg_ERR470100_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapAeg_ERR470100_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapAeg_ERR470100_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapAeg_ERR470100_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapAeg_ERR470100_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapAeg_ERR470100_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapAeg_ERR470100_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapAeg_ERR470100_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29035m, used=1101m
+
+Added 187335 kmers; time: 	0.128 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.179 seconds.
+Processing time:   		1520.726 seconds.
+
+Input:                  	452889130 reads 		45083463824 bases.
+QTrimmed:               	23414901 reads (5.17%) 	1592368692 bases (3.53%)
+KTrimmed:               	83911 reads (0.02%) 	2813479 bases (0.01%)
+Low quality discards:   	57291340 reads (12.65%) 	5095666433 bases (11.30%)
+Total Removed:          	70427872 reads (15.55%) 	6690848604 bases (14.84%)
+Result:                 	382461258 reads (84.45%) 	38392615220 bases (85.16%)
+
+Time:   			1521.046 seconds.
+Reads Processed:        452m 	297.75k reads/sec
+Bases Processed:      45083m 	29.64m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapAeg_ERR470104_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapAeg_ERR470104_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapAeg_ERR470104_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapAeg_ERR470104_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapAeg_ERR470104_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapAeg_ERR470104_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapAeg_ERR470104_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapAeg_ERR470104_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29035m, used=1101m
+
+Added 187335 kmers; time: 	0.125 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.104 seconds.
+Processing time:   		1550.579 seconds.
+
+Input:                  	435911496 reads 		43442829632 bases.
+QTrimmed:               	20229862 reads (4.64%) 	1388210608 bases (3.20%)
+KTrimmed:               	41023 reads (0.01%) 	1479900 bases (0.00%)
+Low quality discards:   	49479180 reads (11.35%) 	4400535210 bases (10.13%)
+Total Removed:          	61028148 reads (14.00%) 	5790225718 bases (13.33%)
+Result:                 	374883348 reads (86.00%) 	37652603914 bases (86.67%)
+
+Time:   			1550.821 seconds.
+Reads Processed:        435m 	281.08k reads/sec
+Bases Processed:      43442m 	28.01m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapAeg_ERR470106_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapAeg_ERR470106_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapAeg_ERR470106_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapAeg_ERR470106_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapAeg_ERR470106_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapAeg_ERR470106_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapAeg_ERR470106_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapAeg_ERR470106_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29193m, used=943m
+
+Added 187335 kmers; time: 	0.150 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.146 seconds.
+Processing time:   		1436.391 seconds.
+
+Input:                  	461559294 reads 		45847734630 bases.
+QTrimmed:               	27794330 reads (6.02%) 	1957257448 bases (4.27%)
+KTrimmed:               	60152 reads (0.01%) 	1896780 bases (0.00%)
+Low quality discards:   	66780200 reads (14.47%) 	5932732574 bases (12.94%)
+Total Removed:          	83204066 reads (18.03%) 	7891886802 bases (17.21%)
+Result:                 	378355228 reads (81.97%) 	37955847828 bases (82.79%)
+
+Time:   			1436.700 seconds.
+Reads Processed:        461m 	321.26k reads/sec
+Bases Processed:      45847m 	31.91m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR318227_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR318227_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR318227_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR318227_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR318227_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR318227_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR318227_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR318227_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29193m, used=943m
+
+Added 187335 kmers; time: 	0.122 seconds.
+Memory: max=30136m, free=27620m, used=2516m
+
+Input is being processed as paired
+Started output streams:	0.125 seconds.
+Processing time:   		410.211 seconds.
+
+Input:                  	259593054 reads 		25959305400 bases.
+QTrimmed:               	140722418 reads (54.21%) 	7069763117 bases (27.23%)
+KTrimmed:               	240871 reads (0.09%) 	13577371 bases (0.05%)
+Low quality discards:   	130373218 reads (50.22%) 	11658650561 bases (44.91%)
+Total Removed:          	183548380 reads (70.71%) 	18741991049 bases (72.20%)
+Result:                 	76044674 reads (29.29%) 	7217314351 bases (27.80%)
+
+Time:   			410.472 seconds.
+Reads Processed:        259m 	632.43k reads/sec
+Bases Processed:      25959m 	63.24m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR318228_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR318228_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR318228_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR318228_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR318228_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR318228_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR318228_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR318228_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=28878m, used=1258m
+
+Added 187335 kmers; time: 	0.128 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.151 seconds.
+Processing time:   		425.849 seconds.
+
+Input:                  	257334874 reads 		25733487400 bases.
+QTrimmed:               	137131839 reads (53.29%) 	6902446460 bases (26.82%)
+KTrimmed:               	135048 reads (0.05%) 	4664388 bases (0.02%)
+Low quality discards:   	129013768 reads (50.13%) 	11571006379 bases (44.96%)
+Total Removed:          	181027432 reads (70.35%) 	18478117227 bases (71.81%)
+Result:                 	76307442 reads (29.65%) 	7255370173 bases (28.19%)
+
+Time:   			426.140 seconds.
+Reads Processed:        257m 	603.87k reads/sec
+Bases Processed:      25733m 	60.39m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR318229_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR318229_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR318229_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR318229_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR318229_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR318229_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR318229_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR318229_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29193m, used=943m
+
+Added 187335 kmers; time: 	0.127 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.179 seconds.
+Processing time:   		366.048 seconds.
+
+Input:                  	213301410 reads 		21330141000 bases.
+QTrimmed:               	108455564 reads (50.85%) 	5434438487 bases (25.48%)
+KTrimmed:               	158862 reads (0.07%) 	8241451 bases (0.04%)
+Low quality discards:   	106949192 reads (50.14%) 	9646423959 bases (45.22%)
+Total Removed:          	147899498 reads (69.34%) 	15089103897 bases (70.74%)
+Result:                 	65401912 reads (30.66%) 	6241037103 bases (29.26%)
+
+Time:   			366.367 seconds.
+Reads Processed:        213m 	582.21k reads/sec
+Bases Processed:      21330m 	58.22m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762662_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762662_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762662_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762662_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762662_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762662_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762662_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762662_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Exception in thread "main" java.lang.RuntimeException: Can't read file '/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762662_Raw_Left.fastq.gz'
+	at shared.Tools.testInputFiles(Tools.java:612)
+	at jgi.BBDukF.<init>(BBDukF.java:784)
+	at jgi.BBDukF.main(BBDukF.java:69)
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762663_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762663_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762663_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762663_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762663_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762663_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762663_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762663_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Exception in thread "main" java.lang.RuntimeException: Can't read file '/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762663_Raw_Left.fastq.gz'
+	at shared.Tools.testInputFiles(Tools.java:612)
+	at jgi.BBDukF.<init>(BBDukF.java:784)
+	at jgi.BBDukF.main(BBDukF.java:69)
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762664_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762664_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762664_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762664_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762664_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762664_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762664_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762664_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Exception in thread "main" java.lang.RuntimeException: Can't read file '/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762664_Raw_Left.fastq.gz'
+	at shared.Tools.testInputFiles(Tools.java:612)
+	at jgi.BBDukF.<init>(BBDukF.java:784)
+	at jgi.BBDukF.main(BBDukF.java:69)
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762668_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762668_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762668_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762668_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762668_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762668_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762668_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762668_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Exception in thread "main" java.lang.RuntimeException: Can't read file '/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762668_Raw_Left.fastq.gz'
+	at shared.Tools.testInputFiles(Tools.java:612)
+	at jgi.BBDukF.<init>(BBDukF.java:784)
+	at jgi.BBDukF.main(BBDukF.java:69)
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/GirTip_SRR3218457_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/GirTip_SRR3218457_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/GirTip_SRR3218457_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/GirTip_SRR3218457_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/GirTip_SRR3218457_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/GirTip_SRR3218457_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/GirTip_SRR3218457_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/GirTip_SRR3218457_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29035m, used=1101m
+
+Added 187335 kmers; time: 	0.126 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.114 seconds.
+Processing time:   		1145.731 seconds.
+
+Input:                  	302313206 reads 		45649294106 bases.
+QTrimmed:               	72019689 reads (23.82%) 	6910595099 bases (15.14%)
+KTrimmed:               	1456134 reads (0.48%) 	52404687 bases (0.11%)
+Low quality discards:   	94498892 reads (31.26%) 	12428036106 bases (27.23%)
+Total Removed:          	124913158 reads (41.32%) 	19391035892 bases (42.48%)
+Result:                 	177400048 reads (58.68%) 	26258258214 bases (57.52%)
+
+Time:   			1145.983 seconds.
+Reads Processed:        302m 	263.80k reads/sec
+Bases Processed:      45649m 	39.83m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/GirTip_SRR3218458_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/GirTip_SRR3218458_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/GirTip_SRR3218458_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/GirTip_SRR3218458_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/GirTip_SRR3218458_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/GirTip_SRR3218458_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/GirTip_SRR3218458_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/GirTip_SRR3218458_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29035m, used=1101m
+
+Added 187335 kmers; time: 	0.127 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.180 seconds.
+Processing time:   		1063.441 seconds.
+
+Input:                  	304415618 reads 		45966758318 bases.
+QTrimmed:               	70915954 reads (23.30%) 	7265025533 bases (15.80%)
+KTrimmed:               	1464267 reads (0.48%) 	52726460 bases (0.11%)
+Low quality discards:   	88880460 reads (29.20%) 	11576199188 bases (25.18%)
+Total Removed:          	121678566 reads (39.97%) 	18893951181 bases (41.10%)
+Result:                 	182737052 reads (60.03%) 	27072807137 bases (58.90%)
+
+Time:   			1063.761 seconds.
+Reads Processed:        304m 	286.17k reads/sec
+Bases Processed:      45966m 	43.21m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/HipAmp_SRR5663646_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/HipAmp_SRR5663646_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/HipAmp_SRR5663646_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/HipAmp_SRR5663646_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/HipAmp_SRR5663646_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/HipAmp_SRR5663646_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/HipAmp_SRR5663646_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/HipAmp_SRR5663646_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29035m, used=1101m
+
+Added 187335 kmers; time: 	0.127 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.208 seconds.
+Processing time:   		2198.148 seconds.
+
+Input:                  	625661138 reads 		62566113800 bases.
+QTrimmed:               	57363750 reads (9.17%) 	2471128400 bases (3.95%)
+KTrimmed:               	20683 reads (0.00%) 	426184 bases (0.00%)
+Low quality discards:   	97329412 reads (15.56%) 	8886600423 bases (14.20%)
+Total Removed:          	110651140 reads (17.69%) 	11358155007 bases (18.15%)
+Result:                 	515009998 reads (82.31%) 	51207958793 bases (81.85%)
+
+Time:   			2198.496 seconds.
+Reads Processed:        625m 	284.59k reads/sec
+Bases Processed:      62566m 	28.46m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/HipAmp_SRR5663648_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/HipAmp_SRR5663648_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/HipAmp_SRR5663648_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/HipAmp_SRR5663648_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/HipAmp_SRR5663648_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/HipAmp_SRR5663648_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/HipAmp_SRR5663648_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/HipAmp_SRR5663648_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29035m, used=1101m
+
+Added 187335 kmers; time: 	0.125 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.178 seconds.
+Processing time:   		1008.583 seconds.
+
+Input:                  	343921854 reads 		34392185400 bases.
+QTrimmed:               	55482974 reads (16.13%) 	2159380843 bases (6.28%)
+KTrimmed:               	13856 reads (0.00%) 	762719 bases (0.00%)
+Low quality discards:   	79277376 reads (23.05%) 	7125924383 bases (20.72%)
+Total Removed:          	90136534 reads (26.21%) 	9286067945 bases (27.00%)
+Result:                 	253785320 reads (73.79%) 	25106117455 bases (73.00%)
+
+Time:   			1008.898 seconds.
+Reads Processed:        343m 	340.89k reads/sec
+Bases Processed:      34392m 	34.09m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/HipAmp_SRR5663649_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/HipAmp_SRR5663649_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/HipAmp_SRR5663649_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/HipAmp_SRR5663649_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/HipAmp_SRR5663649_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/HipAmp_SRR5663649_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/HipAmp_SRR5663649_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/HipAmp_SRR5663649_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29193m, used=943m
+
+Added 187335 kmers; time: 	0.125 seconds.
+Memory: max=30136m, free=27620m, used=2516m
+
+Input is being processed as paired
+Started output streams:	0.151 seconds.
+Processing time:   		1428.622 seconds.
+
+Input:                  	482315612 reads 		48231561200 bases.
+QTrimmed:               	52948903 reads (10.98%) 	2438607239 bases (5.06%)
+KTrimmed:               	28888 reads (0.01%) 	1799000 bases (0.00%)
+Low quality discards:   	83941488 reads (17.40%) 	7633334792 bases (15.83%)
+Total Removed:          	98170708 reads (20.35%) 	10073741031 bases (20.89%)
+Result:                 	384144904 reads (79.65%) 	38157820169 bases (79.11%)
+
+Time:   			1428.911 seconds.
+Reads Processed:        482m 	337.54k reads/sec
+Bases Processed:      48231m 	33.75m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OdoVir_SRR4069807_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OdoVir_SRR4069807_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OdoVir_SRR4069807_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OdoVir_SRR4069807_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OdoVir_SRR4069807_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OdoVir_SRR4069807_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OdoVir_SRR4069807_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OdoVir_SRR4069807_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=29193m, used=943m
+
+Added 187335 kmers; time: 	0.123 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.158 seconds.
+Processing time:   		1469.919 seconds.
+
+Input:                  	463354494 reads 		46798803894 bases.
+QTrimmed:               	79833928 reads (17.23%) 	5173443036 bases (11.05%)
+KTrimmed:               	1711375 reads (0.37%) 	51011020 bases (0.11%)
+Low quality discards:   	92451092 reads (19.95%) 	8292016355 bases (17.72%)
+Total Removed:          	130502882 reads (28.16%) 	13516470411 bases (28.88%)
+Result:                 	332851612 reads (71.84%) 	33282333483 bases (71.12%)
+
+Time:   			1470.213 seconds.
+Reads Processed:        463m 	315.16k reads/sec
+Bases Processed:      46798m 	31.83m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29989m -Xms29989m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OdoVir_SRR4069809_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OdoVir_SRR4069809_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OdoVir_SRR4069809_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OdoVir_SRR4069809_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OdoVir_SRR4069809_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OdoVir_SRR4069809_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OdoVir_SRR4069809_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OdoVir_SRR4069809_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30136m, free=28878m, used=1258m
+
+Added 187335 kmers; time: 	0.127 seconds.
+Memory: max=30136m, free=27463m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.151 seconds.
+Processing time:   		1527.853 seconds.
+
+Input:                  	476254676 reads 		48101722276 bases.
+QTrimmed:               	109099199 reads (22.91%) 	6107611739 bases (12.70%)
+KTrimmed:               	1986064 reads (0.42%) 	59752476 bases (0.12%)
+Low quality discards:   	119253262 reads (25.04%) 	10569023744 bases (21.97%)
+Total Removed:          	161324010 reads (33.87%) 	16736387959 bases (34.79%)
+Result:                 	314930666 reads (66.13%) 	31365334317 bases (65.21%)
+
+Time:   			1528.144 seconds.
+Reads Processed:        476m 	311.66k reads/sec
+Bases Processed:      48101m 	31.48m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29988m -Xms29988m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OkaJoh_SRR3217625_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OkaJoh_SRR3217625_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OkaJoh_SRR3217625_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OkaJoh_SRR3217625_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OkaJoh_SRR3217625_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OkaJoh_SRR3217625_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OkaJoh_SRR3217625_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OkaJoh_SRR3217625_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30134m, free=29033m, used=1101m
+
+Added 187335 kmers; time: 	0.126 seconds.
+Memory: max=30134m, free=27461m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.204 seconds.
+Processing time:   		1198.925 seconds.
+
+Input:                  	267791030 reads 		40168654500 bases.
+QTrimmed:               	45387659 reads (16.95%) 	4589078214 bases (11.42%)
+KTrimmed:               	1401397 reads (0.52%) 	50396951 bases (0.13%)
+Low quality discards:   	44546384 reads (16.63%) 	5566870974 bases (13.86%)
+Total Removed:          	64755756 reads (24.18%) 	10206346139 bases (25.41%)
+Result:                 	203035274 reads (75.82%) 	29962308361 bases (74.59%)
+
+Time:   			1199.269 seconds.
+Reads Processed:        267m 	223.30k reads/sec
+Bases Processed:      40168m 	33.49m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29988m -Xms29988m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OkaJoh_SRR3217884_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OkaJoh_SRR3217884_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OkaJoh_SRR3217884_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OkaJoh_SRR3217884_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OkaJoh_SRR3217884_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OkaJoh_SRR3217884_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OkaJoh_SRR3217884_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OkaJoh_SRR3217884_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30134m, free=28876m, used=1258m
+
+Added 187335 kmers; time: 	0.125 seconds.
+Memory: max=30134m, free=27461m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.177 seconds.
+Processing time:   		846.219 seconds.
+
+Input:                  	273414334 reads 		41012150100 bases.
+QTrimmed:               	69264487 reads (25.33%) 	13545710120 bases (33.03%)
+KTrimmed:               	1279413 reads (0.47%) 	46614813 bases (0.11%)
+Low quality discards:   	32456390 reads (11.87%) 	4043635015 bases (9.86%)
+Total Removed:          	115103134 reads (42.10%) 	17635959948 bases (43.00%)
+Result:                 	158311200 reads (57.90%) 	23376190152 bases (57.00%)
+
+Time:   			846.534 seconds.
+Reads Processed:        273m 	322.98k reads/sec
+Bases Processed:      41012m 	48.45m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29988m -Xms29988m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OviAri_ERR2099815_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OviAri_ERR2099815_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OviAri_ERR2099815_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OviAri_ERR2099815_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OviAri_ERR2099815_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OviAri_ERR2099815_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OviAri_ERR2099815_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OviAri_ERR2099815_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30134m, free=29191m, used=943m
+
+Added 187335 kmers; time: 	0.122 seconds.
+Memory: max=30134m, free=27461m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.192 seconds.
+Processing time:   		1306.008 seconds.
+
+Input:                  	455148898 reads 		45970038698 bases.
+QTrimmed:               	76727601 reads (16.86%) 	5345436348 bases (11.63%)
+KTrimmed:               	293016 reads (0.06%) 	9762658 bases (0.02%)
+Low quality discards:   	99410810 reads (21.84%) 	9071311151 bases (19.73%)
+Total Removed:          	140072604 reads (30.78%) 	14426510157 bases (31.38%)
+Result:                 	315076294 reads (69.22%) 	31543528541 bases (68.62%)
+
+Time:   			1306.334 seconds.
+Reads Processed:        455m 	348.42k reads/sec
+Bases Processed:      45970m 	35.19m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29988m -Xms29988m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OviAri_ERR2099817_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OviAri_ERR2099817_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OviAri_ERR2099817_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OviAri_ERR2099817_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OviAri_ERR2099817_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/OviAri_ERR2099817_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OviAri_ERR2099817_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/OviAri_ERR2099817_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30134m, free=28876m, used=1258m
+
+Added 187335 kmers; time: 	0.126 seconds.
+Memory: max=30134m, free=27461m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.228 seconds.
+Processing time:   		1181.080 seconds.
+
+Input:                  	429430534 reads 		43372483934 bases.
+QTrimmed:               	60025401 reads (13.98%) 	3849944077 bases (8.88%)
+KTrimmed:               	92281 reads (0.02%) 	4119680 bases (0.01%)
+Low quality discards:   	76933854 reads (17.92%) 	7011901627 bases (16.17%)
+Total Removed:          	105135062 reads (24.48%) 	10865965384 bases (25.05%)
+Result:                 	324295472 reads (75.52%) 	32506518550 bases (74.95%)
+
+Time:   			1181.446 seconds.
+Reads Processed:        429m 	363.48k reads/sec
+Bases Processed:      43372m 	36.71m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29998m -Xms29998m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762662_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762662_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762662_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762662_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762662_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762662_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762662_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762662_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30144m, free=29043m, used=1101m
+
+Added 187335 kmers; time: 	0.120 seconds.
+Memory: max=30144m, free=27628m, used=2516m
+
+Input is being processed as paired
+Started output streams:	0.217 seconds.
+Processing time:   		1850.245 seconds.
+
+Input:                  	179450058 reads 		17945005800 bases.
+QTrimmed:               	36658976 reads (20.43%) 	1549311233 bases (8.63%)
+KTrimmed:               	22338 reads (0.01%) 	769249 bases (0.00%)
+Low quality discards:   	31513084 reads (17.56%) 	2809061769 bases (15.65%)
+Total Removed:          	40184378 reads (22.39%) 	4359142251 bases (24.29%)
+Result:                 	139265680 reads (77.61%) 	13585863549 bases (75.71%)
+
+Time:   			1850.597 seconds.
+Reads Processed:        179m 	96.97k reads/sec
+Bases Processed:      17945m 	9.70m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29998m -Xms29998m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762663_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762663_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762663_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762663_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762663_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762663_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762663_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762663_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30144m, free=29201m, used=943m
+
+Added 187335 kmers; time: 	0.110 seconds.
+Memory: max=30144m, free=27628m, used=2516m
+
+Input is being processed as paired
+Started output streams:	5.867 seconds.
+Processing time:   		5497.305 seconds.
+
+Input:                  	180560750 reads 		18056075000 bases.
+QTrimmed:               	42704087 reads (23.65%) 	1916702991 bases (10.62%)
+KTrimmed:               	863594 reads (0.48%) 	32245834 bases (0.18%)
+Low quality discards:   	31592148 reads (17.50%) 	2743543037 bases (15.19%)
+Total Removed:          	42571164 reads (23.58%) 	4692491862 bases (25.99%)
+Result:                 	137989586 reads (76.42%) 	13363583138 bases (74.01%)
+
+Time:   			5503.296 seconds.
+Reads Processed:        180m 	32.81k reads/sec
+Bases Processed:      18056m 	3.28m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29998m -Xms29998m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762664_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762664_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762664_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762664_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762664_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762664_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762664_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762664_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30144m, free=29043m, used=1101m
+
+Added 187335 kmers; time: 	0.109 seconds.
+Memory: max=30144m, free=27471m, used=2673m
+
+Input is being processed as paired
+Started output streams:	11.621 seconds.
+Processing time:   		4967.889 seconds.
+
+Input:                  	180842730 reads 		18084273000 bases.
+QTrimmed:               	39005417 reads (21.57%) 	1615991045 bases (8.94%)
+KTrimmed:               	19493 reads (0.01%) 	692927 bases (0.00%)
+Low quality discards:   	34002960 reads (18.80%) 	3027257853 bases (16.74%)
+Total Removed:          	42860446 reads (23.70%) 	4643941825 bases (25.68%)
+Result:                 	137982284 reads (76.30%) 	13440331175 bases (74.32%)
+
+Time:   			4979.631 seconds.
+Reads Processed:        180m 	36.32k reads/sec
+Bases Processed:      18084m 	3.63m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29998m -Xms29998m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762668_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762668_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762668_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762668_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762668_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/ElaDav_SRR5762668_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762668_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/ElaDav_SRR5762668_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30144m, free=29043m, used=1101m
+
+Added 187335 kmers; time: 	0.103 seconds.
+Memory: max=30144m, free=27471m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.516 seconds.
+Processing time:   		3656.030 seconds.
+
+Input:                  	186522092 reads 		18652209200 bases.
+QTrimmed:               	43634163 reads (23.39%) 	1993305534 bases (10.69%)
+KTrimmed:               	1622129 reads (0.87%) 	60684141 bases (0.33%)
+Low quality discards:   	32372128 reads (17.36%) 	2809995631 bases (15.07%)
+Total Removed:          	44000902 reads (23.59%) 	4863985306 bases (26.08%)
+Result:                 	142521190 reads (76.41%) 	13788223894 bases (73.92%)
+
+Time:   			3656.667 seconds.
+Reads Processed:        186m 	51.01k reads/sec
+Bases Processed:      18652m 	5.10m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29999m -Xms29999m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR234319_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR234319_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR234319_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR234319_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR234319_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR234319_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR234319_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR234319_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30146m, free=28888m, used=1258m
+
+Added 187335 kmers; time: 	0.168 seconds.
+Memory: max=30146m, free=27472m, used=2674m
+
+Input is being processed as paired
+Started output streams:	0.355 seconds.
+Processing time:   		4963.029 seconds.
+
+Input:                  	481073414 reads 		47492549656 bases.
+QTrimmed:               	32651949 reads (6.79%) 	2068502175 bases (4.36%)
+KTrimmed:               	33473 reads (0.01%) 	1134409 bases (0.00%)
+Low quality discards:   	81489706 reads (16.94%) 	7231609149 bases (15.23%)
+Total Removed:          	99389886 reads (20.66%) 	9301245733 bases (19.58%)
+Result:                 	381683528 reads (79.34%) 	38191303923 bases (80.42%)
+
+Time:   			4963.572 seconds.
+Reads Processed:        481m 	96.92k reads/sec
+Bases Processed:      47492m 	9.57m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29998m -Xms29998m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR248918_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR248918_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR248918_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR248918_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR248918_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR248918_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR248918_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR248918_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30144m, free=29043m, used=1101m
+
+Added 187335 kmers; time: 	0.153 seconds.
+Memory: max=30144m, free=27628m, used=2516m
+
+Input is being processed as paired
+Started output streams:	0.820 seconds.
+Processing time:   		1836.298 seconds.
+
+Input:                  	486735862 reads 		47799870897 bases.
+QTrimmed:               	35178598 reads (7.23%) 	1870399490 bases (3.91%)
+KTrimmed:               	43094 reads (0.01%) 	1308010 bases (0.00%)
+Low quality discards:   	90047598 reads (18.50%) 	7908401801 bases (16.54%)
+Total Removed:          	105422300 reads (21.66%) 	9780109301 bases (20.46%)
+Result:                 	381313562 reads (78.34%) 	38019761596 bases (79.54%)
+
+Time:   			1837.291 seconds.
+Reads Processed:        486m 	264.92k reads/sec
+Bases Processed:      47799m 	26.02m bases/sec
+java -Djava.library.path=/home/literman/Programs/bbmap/jni/ -ea -Xmx29998m -Xms29998m -cp /home/literman/Programs/bbmap/current/ jgi.BBDukF maxns=0 ref=/home/literman/Programs/bbmap/resources/adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR315506_Raw_Left.fastq.gz in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR315506_Raw_Right.fastq.gz out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR315506_Trim_Left.fastq.gz out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR315506_Trim_Right.fastq.gz k=23 mink=11 hdist=1 hdist2=0 ktrim=r
+Executing jgi.BBDukF [maxns=0, ref=/home/literman/Programs/bbmap/resources/adapters.fa, qtrim=w, trimq=15, minlength=35, maq=25, in=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR315506_Raw_Left.fastq.gz, in2=/data3/schwartzlab/bob/Mammals_50X/Reads/RawReads/C/CapHir_ERR315506_Raw_Right.fastq.gz, out=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR315506_Trim_Left.fastq.gz, out2=/data3/schwartzlab/bob/Mammals_50X/Reads/TrimReads/C/CapHir_ERR315506_Trim_Right.fastq.gz, k=23, mink=11, hdist=1, hdist2=0, ktrim=r]
+
+BBDuk version 37.41
+maskMiddle was disabled because useShortKmers=true
+Initial:
+Memory: max=30144m, free=29043m, used=1101m
+
+Added 187335 kmers; time: 	0.157 seconds.
+Memory: max=30144m, free=27471m, used=2673m
+
+Input is being processed as paired
+Started output streams:	0.207 seconds.
+Processing time:   		1606.957 seconds.
+
+Input:                  	496671568 reads 		48902902602 bases.
+QTrimmed:               	37756090 reads (7.60%) 	2455977283 bases (5.02%)
+KTrimmed:               	97649 reads (0.02%) 	2830153 bases (0.01%)
+Low quality discards:   	91830704 reads (18.49%) 	8139058301 bases (16.64%)
+Total Removed:          	113578786 reads (22.87%) 	10597865737 bases (21.67%)
+Result:                 	383092782 reads (77.13%) 	38305036865 bases (78.33%)
+
+Time:   			1607.338 seconds.
+Reads Processed:        496m 	309.00k reads/sec
+Bases Processed:      48902m 	30.42m bases/sec
