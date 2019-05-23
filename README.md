@@ -169,12 +169,9 @@ The final step of the SISRS pipeline takes the output from each species and crea
 - All variable sites without singletons (parsimony-informative sites)
 - All biallelic parsimony-informative sites
 
-Running the script **Data_Processing_Scripts/sisrs_output.py** will generate these alignments both with and without gap positions, and with a number of species allowed to be missing (0 in this study)
+Running the script **Data_Processing_Scripts/sisrs_output.py** will generate these alignments both with and without gap positions, and with a number of species allowed to be missing (0 in this study). This script will also compile summary outputs.
 ```
 #To output gapped and ungapped alignments with 0 taxa allowed missing
 python sisrs_output.py 0
 ```
-
-This script will also compile summary outputs assuming that individual SISRS runs have output in the form of out_TAXA_SISRS/err_TAXA_SISRS  
-
 The output from these scripts can be found in **Data_and_Tables/SISRS_Alignment_Output**
