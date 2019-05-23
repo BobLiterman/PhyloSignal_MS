@@ -265,4 +265,4 @@ python post_sisrs_site_annotation.py 20 BosTau
 python post_sisrs_site_annotation 20 HomSap
 ```
 
-Annotation count data for each dataset and split can be found in [**Data_and_Tables/Annotation_Counts**](Data_and_Tables/Annotation_Counts)  
+Annotation count data for each dataset and split can be found in [**Data_Processing_Scripts/Post_SISRS_Scripts/Site_Annotation**](Data_Processing_Scripts/Post_SISRS_Scripts/Site_Annotation)  
