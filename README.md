@@ -57,6 +57,8 @@ In this manuscript, we investigated how phylogenetic signal was distributed acro
 
 There was also an analysis will all 36 species combined (*Combined*).  
 
+[Tree of All Species](Reference_Tree.tif)
+
 ## 2) Read QC  
 
 Read quality was assessed before and after trimming using FastQC v.0.11.5.  
