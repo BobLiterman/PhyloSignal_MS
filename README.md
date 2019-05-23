@@ -175,3 +175,43 @@ Running the script [**Data_Processing_Scripts/SISRS_Scripts/sisrs_output.py**](D
 python sisrs_output.py 0
 ```
 The output from these scripts can be found in [**Data_and_Tables/SISRS_Alignment_Output**](Data_and_Tables/SISRS_Alignment_Output)  
+
+**Note:** This represents the terminal output of a traditional SISRS run.
+
+## 8) Annotating SISRS orthologs via reference genome mapping  
+
+Because SISRS-derived orthologs are generated via *de novo* genome assembly, the assembled contigs lack any annotation information. By having one species per focal dataset with a well-assembled and well-annotated reference genome, we were able to filter and annotate the SISRS orthologs, facilitating annotation-specific analyses.  
+
+We downloaded canonical chromosomes (e.g. no unlinked or alternative scaffolds) + MT scaffolds from the Ensembl Build 92 versions of the *Homo sapiens*, *Mus musculus*, and *Bos taurus* genomes and their associated annotation files.  
+
+Bowtie2 and Samtools indexes were made for each genome...  
+```
+bowtie2-build Homo_sapiens.GRCh38.dna.chromosome.CANONICAL.fa HomSap_Ens92
+samtools faidx Homo_sapiens.GRCh38.dna.chromosome.CANONICAL.fa
+
+bowtie2-build Mus_musculus.GRCm38.dna.chromosome.CANONICAL.fa MusMus_Ens92
+samtools faidx Mus_musculus.GRCm38.dna.chromosome.CANONICAL.fa
+
+bowtie2-build Bos_taurus.UMD3.1.dna.chromosome.CANONICAL.fa BosTau_Ens92
+samtools faidx Bos_taurus.UMD3.1.dna.chromosome.CANONICAL.fa
+```
+
+Annotation files were processed...  
+```
+Add stuff
+```
+
+For each dataset (*Primates*,*Rodents*,*Pecora*,*Combined*), the reference species (*HomSap*,*MusMus*,*BosTau*,*HomSap*) orthologs were mapped against the reference genome using the [**Post_SISRS_Scripts/post_sisrs_reference.py**](*Post_SISRS_Scripts/post_sisrs_reference.py):  
+```
+#Primates with 20 processors
+python post_sisrs_reference.py 20 HomSap
+
+#Rodents
+python post_sisrs_reference.py 20 MusMus
+
+#Pecora
+python post_sisrs_reference.py 20 BosTau
+
+#Combined
+python post_sisrs_reference.py 20 HomSap
+```
