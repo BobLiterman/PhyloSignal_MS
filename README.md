@@ -5,7 +5,7 @@ This repo is meant as a specific walkthrough for the analyses performed in Liter
 
 **If you wish to re-run this pipeline using your own data, please refer to RUN_REPO**
 
-## 1) Acquiring study data  
+### 1) Acquiring study data  
 In this manuscript, we investigated how phylogenetic signal was distributed across the genomes of three focal mammal clades. The species and their shortened analysis IDs are listed below, with the reference species for each dataset indicated in **bold**. SRR numbers for all species can be found in [**Data_and_Tables/SRR_Table.csv**](Data_and_Tables/SRR_Table.csv). All reads are Illumina paired-end reads from WGS-type sequencing.  
 
 - Catarrhine primates  (*Primates*)  
@@ -57,15 +57,15 @@ In this manuscript, we investigated how phylogenetic signal was distributed acro
 
 There was also an analysis will all 36 species combined (*Combined*).  
 
-![alt text](Data_and_Tables/Reference_Tree.png)
+![alt text](Sample_Images/Reference_Tree.png)
 
-## 2) Read QC  
+### 2) Read QC  
 
 Read quality was assessed before and after trimming using FastQC v.0.11.5.  
 
 HTML output from FastQC can be found in [**Data_and_Tables/FastQC**](Data_and_Tables/FastQC)  
 
-## 3) Read trimming  
+### 3) Read trimming  
 
 All reads were trimmed using BBDuk v.37.41 using the following command:  
 ```
@@ -73,7 +73,7 @@ bbduk.sh maxns=0 ref=adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=<RAW_LE
 ```
 Read trimming scripts and output can be found in [**Data_Processing_Scripts/Trim_Scripts**](Data_Processing_Scripts/Trim_Scripts)  
 
-## 4) Read subsetting  
+### 4) Read subsetting  
 
 The SISRS pipeline identifies orthologous loci through a 'composite genome' assembly step. The first step for this assembly is to subset the reads of each species so that ideally:  
 
@@ -95,7 +95,7 @@ python sisrs_read_subsetter.py 3500000000
 Subset schemes used in this study can be found in [**Data_and_Tables/Subset_Schemes**](Data_and_Tables/Subset_Schemes)  
 Output from subsetting can be found in [**Data_and_Tables/Subset_Schemes/Subset_Output**](Data_and_Tables/Subset_Schemes/Subset_Output)  
 
-## 5) Composite genome assembly  
+### 5) Composite genome assembly  
 
 This manuscript uses Ray (https://github.com/sebhtml/ray) to assemble composite genomes. Ray commands were generated automatically by [**Data_Processing_Scripts/SISRS_Scripts/sisrs_ray_composite.py**](Data_Processing_Scripts/SISRS_Scripts/sisrs_ray_composite.py)  
 
@@ -110,7 +110,7 @@ $ mpirun -n 160 Ray -k 31 {-s <READ_FILE>} -o <OUTPUT_DIR>
 
 Ray assembly scripts can be found in [**Data_Processing_Scripts/Ray_Scripts**](Data_Processing_Scripts/Ray_Scripts)  
 
-## 6) Running independent SISRS steps  
+### 6) Running independent SISRS steps  
 
 The next step of SISRS involves converting this single composite genome to multiple, taxon-specific ortholog sequences. This involves a few key steps:  
 
@@ -162,7 +162,7 @@ python SCRIPT_DIR/get_pruned_dict.py SISRS_DIR/TAXA COMPOSITE_DIR MINREAD THRESH
 
 These scripts and their output can be found in [**Data_Processing_Scripts/Independent_SISRS_Scripts**](Data_Processing_Scripts/Independent_SISRS_Scripts)  
 
-## 7) Output SISRS alignments
+### 7) Output SISRS alignments
 
 The final step of the SISRS pipeline takes the output from each species and creates a series of alignments:  
 - All variable sites
@@ -178,7 +178,7 @@ The output from these scripts can be found in [**Data_and_Tables/SISRS_Alignment
 
 **Note:** This represents the terminal output of a traditional SISRS run.
 
-## 8) Filtering SISRS orthologs via reference genome mapping  
+### 8) Filtering SISRS orthologs via reference genome mapping  
 
 Because SISRS-derived orthologs are generated via *de novo* genome assembly, the assembled contigs lack any annotation or locus information. By having one species per focal dataset with a well-assembled and well-annotated reference genome, we were able to further filter the SISRS orthologs based on their ability to uniquely map to the reference genome.
 
@@ -221,3 +221,9 @@ python post_sisrs_reference.py 20 HomSap
 ```
 
 The output from these scripts can be found in [**Data_and_Tables/Reference_Genome_Mapping**](Data_and_Tables/Reference_Genome_Mapping)  
+
+### 9) Identifying phylogenetic signal from alignments of biallelic SISRS sites  
+
+Each biallelic SISRS site splits the data into two sets of taxa. If the taxonomic splits agree with a split in the reference topology, that site is designated as 'concordant', or providing historical phylogenetic signal.  
+
+![alt text](Sample_Images/Good_Split.png)
