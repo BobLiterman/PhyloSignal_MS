@@ -87,7 +87,7 @@ For the three focal datasets (Primtes, Rodents, and Pecora):
 
 For the combined analysis: 10X = 35Gb / 36 species ~ 972,222,222 bases per species
 
-Reads for each dataset (Primates, Rodents, Pecora, Combined) were subset using the script [**Data_Processing_Scripts/sisrs_read_subsetter.py**](Data_Processing_Scripts/sisrs_read_subsetter.py)  
+Reads for each dataset (Primates, Rodents, Pecora, Combined) were subset using the script [**Data_Processing_Scripts/SISRS_Scripts/sisrs_read_subsetter.py**](Data_Processing_Scripts/SISRS_Scripts/sisrs_read_subsetter.py)  
 ```
 python sisrs_read_subsetter.py 3500000000
 ```
@@ -97,7 +97,7 @@ Output from subsetting can be found in [**Data_and_Tables/Subset_Schemes/Subset_
 
 ## 5) Composite genome assembly  
 
-This manuscript uses Ray (https://github.com/sebhtml/ray) to assemble composite genomes. Ray commands were generated automatically by [**Data_Processing_Scripts/sisrs_ray_composite.py**](Data_Processing_Scripts/sisrs_ray_composite.py)  
+This manuscript uses Ray (https://github.com/sebhtml/ray) to assemble composite genomes. Ray commands were generated automatically by [**Data_Processing_Scripts/SISRS_Scripts/sisrs_ray_composite.py**](Data_Processing_Scripts/SISRS_Scripts/sisrs_ray_composite.py)  
 
 ```
 #To run on 8 nodes with 20 processors per node  
@@ -118,7 +118,7 @@ The next step of SISRS involves converting this single composite genome to multi
 2) Replace the composite base with the most common taxon-specific base  
 3) Re-map the reads onto the new corrected genome, but for any site with less than 3 reads of coverage or more than 1 possible base, replace with 'N'  
 
-The script [**Data_Processing_Scripts/sisrs_setup_run.py**](Data_Processing_Scripts/sisrs_setup_run.py) will do the following:  
+The script [**Data_Processing_Scripts/SISRS_Scripts/sisrs_setup_run.py**](Data_Processing_Scripts/SISRS_Scripts/sisrs_setup_run.py) will do the following:  
 - Rename Ray contigs to include 'SISRS_' prefix, build a Bowtie2 index, and move to analysis folder  
 - Generate scripts to perform Steps 1-3 above  
 
@@ -169,7 +169,7 @@ The final step of the SISRS pipeline takes the output from each species and crea
 - All variable sites without singletons (parsimony-informative sites)
 - All biallelic parsimony-informative sites
 
-Running the script [**Data_Processing_Scripts/sisrs_output.py**](Data_Processing_Scripts/sisrs_output.py) will generate these alignments both with and without gap positions, and with a number of species allowed to be missing (0 in this study). This script will also compile summary outputs.
+Running the script [**Data_Processing_Scripts/SISRS_Scripts/sisrs_output.py**](Data_Processing_Scripts/SISRS_Scripts/sisrs_output.py) will generate these alignments both with and without gap positions, and with a number of species allowed to be missing (0 in this study). This script will also compile summary outputs.
 ```
 #To output gapped and ungapped alignments with 0 taxa allowed missing
 python sisrs_output.py 0
