@@ -226,4 +226,8 @@ The output from these scripts can be found in [**Data_and_Tables/Reference_Genom
 
 Each biallelic SISRS site splits the data into two sets of taxa. If the taxonomic splits agree with a split in the reference topology, that site is designated as 'concordant', or providing historical phylogenetic signal.  
 
-![alt text](Sample_Images/Good_Split.png)
+![alt text](Sample_Images/Good_Split.png)  
+
+If the taxonomic split does not agree with a split in the reference topology, that site is designated as 'discordant', or providing non-historical phylogenetic signal.  
+
+![alt text](Sample_Images/Bad_Split.png)  
