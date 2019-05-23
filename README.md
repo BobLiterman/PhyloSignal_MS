@@ -57,7 +57,7 @@ In this manuscript, we investigated how phylogenetic signal was distributed acro
 
 There was also an analysis will all 36 species combined (*Combined*).  
 
-[Tree of All Species](Reference_Tree.tif)
+[Tree of All Species](Data_and_Tables/Reference_Tree.tif)
 
 ## 2) Read QC  
 
