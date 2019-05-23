@@ -196,7 +196,7 @@ bowtie2-build Bos_taurus.UMD3.1.dna.chromosome.CANONICAL.fa BosTau_Ens92
 samtools faidx Bos_taurus.UMD3.1.dna.chromosome.CANONICAL.fa
 ```
 
-For each dataset (*Primates*, *Rodents*, *Pecora*, *Combined*), the reference species (*HomSap*, *MusMus*, *BosTau*, *HomSap*) orthologs were mapped against the reference genome using [**Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_reference.py**](Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_reference.py). This script further filters the SISRS orthologs, removing contigs that cannot be mapped or that multiply map based on the reference genome information.  
+For each dataset (*Primates*, *Rodents*, *Pecora*, *Combined*), the reference species (*HomSap*, *MusMus*, *BosTau*, *HomSap*) orthologs were mapped against the reference genome using [**Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_reference.py**](Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_reference.py). This script removes contigs that cannot be mapped or that multiply map based on the reference genome information, and provides a coordinate system for downstream annotation.
 :  
 ```
 #Primates with 20 processors
@@ -211,3 +211,5 @@ python post_sisrs_reference.py 20 BosTau
 #Combined
 python post_sisrs_reference.py 20 HomSap
 ```
+
+The output from these scripts can be found in [**Data_and_Tables/Refence_Genome_Mapping**](Data_and_Tables/Reference_Genome_Mapping)
