@@ -91,12 +91,11 @@ python sisrs_read_subsetter.py 350000000
 ```
 
 Subset schemes used in this study can be found in **Data_and_Tables/Subset_Schemes**  
-Output from subsetting can be found in **Data_Processing_Scripts/Subset_Output**  
+Output from subsetting can be found in **Data_and_Tables/Subset_Schemes/Subset_Output**  
 
 ## 5) Composite genome assembly  
 
-This manuscript uses Ray (https://github.com/sebhtml/ray) to assemble composite genomes. Ray commands are generated automatically by **Data_Processing_Scripts/sisrs_ray_composite.py**  
-- Note: Ray uses MPI even if running on a single node, so mpirun must be enabled and in your path to use these scripts
+This manuscript uses Ray (https://github.com/sebhtml/ray) to assemble composite genomes. Ray commands were generated automatically by **Data_Processing_Scripts/sisrs_ray_composite.py**  
 
 ```
 #To run on 8 nodes with 20 processors per node  
@@ -159,7 +158,7 @@ samtools mpileup -f COMPOSITE_GENOME SISRS_DIR/TAXA/TAXA.bam > SISRS_DIR/TAXA/TA
 python SCRIPT_DIR/get_pruned_dict.py SISRS_DIR/TAXA COMPOSITE_DIR MINREAD THRESHOLD
 ```
 
-These scripts and their output can be found in **Data_Processing_Scripts/SISRS_Run_Scripts**  
+These scripts and their output can be found in **Data_Processing_Scripts/Independent_SISRS_Scripts**  
 
 ## 7) Output SISRS alignments
 
@@ -176,4 +175,4 @@ python sisrs_output.py 0
 
 This script will also compile summary outputs assuming that individual SISRS runs have output in the form of out_TAXA_SISRS/err_TAXA_SISRS  
 
-The output from these scripts can be found in **Data_Processing_Scripts/SISRS_Alignment_Output**
+The output from these scripts can be found in **Data_and_Tables/SISRS_Alignment_Output**
