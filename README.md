@@ -234,8 +234,8 @@ If the taxonomic split does not agree with a split in the reference topology, th
 
 ![alt text](Sample_Images/Bad_Split.png)  
 
-Concordant split counts can be found in [**Data_Processing_Scripts/Site_Splits/Concordant_Site_Splits**](Data_Processing_Scripts/Site_Splits/Concordant_Site_Splits)  
-Discordant split counts can be found in [**Data_Processing_Scripts/Site_Splits/Discordant_Site_Splits**](Data_Processing_Scripts/Site_Splits/Discordant_Site_Splits)  
+Concordant split counts can be found in [**Data_Processing_Scripts/Post_SISRS_Scripts/Site_Splits/Concordant_Site_Splits**](Data_Processing_Scripts/Post_SISRS_Scripts/Site_Splits/Concordant_Site_Splits)  
+Discordant split counts can be found in [**Data_Processing_Scripts/Post_SISRS_Scripts/Site_Splits/Discordant_Site_Splits**](Data_Processing_Scripts/Post_SISRS_Scripts/Site_Splits/Discordant_Site_Splits)  
 
 
 ### 10) Site Annotation  
