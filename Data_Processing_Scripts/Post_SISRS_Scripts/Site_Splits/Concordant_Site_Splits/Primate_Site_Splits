@@ -1,0 +1,20 @@
+ - Site split ID key written to /net/fs03.cluster.com/data3/schwartzlab/bob/Rerun_Mammals/Primates/Reference_Topology/RefTree_SplitKey.txt
+ - Complete site split data written to /net/fs03.cluster.com/data3/schwartzlab/bob/Rerun_Mammals/Primates/Post_SISRS_Processing/Site_Splits/HomSap_SISRS_Biallelic_NoMissing_AllSiteSplits.tsv
+
+ - Of 11523818 total sites in the alignment, 11523818 alignment columns were gappless.
+ - 10382032 of these supported a split in the supplied tree, while 1141786 sites supported a non-canonical split. (90.09% good sites)
+ - No sites in the alignment were gapped.
+
+ - Split Support:
+
+Non-canonical splits: 1141786
+
+Split 1 - ColAng,GorGor,HomSap,HylMol,MacMul,MacNem,PanPan,PanTro,PapAnu,PapCyn...AotNan,CalJac - 4680487
+Split 2 - ColAng,MacMul,MacNem,PapAnu,PapCyn...AotNan,CalJac,GorGor,HomSap,HylMol,PanPan,PanTro - 1869857
+Split 3 - MacMul,MacNem,PapAnu,PapCyn...AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,PanPan,PanTro - 751617
+Split 4 - MacMul,MacNem...AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,PanPan,PanTro,PapAnu,PapCyn - 312441
+Split 5 - PapAnu,PapCyn...AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,MacMul,MacNem,PanPan,PanTro - 360934
+Split 6 - GorGor,HomSap,HylMol,PanPan,PanTro...AotNan,CalJac,ColAng,MacMul,MacNem,PapAnu,PapCyn - 1006055
+Split 7 - GorGor,HomSap,PanPan,PanTro...AotNan,CalJac,ColAng,HylMol,MacMul,MacNem,PapAnu,PapCyn - 941790
+Split 8 - HomSap,PanPan,PanTro...AotNan,CalJac,ColAng,GorGor,HylMol,MacMul,MacNem,PapAnu,PapCyn - 148054
+Split 9 - PanPan,PanTro...AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,MacMul,MacNem,PapAnu,PapCyn - 310797

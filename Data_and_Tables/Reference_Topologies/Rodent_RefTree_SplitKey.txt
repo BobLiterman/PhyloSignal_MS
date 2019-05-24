@@ -1,0 +1,9 @@
+Split 1: EllLut,MasCou,MerUng,MusCar,MusMus,MusSpr,PerLeu,PsaObe,RatNit,RatNor...ApoSyl,ApoUra
+Split 2: MasCou,MusCar,MusMus,MusSpr...ApoSyl,ApoUra,EllLut,MerUng,PerLeu,PsaObe,RatNit,RatNor
+Split 3: MusCar,MusMus,MusSpr...ApoSyl,ApoUra,EllLut,MasCou,MerUng,PerLeu,PsaObe,RatNit,RatNor
+Split 4: MusMus,MusSpr...ApoSyl,ApoUra,EllLut,MasCou,MerUng,MusCar,PerLeu,PsaObe,RatNit,RatNor
+Split 5: EllLut,MerUng,PerLeu,PsaObe,RatNit,RatNor...ApoSyl,ApoUra,MasCou,MusCar,MusMus,MusSpr
+Split 6: EllLut,MerUng,PerLeu,PsaObe...ApoSyl,ApoUra,MasCou,MusCar,MusMus,MusSpr,RatNit,RatNor
+Split 7: MerUng,PsaObe...ApoSyl,ApoUra,EllLut,MasCou,MusCar,MusMus,MusSpr,PerLeu,RatNit,RatNor
+Split 8: EllLut,PerLeu...ApoSyl,ApoUra,MasCou,MerUng,MusCar,MusMus,MusSpr,PsaObe,RatNit,RatNor
+Split 9: RatNit,RatNor...ApoSyl,ApoUra,EllLut,MasCou,MerUng,MusCar,MusMus,MusSpr,PerLeu,PsaObe

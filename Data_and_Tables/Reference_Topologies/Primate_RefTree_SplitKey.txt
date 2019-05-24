@@ -1,0 +1,9 @@
+Split 1: ColAng,GorGor,HomSap,HylMol,MacMul,MacNem,PanPan,PanTro,PapAnu,PapCyn...AotNan,CalJac
+Split 2: ColAng,MacMul,MacNem,PapAnu,PapCyn...AotNan,CalJac,GorGor,HomSap,HylMol,PanPan,PanTro
+Split 3: MacMul,MacNem,PapAnu,PapCyn...AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,PanPan,PanTro
+Split 4: MacMul,MacNem...AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,PanPan,PanTro,PapAnu,PapCyn
+Split 5: PapAnu,PapCyn...AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,MacMul,MacNem,PanPan,PanTro
+Split 6: GorGor,HomSap,HylMol,PanPan,PanTro...AotNan,CalJac,ColAng,MacMul,MacNem,PapAnu,PapCyn
+Split 7: GorGor,HomSap,PanPan,PanTro...AotNan,CalJac,ColAng,HylMol,MacMul,MacNem,PapAnu,PapCyn
+Split 8: HomSap,PanPan,PanTro...AotNan,CalJac,ColAng,GorGor,HylMol,MacMul,MacNem,PapAnu,PapCyn
+Split 9: PanPan,PanTro...AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,MacMul,MacNem,PapAnu,PapCyn

@@ -57,6 +57,8 @@ In this manuscript, we investigated how phylogenetic signal was distributed acro
 
 There was also an analysis will all 36 species combined (*Combined*).  
 
+All reference topologies can be found in [**Data_and_Tables/Reference_Topologies**](Data_and_Tables/Reference_Topologies)
+
 ![alt text](Sample_Images/Reference_Tree.png)
 
 ### 2) Read QC  
@@ -231,6 +233,10 @@ Each biallelic SISRS site splits the data into two sets of taxa. If the taxonomi
 If the taxonomic split does not agree with a split in the reference topology, that site is designated as '**discordant**', or providing non-historical phylogenetic signal.  
 
 ![alt text](Sample_Images/Bad_Split.png)  
+
+Concordant split counts can be found in [**Data_Processing_Scripts/Site_Splits/Concordant_Site_Splits**](Data_Processing_Scripts/Site_Splits/Concordant_Site_Splits)  
+Discordant split counts can be found in [**Data_Processing_Scripts/Site_Splits/Discordant_Site_Splits**](Data_Processing_Scripts/Site_Splits/Discordant_Site_Splits)  
+
 
 ### 10) Site Annotation  
 

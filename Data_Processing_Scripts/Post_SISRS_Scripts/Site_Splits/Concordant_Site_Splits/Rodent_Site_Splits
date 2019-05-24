@@ -1,0 +1,20 @@
+ - Site split ID key written to /net/fs03/data3/schwartzlab/bob/Rerun_Mammals/Rodents/Reference_Topology/RefTree_SplitKey.txt
+ - Complete site split data written to /net/fs03/data3/schwartzlab/bob/Rerun_Mammals/Rodents/Post_SISRS_Processing/Site_Splits/MusMus_SISRS_Biallelic_NoMissing_AllSiteSplits.tsv
+
+ - Of 3113300 total sites in the alignment, 3113300 alignment columns were gappless.
+ - 2445584 of these supported a split in the supplied tree, while 667716 sites supported a non-canonical split. (78.55% good sites)
+ - No sites in the alignment were gapped.
+
+ - Split Support:
+
+Non-canonical splits: 667716
+
+Split 1 - EllLut,MasCou,MerUng,MusCar,MusMus,MusSpr,PerLeu,PsaObe,RatNit,RatNor...ApoSyl,ApoUra - 412304
+Split 2 - MasCou,MusCar,MusMus,MusSpr...ApoSyl,ApoUra,EllLut,MerUng,PerLeu,PsaObe,RatNit,RatNor - 27486
+Split 3 - MusCar,MusMus,MusSpr...ApoSyl,ApoUra,EllLut,MasCou,MerUng,PerLeu,PsaObe,RatNit,RatNor - 255151
+Split 4 - MusMus,MusSpr...ApoSyl,ApoUra,EllLut,MasCou,MerUng,MusCar,PerLeu,PsaObe,RatNit,RatNor - 70704
+Split 5 - EllLut,MerUng,PerLeu,PsaObe,RatNit,RatNor...ApoSyl,ApoUra,MasCou,MusCar,MusMus,MusSpr - 58679
+Split 6 - EllLut,MerUng,PerLeu,PsaObe...ApoSyl,ApoUra,MasCou,MusCar,MusMus,MusSpr,RatNit,RatNor - 251651
+Split 7 - MerUng,PsaObe...ApoSyl,ApoUra,EllLut,MasCou,MusCar,MusMus,MusSpr,PerLeu,RatNit,RatNor - 599977
+Split 8 - EllLut,PerLeu...ApoSyl,ApoUra,MasCou,MerUng,MusCar,MusMus,MusSpr,PsaObe,RatNit,RatNor - 262264
+Split 9 - RatNit,RatNor...ApoSyl,ApoUra,EllLut,MasCou,MerUng,MusCar,MusMus,MusSpr,PerLeu,PsaObe - 507368
