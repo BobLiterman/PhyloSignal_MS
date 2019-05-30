@@ -50,10 +50,10 @@ nodeDater <- function(split_list,dated_topology_10000,dated_topology_50000){
 
 
 ##Combined
-base_dir <- 'C:/Users/User-Pc/Desktop/Mammal_R/Datasets/Combined'
+base_dir <- 'PATH/Combined'
 user_outgroup <- c('BalMys','BisBis','BosTau','BubBub','CapAeg','CapHir','ElaDav','GirTip','HipAmp','OdoVir','OkaJoh','OviAri')
-raw_out_file <- "C:/Users/User-Pc/Desktop/Mammal_R/Datasets/Combined/Combined_Node_Date_Distribution.csv"
-median_out_file <- "C:/Users/User-Pc/Desktop/Mammal_R/Datasets/Combined/Combined_Median_Node.csv"
+raw_out_file <- "PATH/Combined/Combined_Node_Date_Distribution.csv"
+median_out_file <- "PATH/Combined/Combined_Median_Node.csv"
 
 annotation_count_path <- paste(base_dir,'/Post_SISRS_Processing/Annotations/Annotation_Counts.tsv',sep = '')
 ref_tree_path <- paste(base_dir,'/Reference_Topology/RefTree.nwk',sep = '')
