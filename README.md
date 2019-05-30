@@ -272,3 +272,27 @@ python post_sisrs_site_annotation 20 HomSap
 ```
 
 Annotation count data for each dataset and split can be found in [**Data_Processing_Scripts/Post_SISRS_Scripts/Site_Annotation**](Data_Processing_Scripts/Post_SISRS_Scripts/Site_Annotation)  
+
+### 11) Node Dating  
+
+In order to look at changes in phylogenetic utility over evolutionary time, nodes in the reference topologies were dated using a subset of the SISRS ortholog data. Briefly, all SISRS orthologs were sorted based on the total number of SISRS sites contained within. The top 10,000 and 50,000 orthologs were aligned and concatenated. Using those alignments, we estimated branch lengths on the fixed reference topology. These alignments are generated using [**Data_Processing_Scripts/Post_SISRS_Scripts/Node_Dating**](Data_Processing_Scripts/Post_SISRS_Scripts/Node_Dating)  
+
+```
+#Primates
+python post_sisrs_chronos.py 20 HomSap 10000
+python post_sisrs_chronos.py 20 HomSap 50000
+
+#Rodents
+python post_sisrs_chronos.py 20 MusMus 10000
+python post_sisrs_chronos.py 20 MusMus 50000
+
+#Pecora
+python post_sisrs_chronos.py 20 BosTau 10000
+python post_sisrs_chronos.py 20 BosTau 50000
+
+#Combined
+python post_sisrs_chronos.py 20 HomSap 10000
+python post_sisrs_chronos.py 20 HomSap 50000
+```
+
+Using these branch length estimates, divergence times for each focal node in the reference topology was estimated 1000 times using the chronos package in R. The median value for each node age was computed and used for downstream analyses. For each focal group, the root node age was calibrated using minimum and maximum divergence times estimates from the TimeTree.org database (accessed 05.30.2019). For the Combined analysis, we calibrated the root node of the entire tree, as well as the root nodes for each focal group.  The scripts to generate the median node ages can be found in [**Data_Processing_Scripts/Post_SISRS_Scripts/Node_Dating**](Data_Processing_Scripts/Post_SISRS_Scripts/Node_Dating). The output from these scripts can be found in [**Data_and_Tables/Node_Date_Information**](Data_and_Tables/Node_Date_Information) 
