@@ -257,7 +257,7 @@ In some cases an individual SISRS site may have multiple annotations types, such
 
 Sites were annotated using [**Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_site_annotation.py**](Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_site_annotation.py)  
 
-Site annotation output can be found in [**Data_and_Tables/Site_Splits**](Data_Processing_Scripts/Post_SISRS_Scripts/Post_SISRS_Output_Logs)  
+Site annotation output can be found in [**Data_and_Tables/Annotation_Counts**](Data_and_Tables/Annotation_Count)  
 
 ```
 # 20 refers to 20 processors
