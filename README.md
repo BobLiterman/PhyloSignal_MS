@@ -223,7 +223,7 @@ python post_sisrs_reference.py 20 BosTau
 python post_sisrs_reference.py 20 HomSap
 ```
 
-The output from these scripts can be found in [**Data_Processing_Scripts/Post_SISRS_Scripts/Post_SISRS_Output_Logs**](*Data_Processing_Scripts/Post_SISRS_Scripts/Post_SISRS_Output_Logs)  
+The output from these scripts can be found in [**Data_Processing_Scripts/Post_SISRS_Scripts/Post_SISRS_Output_Logs**](Data_Processing_Scripts/Post_SISRS_Scripts/Post_SISRS_Output_Logs)  
 
 ### 9) Identifying phylogenetic signal from alignments of biallelic SISRS sites  
 
