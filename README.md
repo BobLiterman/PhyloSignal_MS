@@ -277,6 +277,8 @@ python post_sisrs_site_annotation 20 HomSap
 
 Site annotation output can be found in [**Data_and_Tables/Annotation_Counts**](Data_and_Tables/Annotation_Counts)  
 
+Alignments of raw SISRS data (e.g. pre-reference mapping) and of each locus type can be found in [**Data_and_Tables/Alignments**](Data_and_Tables/Alignments)  
+
 ### 11) Node Dating  
 
 In order to look at changes in phylogenetic utility over evolutionary time, nodes in the reference topologies were dated using a subset of the SISRS ortholog data. Briefly, all SISRS orthologs were sorted based on the total number of SISRS sites contained within. The top 50,000 orthologs were aligned and concatenated. Using those alignments, we estimated branch lengths on the fixed reference topology. These alignments are generated using [**Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_chronos.py**](Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_chronos.py)  
