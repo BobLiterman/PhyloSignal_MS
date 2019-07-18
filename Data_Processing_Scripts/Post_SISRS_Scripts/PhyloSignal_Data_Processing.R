@@ -612,13 +612,13 @@ cds_diff_df <- outlier_df %>%
 #Figure
 
 z_facet_names <- c(`Composite` = "Percent Reference in Composite",`SISRS` = "Percent Composite in SISRS",`Concordant` = "Percent Taxonomic Signal")
-
+#Add color by locus type to MAD == Y
 z_figure <- outlier_df %>%
   mutate(Test=factor(Test,levels = c('Composite','SISRS','Concordant'))) %>%
   mutate(Dataset=factor(Dataset,levels = c('Combined','Rodents','Pecora','Primates'))) %>%
   mutate(Annotation=factor(Annotation)) %>% 
   ggplot(aes(x=Dataset,y=Percent)) + 
-  geom_point(size=2,aes(fill=MAD,color=MAD,shape=MAD)) +
+  geom_point(size=2,aes(fill=Annotation,color=MAD,shape=MAD)) +
   geom_boxplot(width=0.15,alpha=0.3,coef = 0,) +
   facet_grid(~Test,scales='free',labeller = as_labeller(z_facet_names)) +
   coord_flip() +
@@ -676,6 +676,7 @@ all_time_figure <- all_tax_signal %>%
   #scale_y_continuous(limits = c(0,110),breaks=seq(0,100,20)) +
   facet_wrap(~Annotation,scales = 'free')
 
+#Symbol for dataset, color/open for  significant; reverse; swap groupings
 ms_time_figure <- all_tax_signal %>%
   filter(Annotation=="CDS" | Annotation=="intronic" | Annotation =="lncRNA" | Annotation == "intergenic") %>%
   left_join(select(sig_time_lm_df,c(BF_Sig,Dataset,Annotation)),by=c('Dataset','Annotation')) %>%
@@ -697,7 +698,8 @@ ms_time_figure <- all_tax_signal %>%
   ylab("Percent Support from Subset") +
   #scale_y_continuous(limits = c(0,110),breaks=seq(0,100,20)) +
   #facet_wrap(~Annotation, scales="free")
-  facet_wrap(~Annotation)
+  facet_wrap(~Annotation) +
+  scale_x_reverse()
 
 
 ###### TREE FIGURE ######
@@ -751,15 +753,15 @@ combo_tree_mask <- ggtree(ggtree_combo,branch.length = "none",color="white")  %<
 
 ###### CHECK FIGURES ######
 #Figure 1
-#focal_tree_figure
-#combo_tree_mask
+focal_tree_figure
+combo_tree_mask
 
 #Figure 2
 #z_figure
 
 #Figure 3
 #ms_time_figure + facet_grid(~Annotation)
-#ms_time_figure + facet_wrap(~Annotation)
+ms_time_figure + facet_wrap(~Annotation,scales="free")
 #all_time_figure
 
 #Figure S1
