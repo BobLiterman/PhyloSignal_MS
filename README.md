@@ -289,7 +289,7 @@ raxmlHPC-PTHREADS-SSE3 -s {alignment} -n {name} -m ASC_GTRGAMMA --asc-corr=lewis
 
 Trees inferred from raw SISRS data from each locus type can be found in [**Data_and_Tables/RAxML_Trees**](Data_and_Tables/RAxML_Trees)  
 
-### 12) Node Dating  
+### 12a) Node Dating  
 
 In order to look at changes in phylogenetic utility over evolutionary time, nodes in the reference topologies were dated using a subset of the SISRS ortholog data. Briefly, all SISRS orthologs were sorted based on the total number of SISRS sites contained within. The top 50,000 orthologs were aligned and concatenated. Using those alignments, we estimated branch lengths on the fixed reference topology. These alignments are generated using [**Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_chronos.py**](Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_chronos.py)  
 
@@ -307,13 +307,14 @@ python post_sisrs_chronos.py 20 BosTau 50000
 python post_sisrs_chronos.py 20 HomSap 50000
 ```
 
-The output from these scripts can be found in [**Data_and_Tables/Node_Date_Information/01_RAxML_Trees**](Data_and_Tables/Node_Date_Information/01_RAxML_Trees)
+The output from these scripts can be found in [**Data_and_Tables/Node_Date_Information/01_RAxML_Trees**](Data_and_Tables/Node_Date_Information/01_RAxML_Trees)  
 
-From this point,
+**Note:** All downstream analyses performed using [**Data_Processing_Scripts/Post_SISRS_Scripts/PhyloSignal_Data_Processing.R**](Data_Processing_Scripts/Post_SISRS_Scripts/PhyloSignal_Data_Processing.R)  
 
-**INTRO R**
-Using these branch length estimates, divergence times for each focal node in the reference topology was estimated 1000 times using the chronos function in R, from the ape package. The median value for each node age was computed and used for downstream analyses. For each focal group, the root node age was calibrated using minimum and maximum divergence times estimates from the TimeTree.org database (accessed 05.30.2019). For the Combined analysis, we calibrated the root node of the entire tree, as well as the root nodes for each focal group.  
+---
 
+### 12b) Node Dating (continued)
 
+Using these branch length estimates, divergence times for each focal node in the reference topology were estimated 1000 times using the chronos function in R, from the ape package. The median value for each node age was computed and used for downstream analyses. For each focal group, the root node age was calibrated using minimum and maximum divergence times estimates from the TimeTree.org database (accessed 05.30.2019). For the Combined analysis, we calibrated the root node of the entire tree, as well as the root nodes for each focal group.  
 
 ### 12) Assessing assembly biases  
