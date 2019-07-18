@@ -1,0 +1,9 @@
+1	ColAng,GorGor,HomSap,HylMol,MacMul,MacNem,PanPan,PanTro,PapAnu,PapCyn...AotNan,CalJac	4680487
+2	ColAng,MacMul,MacNem,PapAnu,PapCyn...AotNan,CalJac,GorGor,HomSap,HylMol,PanPan,PanTro	1869857
+3	MacMul,MacNem,PapAnu,PapCyn...AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,PanPan,PanTro	751617
+4	MacMul,MacNem...AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,PanPan,PanTro,PapAnu,PapCyn	312441
+5	PapAnu,PapCyn...AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,MacMul,MacNem,PanPan,PanTro	360934
+6	GorGor,HomSap,HylMol,PanPan,PanTro...AotNan,CalJac,ColAng,MacMul,MacNem,PapAnu,PapCyn	1006055
+7	GorGor,HomSap,PanPan,PanTro...AotNan,CalJac,ColAng,HylMol,MacMul,MacNem,PapAnu,PapCyn	941790
+8	HomSap,PanPan,PanTro...AotNan,CalJac,ColAng,GorGor,HylMol,MacMul,MacNem,PapAnu,PapCyn	148054
+9	PanPan,PanTro...AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,MacMul,MacNem,PapAnu,PapCyn	310797
