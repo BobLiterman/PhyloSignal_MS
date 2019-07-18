@@ -295,8 +295,11 @@ python post_sisrs_chronos.py 20 BosTau 50000
 python post_sisrs_chronos.py 20 HomSap 50000
 ```
 
+The output from these scripts can be found in [**Data_and_Tables/Node_Date_Information**](Data_and_Tables/Node_Date_Information)
+
+**INTRO R**
 Using these branch length estimates, divergence times for each focal node in the reference topology was estimated 1000 times using the chronos function in R, from the ape package. The median value for each node age was computed and used for downstream analyses. For each focal group, the root node age was calibrated using minimum and maximum divergence times estimates from the TimeTree.org database (accessed 05.30.2019). For the Combined analysis, we calibrated the root node of the entire tree, as well as the root nodes for each focal group.  
 
-The output from these scripts can be found in [**Data_and_Tables/Node_Date_Information**](Data_and_Tables/Node_Date_Information)  
+
 
 ### 12) Assessing assembly biases  
