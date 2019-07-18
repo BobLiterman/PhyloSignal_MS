@@ -4,7 +4,7 @@
 This repo is meant as a specific walkthrough for the analyses performed in Literman and Schwartz (2019).  
 
 ### 1) Acquiring study data  
-In this manuscript, we investigated how phylogenetic signal was distributed across the genomes of three focal mammal clades. The species and their shortened analysis IDs are listed below, with the reference species for each dataset indicated in **bold**. SRR numbers for all species can be found in [**Data_and_Tables/Read_Data/SRR_Table.csv**](*Data_and_Tables/Read_Data/SRR_Table.csv). All reads are Illumina paired-end reads from WGS-type sequencing.  
+In this manuscript, we investigated how phylogenetic signal was distributed across the genomes of three focal mammal clades. The species and their shortened analysis IDs are listed below, with the reference species for each dataset indicated in **bold**. SRR numbers for all species can be found in [**Data_and_Tables/Read_Data/SRR_Table.csv**](Data_and_Tables/Read_Data/SRR_Table.csv). All reads are Illumina paired-end reads from WGS-type sequencing.  
 
 - Catarrhine primates  (*Primates*)  
   - Colobus angolensis (ColAng)  
