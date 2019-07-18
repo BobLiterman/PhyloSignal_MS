@@ -74,7 +74,7 @@ bbduk.sh maxns=0 ref=adapters.fa qtrim=w trimq=15 minlength=35 maq=25 in=<RAW_LE
 Read trimming scripts can be found in [**Data_Processing_Scripts/Trim_Scripts**](Data_Processing_Scripts/Trim_Scripts)  
 
 
-Read trimming output can be found in [**Data_and_Tables/Read_Data/Read_Trim_Ouput**](Data_and_Tables/Read_Data/Read_Trim_Ouput)  
+Read trimming output can be found in [**Data_and_Tables/Read_Data/Read_Trim_Output**](Data_and_Tables/Read_Data/Read_Trim_Output)  
 
 ### 4) Read subsetting  
 
