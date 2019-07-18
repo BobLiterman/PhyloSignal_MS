@@ -90,7 +90,7 @@ For the three focal datasets (Primtes, Rodents, and Pecora):
 
 For the combined analysis: 10X = 35Gb / 36 species ~ 972,222,222 bases per species
 
-Reads for each dataset (Primates, Rodents, Pecora, Combined) were subset using the script [**Data_Processing_Scripts/Base_SISRS_Scripts/sisrs_read_subsetter.py**](*Data_Processing_Scripts/Base_SISRS_Scripts/sisrs_read_subsetter.py)  
+Reads for each dataset (Primates, Rodents, Pecora, Combined) were subset using the script [**Data_Processing_Scripts/Base_SISRS_Scripts/sisrs_read_subsetter.py**](Data_Processing_Scripts/Base_SISRS_Scripts/sisrs_read_subsetter.py)  
 ```
 python sisrs_read_subsetter.py 3500000000
 ```
