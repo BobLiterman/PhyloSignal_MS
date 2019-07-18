@@ -237,7 +237,7 @@ If the taxonomic split does not agree with a split in the reference topology, th
 
 Site splits were tabulated using [**Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_site_splits.py**](Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_site_splits.py)  
 
-Site split output can be found in [**Data_and_Tables/Site_Splits**](Data_Processing_Scripts/Post_SISRS_Scripts/Post_SISRS_Output_Logs)  
+Site split output can be found in [**Data_and_Tables/Site_Splits**](Data_and_Tables/Site_Splits)  
 
 
 ### 10) Site Annotation  
