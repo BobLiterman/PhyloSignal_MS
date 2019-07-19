@@ -113,6 +113,13 @@ $ mpirun -n 160 Ray -k 31 {-s <READ_FILE>} -o <OUTPUT_DIR>
 
 Ray assembly scripts can be found in [**Data_Processing_Scripts/Base_SISRS_Scripts/Ray_Scripts**](Data_Processing_Scripts/Base_SISRS_Scripts/Ray_Scripts)  
 
+**Dataset**|**Contigs Assembled**|**N50 (bp)**|**Longest Contig (bp)**|**Composite Bases**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Pecora|3,375,179 |148 |18,508 |524,476,971
+Primates|3,356,297 |152 |7,038 |532,512,652
+Rodents|6,407,239 |152 |6,445 |1,022,381,442
+Combined|2,113,479 |146 |8,196 |320,262,920
+
 ### 6) Running taxon-specific (independent) SISRS steps  
 
 The next step of SISRS involves converting this single composite genome to multiple, taxon-specific ortholog sequences. This involves a few key steps:  
@@ -181,6 +188,13 @@ The output from these scripts can be found in [**Data_and_Tables/SISRS_Alignment
 
 **Note:** This represents the terminal output of a traditional SISRS run.
 
+**Dataset**|**Composite Bases**|**Variable Sites**|**Singleton Sites**|**Parsimony-Informative Sites**|**Biallelic P.I. Sites**|**Biallelic P.I. Sites (No indels or missing taxa)**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+Pecora|524,476,971 |85,083,658 |47,698,420 |37,385,238 |33,500,141 |10,890,450
+Primates|532,512,652 |65,427,169 |33,957,072 |31,470,097 |29,198,422 |11,862,054
+Rodents|10,223,814,421 |155,467,941 |89,288,017 |66,179,924 |58,003,231 |3,761,214
+Combined|320,262,920 |62,161,232 |31,270,976 |30,890,256 |26,725,108 |337,663
+
 ### 8) Filtering SISRS orthologs via reference genome mapping  
 
 Because SISRS-derived orthologs are generated via *de novo* genome assembly, the assembled contigs lack any annotation or locus information. By having one species per focal dataset with a well-assembled and well-annotated reference genome, we were able to further filter the SISRS orthologs based on their ability to uniquely map to the reference genome.
@@ -225,6 +239,7 @@ python post_sisrs_reference.py 20 HomSap
 
 The output from these scripts can be found in [**Data_Processing_Scripts/Post_SISRS_Scripts/Post_SISRS_Output_Logs**](Data_Processing_Scripts/Post_SISRS_Scripts/Post_SISRS_Output_Logs)  
 
+
 ### 9) Identifying phylogenetic signal from alignments of biallelic SISRS sites  
 
 Each biallelic SISRS site splits the data into two sets of taxa. If the taxonomic splits agree with a split in the reference topology, that site is designated as '**concordant**', or providing historical phylogenetic signal.  
@@ -238,7 +253,6 @@ If the taxonomic split does not agree with a split in the reference topology, th
 Site splits were tabulated using [**Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_site_splits.py**](Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_site_splits.py)  
 
 Site split output can be found in [**Data_and_Tables/Site_Splits**](Data_and_Tables/Site_Splits)  
-
 
 ### 10) Site Annotation  
 
@@ -256,8 +270,6 @@ Once sites were mapped to the reference genome, BEDTools was used to transfer an
 In some cases an individual SISRS site may have multiple annotations types, such as pseudogenes within introns, or alternative five prime UTR regions overlapping CDS.
 
 Sites were annotated using [**Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_site_annotation.py**](Data_Processing_Scripts/Post_SISRS_Scripts/post_sisrs_site_annotation.py)  
-
-
 
 ```
 # 20 refers to 20 processors
