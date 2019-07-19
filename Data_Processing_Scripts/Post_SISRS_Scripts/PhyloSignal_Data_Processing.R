@@ -611,7 +611,7 @@ cds_diff_df <- outlier_df %>%
 
 #Figure
 
-z_facet_names <- c(`Composite` = "Proportion of reference genome sites\nassembled into the composite genome",`SISRS` = "Proportion of composite genome sites\nselected by SISRS as 'potentially informative'",`Concordant` = "Proportion of SISRS sites\ncarrying phylogenetic signal")
+z_facet_names <- c(`Composite` = "Reference to Composite",`SISRS` = "Composite to SISRS",`Concordant` = "Percent Concordance")
 
 z_figure_df <- outlier_df %>%
   mutate(Test=factor(Test,levels = c('Composite','SISRS','Concordant'))) %>%
