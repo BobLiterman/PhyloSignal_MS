@@ -706,7 +706,7 @@ ms_time_df <- all_tax_signal %>%
                       "Combined, Not Significant"))))))))
 
 ms_time_figure <- ggplot(ms_time_df,aes(x=Median_Node_Age,y=PercentSplit)) +
-geom_jitter(size=5,aes(shape=Anno_Shape,color=Anno_Shape)) +
+geom_jitter(size=4,aes(shape=Anno_Shape,color=Anno_Shape)) +
 geom_smooth(size=1,method=lm,se=TRUE,aes(color=Anno_Shape),show.legend = FALSE) +
 theme_bw() +
 theme(axis.title=element_text(size=14,face="bold"),
@@ -717,7 +717,7 @@ theme(axis.title=element_text(size=14,face="bold"),
       panel.spacing = unit(1.5, "lines"),
       legend.title.align=0.5,
       strip.text.x = element_text(size = 12,face="bold")) + 
-xlab("\nEstimated Divergence Time (MYA)\n") +
+xlab("\nTime Since Split (MYA)\n") +
 ylab("Proportion of Phylogenetic Signal (%)\n") +
 facet_wrap(~Annotation,scales="free") +
 scale_shape_manual(name="Dataset and Signficance",values = c(0,15,2,17,1,5,18)) +
@@ -763,7 +763,7 @@ combined_ggtree_df <- ggtree_df %>% filter(Dataset=="Combined" & !(node %in% foc
 ggtree_combo <- combined_timetree
 ggtree_combo$tip.label <- c("Colobus angolensis","Macaca mulatta","Macaca nemestrina","Papio anubis","Papio cynocephalus","Hylobates moloch","Homo sapiens","Pan troglodytes","Pan paniscus","Gorilla gorilla","Peromyscus leucopus","Ellobius lutescens","Psammomys obesus","Meriones unguiculatus","Rattus norvegicus","Rattus nitidus","Apodemus sylvaticus","Apodemus uralensis","Mus musculus","Mus spretus","Mus caroli","Mastomys coucha","Capra aegagrus","Capra hircus","Ovis aries","Bubalis bubalis","Bison bison","Bos taurus","Odocoileus virginianus","Elaphurus davidianus","Okapia johnstoni","Giraffa tippelskirchi","Balaena mysticetus","Hippopotamus amphibius","Callithrix jacchus","Aotus nancymaae")
 
-combo_tree <- ggtree(ggtree_combo,size=1.3,branch.length = "none") + geom_tiplab(fontface="italic")
+combo_tree <- ggtree(ggtree_combo,size=1.3,branch.length = "none") + geom_tiplab(fontface="italic",size=6)
 
 focal_tree_figure <- combo_tree  %<+% focal_ggtree_df + 
   geom_nodepoint(alpha=0.9,aes(shape=Dataset,size=Support,color=Dataset)) + 
@@ -789,9 +789,12 @@ combo_only_mask <- ggtree(ggtree_combo,branch.length = "none",color="white")  %<
 
 #Figure 2
 #z_figure
+#ggsave("C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Figures/Figure2.tif",z_figure,device = "tiff",units = "in",width = 15,height=5)
 
 #Figure 3
-#ms_time_figure
+ms_time_figure
+#ggsave("C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Figures/Figure3.tif",ms_time_figure,device = "tiff",units = "in",width = 8,height=7)
+
 #all_time_figure
 
 #Figure S1
