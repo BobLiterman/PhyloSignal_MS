@@ -611,21 +611,35 @@ cds_diff_df <- outlier_df %>%
 
 #Figure
 
-z_facet_names <- c(`Composite` = "Percent Reference in Composite",`SISRS` = "Percent Composite in SISRS",`Concordant` = "Percent Taxonomic Signal")
-#Add color by locus type to MAD == Y
-z_figure <- outlier_df %>%
+z_facet_names <- c(`Composite` = "Proportion of reference genome sites\nassembled into the composite genome",`SISRS` = "Proportion of composite genome sites\nselected by SISRS as 'potentially informative'",`Concordant` = "Proportion of SISRS sites\ncarrying phylogenetic signal")
+
+z_figure_df <- outlier_df %>%
   mutate(Test=factor(Test,levels = c('Composite','SISRS','Concordant'))) %>%
   mutate(Dataset=factor(Dataset,levels = c('Combined','Rodents','Pecora','Primates'))) %>%
-  mutate(Annotation=factor(Annotation)) %>% 
-  ggplot(aes(x=Dataset,y=Percent)) + 
-  geom_point(size=2,aes(fill=Annotation,color=MAD,shape=MAD)) +
-  geom_boxplot(width=0.15,alpha=0.3,coef = 0,) +
+  mutate(Annotation_Label = ifelse(MAD=="Y",Annotation,"Not Signficant")) %>%
+  mutate(Annotation_Size = ifelse(MAD=="Y",5,2))
+
+z_figure <- ggplot(z_figure_df,aes(x=Dataset,y=Percent)) + 
+  geom_point(aes(size=Annotation_Size,color=Annotation_Label,shape=Annotation_Label,fill=Annotation_Label)) +
+  geom_boxplot(width=0.15,alpha=0.1,coef = 0,outlier.shape = NA) +
   facet_grid(~Test,scales='free',labeller = as_labeller(z_facet_names)) +
+  scale_fill_manual(name = "Annotation Type",labels=c('CDS','Five-prime UTR','Pseudogene','smRNA','Three-prime UTR'),breaks=c('CDS','fivePrimeUTR','pseudogene','smRNA','threePrimeUTR'),values = c("#D55E00","#009E73","#000000","#0072B2","#56B4E9","#CC79A7")) +
+  scale_color_manual(name = "Annotation Type",labels=c('CDS','Five-prime UTR','Pseudogene','smRNA','Three-prime UTR'),breaks=c('CDS','fivePrimeUTR','pseudogene','smRNA','threePrimeUTR'),values = c("#D55E00","#009E73","#000000","#0072B2","#56B4E9","#CC79A7")) +
+  scale_shape_manual(name = "Annotation Type",labels=c('CDS','Five-prime UTR','Pseudogene','smRNA','Three-prime UTR'),breaks=c('CDS','fivePrimeUTR','pseudogene','smRNA','threePrimeUTR'),values = c(17,15,1,25,16,23)) +
+  scale_size_identity() + 
   coord_flip() +
-  scale_color_manual(values = c("black","red")) +
-  scale_fill_manual(values = c("black","red")) +
-  scale_shape_manual(values = c(18,8)) +
-  theme_bw()
+  ylab("\nPercent of Sites from Previous Pool") +
+  theme_bw() +
+  theme(axis.title=element_text(size=14,face="bold"),
+        axis.text.x=element_text(size=13),
+        axis.text.y = element_text(size=13,face="bold"),
+        axis.title.y = element_blank(),
+        legend.text =element_text(size=13),
+        legend.title = element_text(size=13,face="bold"),
+        panel.spacing = unit(1.5, "lines"),
+        legend.title.align=0.5,
+        strip.text.x = element_text(size = 12,face="bold")) + 
+  guides(shape = guide_legend(override.aes = list(size = 4)))
 
 ###### TIME-DEPENDENT ANALYSES ######
 
@@ -676,30 +690,40 @@ all_time_figure <- all_tax_signal %>%
   #scale_y_continuous(limits = c(0,110),breaks=seq(0,100,20)) +
   facet_wrap(~Annotation,scales = 'free')
 
-#Symbol for dataset, color/open for  significant; reverse; swap groupings
-ms_time_figure <- all_tax_signal %>%
+ms_time_df <- all_tax_signal %>%
   filter(Annotation=="CDS" | Annotation=="intronic" | Annotation =="lncRNA" | Annotation == "intergenic") %>%
   left_join(select(sig_time_lm_df,c(BF_Sig,Dataset,Annotation)),by=c('Dataset','Annotation')) %>%
   mutate(BF_Sig = replace_na(BF_Sig,"N")) %>% 
-  mutate(Annotation = factor(Annotation, levels=c("CDS","intronic","lncRNA","intergenic"))) %>%
-  ggplot(aes(x=Median_Node_Age,y=PercentSplit,color=Dataset)) +
-  geom_jitter(size=3,aes(shape=BF_Sig)) +
-  geom_smooth(size=1,method=lm,se=TRUE) +
-  theme_bw() +
-  theme(axis.title.x=element_text(size=6,face="bold"),
-        axis.title.y =element_text(size=5,face="bold",margin = margin(t = 0, r = 20, b = 0, l = 0)),
-        axis.text.x =element_text(size=6,face="bold"),
-        axis.text.y =element_text(size=6),
-        strip.text.x = element_text(size = 5,face="bold",margin = margin(t = 10, r = 0, b =10, l = 0)),
-        panel.spacing = unit(2, "lines"),
-        legend.position = "none") +
-  scale_color_colorblind() +
-  xlab("\nNode Age (MYA)\n") +
-  ylab("Percent Support from Subset") +
-  #scale_y_continuous(limits = c(0,110),breaks=seq(0,100,20)) +
-  #facet_wrap(~Annotation, scales="free")
-  facet_wrap(~Annotation) +
-  scale_x_reverse()
+  mutate(Annotation = factor(Annotation, labels = c("CDS","Intronic","lncRNA","Intergenic"),levels=c("CDS","intronic","lncRNA","intergenic"))) %>%
+  mutate(Dataset = factor(Dataset,levels = c("Pecora","Primates","Rodents","Combined"))) %>%
+  mutate(Anno_Shape = ifelse(Dataset=="Primates" & BF_Sig=="Y","Primates, Signficant",
+                      ifelse(Dataset=="Primates" & BF_Sig=="N","Primates, Not Signficant",
+                      ifelse(Dataset=="Rodents" & BF_Sig=="Y","Rodents, Signficant",
+                      ifelse(Dataset=="Rodents" & BF_Sig=="N","Rodents, Not Signifcant",
+                      ifelse(Dataset=="Pecora" & BF_Sig=="Y","Pecora, Signficant",
+                      ifelse(Dataset=="Pecora" & BF_Sig=="N","Pecora, Not Signficant",
+                      ifelse(Dataset=="Combined" & BF_Sig=="Y","Combined, Signifcant",
+                      "Combined, Not Significant"))))))))
+
+ms_time_figure <- ggplot(ms_time_df,aes(x=Median_Node_Age,y=PercentSplit)) +
+geom_jitter(size=5,aes(shape=Anno_Shape,color=Anno_Shape)) +
+geom_smooth(size=1,method=lm,se=TRUE,aes(color=Anno_Shape),show.legend = FALSE) +
+theme_bw() +
+theme(axis.title=element_text(size=14,face="bold"),
+      axis.text.x=element_text(size=13),
+      axis.text.y = element_text(size=13,face="bold"),
+      legend.text =element_text(size=13),
+      legend.title = element_text(size=13,face="bold"),
+      panel.spacing = unit(1.5, "lines"),
+      legend.title.align=0.5,
+      strip.text.x = element_text(size = 12,face="bold")) + 
+xlab("\nEstimated Divergence Time (MYA)\n") +
+ylab("Proportion of Phylogenetic Signal (%)\n") +
+facet_wrap(~Annotation,scales="free") +
+scale_shape_manual(name="Dataset and Signficance",values = c(0,15,2,17,1,5,18)) +
+scale_color_manual(name="Dataset and Signficance",values = c('#D55E00','#D55E00','#56B4E9','#56B4E9','#000000','#009E73','#009E73')) +
+scale_x_reverse() +
+guides(shape = guide_legend(override.aes = list(size = 4)))
 
 
 ###### TREE FIGURE ######
@@ -733,35 +757,41 @@ ggtree_df <- rbind(primate_ggtree,rodent_ggtree,pecora_ggtree) %>%
   mutate(Support = rescale(Support,to=c(3.5,20)))
 
 focal_ggtree_df  <- ggtree_df %>% filter(Dataset!="Combined")
-combined_ggtree_df <- ggtree_df %>% filter(Dataset=="Combined")
+focal_combined_ggtree_df <- ggtree_df %>% filter(Dataset=="Combined")
+combined_ggtree_df <- ggtree_df %>% filter(Dataset=="Combined" & !(node %in% focal_ggtree_df$node))
 
 ggtree_combo <- combined_timetree
 ggtree_combo$tip.label <- c("Colobus angolensis","Macaca mulatta","Macaca nemestrina","Papio anubis","Papio cynocephalus","Hylobates moloch","Homo sapiens","Pan troglodytes","Pan paniscus","Gorilla gorilla","Peromyscus leucopus","Ellobius lutescens","Psammomys obesus","Meriones unguiculatus","Rattus norvegicus","Rattus nitidus","Apodemus sylvaticus","Apodemus uralensis","Mus musculus","Mus spretus","Mus caroli","Mastomys coucha","Capra aegagrus","Capra hircus","Ovis aries","Bubalis bubalis","Bison bison","Bos taurus","Odocoileus virginianus","Elaphurus davidianus","Okapia johnstoni","Giraffa tippelskirchi","Balaena mysticetus","Hippopotamus amphibius","Callithrix jacchus","Aotus nancymaae")
 
-combo_tree <- ggtree(ggtree_combo,branch.length = "none") + geom_tiplab(fontface="italic")
+combo_tree <- ggtree(ggtree_combo,size=1.3,branch.length = "none") + geom_tiplab(fontface="italic")
 
 focal_tree_figure <- combo_tree  %<+% focal_ggtree_df + 
-  geom_nodepoint(alpha=0.8,aes(size=Support,color=Dataset)) + 
+  geom_nodepoint(alpha=0.9,aes(shape=Dataset,size=Support,color=Dataset)) + 
   scale_size_identity() + 
   scale_color_manual(values = c("#56B4E9","#E69F00","#009E73")) + 
   ggplot2::xlim(0, 12)
 
-combo_tree_mask <- ggtree(ggtree_combo,branch.length = "none",color="white")  %<+% combined_ggtree_df + 
-  geom_nodepoint(alpha=0.5,aes(size=Support)) + 
+# combo_focal_mask <- ggtree(ggtree_combo,branch.length = "none",color="white")  %<+% focal_combined_ggtree_df + 
+#   geom_nodepoint(alpha=0.5,aes(size=Support)) + 
+#   scale_size_identity() + 
+#   ggplot2::xlim(0, 12) 
+
+combo_only_mask <- ggtree(ggtree_combo,branch.length = "none",color="white")  %<+% combined_ggtree_df + 
+  geom_nodepoint(shape=18,alpha=0.9,color="black",aes(size=Support)) + 
   scale_size_identity() + 
   ggplot2::xlim(0, 12)
 
 ###### CHECK FIGURES ######
 #Figure 1
-focal_tree_figure
-combo_tree_mask
+#focal_tree_figure
+#combo_focal_mask
+#combo_only_mask
 
 #Figure 2
 #z_figure
 
 #Figure 3
-#ms_time_figure + facet_grid(~Annotation)
-ms_time_figure + facet_wrap(~Annotation,scales="free")
+#ms_time_figure
 #all_time_figure
 
 #Figure S1
