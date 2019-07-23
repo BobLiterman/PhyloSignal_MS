@@ -653,9 +653,12 @@ z_figure <- ggplot(z_figure_df,aes(x=Dataset,y=Percent)) +
 ###### TIME-DEPENDENT ANALYSES ######
 
 #all_tax_signal <- rbind(primate_anno_signal,rodent_anno_signal,pecora_anno_signal,combined_anno_signal)
+# time_lm_df <- rbind(time_lm(primate_anno_signal,'Primates'),
+#                     time_lm(rodent_anno_signal,'Rodents'),
+#                     time_lm(pecora_anno_signal,'Pecora'),
+#                     time_lm(combined_anno_signal,'Combined'))
+
 all_tax_signal <- read_tsv("C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/04_Plot_Data/all_tax_signal.tsv",col_types = "ccicnin" )
-
-
 time_lm_df <- rbind(time_lm(all_tax_signal[all_tax_signal$Dataset=="Primates",],'Primates'),
                     time_lm(all_tax_signal[all_tax_signal$Dataset=="Rodents",],'Rodents'),
                     time_lm(all_tax_signal[all_tax_signal$Dataset=="Pecora",],'Pecora'),
