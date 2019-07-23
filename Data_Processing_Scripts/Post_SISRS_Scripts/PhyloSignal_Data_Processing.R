@@ -352,6 +352,19 @@ combined_good_split_counts <- combined_good_split_counts %>%
   left_join(select(combined_focal_nodes,Split,Median_Node_Age),by="Split") %>%
   mutate(Split = ifelse(Root=="Y","Root",Split))
 
+
+###### PRINT TIME STATS ######
+# write_tsv(primate_good_split_counts %>% select(Split,Taxa_A,Taxa_B,Node,Median_Node_Age),"C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/02_Date_Estimates/Primate_Node_Table.tsv")
+# write_tsv(rodent_good_split_counts %>% select(Split,Taxa_A,Taxa_B,Node,Median_Node_Age),"C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/02_Date_Estimates/Rodent_Node_Table.tsv")
+# write_tsv(pecora_good_split_counts %>% select(Split,Taxa_A,Taxa_B,Node,Median_Node_Age),"C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/02_Date_Estimates/Pecora_Node_Table.tsv")
+# write_tsv(combined_good_split_counts %>% select(Split,Taxa_A,Taxa_B,Node,Median_Node_Age),"C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/02_Date_Estimates/Combined_Node_Table.tsv")
+# 
+# 
+# write.tree(primate_timetree,"C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/03_R_TimeTrees/Primate_TimeTree.nwk")
+# write.tree(rodent_timetree,"C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/03_R_TimeTrees/Rodent_TimeTree.nwk")
+# write.tree(pecora_timetree,"C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/03_R_TimeTrees/Pecora_TimeTree.nwk")
+# write.tree(combined_timetree,"C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/03_R_TimeTrees/Combined_TimeTree.nwk")
+
 ###### SPLIT SUPPORT ANALYSIS ######
 
 #Mann-Whitney-Wilcoxon test for good versus bad split support
@@ -550,10 +563,6 @@ comp_sisrs <- rbind(primate_comp_sisrs_df,rodent_comp_sisrs_df,pecora_comp_sisrs
 sisrs_conc <- rbind(primate_sisrs_conc_df,rodent_sisrs_conc_df,pecora_sisrs_conc_df,combined_sisrs_conc_df) %>%
   select(Dataset,Test,Annotation,Concordant,MADs_from_Median,MAD)
 
-sisrs_conc_chi <- rbind(primate_sisrs_conc_df,rodent_sisrs_conc_df,pecora_sisrs_conc_df,combined_sisrs_conc_df) %>%
-  select(Dataset,Test,Annotation,MADs_from_Median,MAD,ChiSquare,Chi_PVal) %>%
-  arrange(Chi_PVal)
-
 #Compile data
 anno_comp <- anno_breakdown %>% 
   select(Dataset,Annotation,Composite_Percent) %>% 
@@ -643,19 +652,14 @@ z_figure <- ggplot(z_figure_df,aes(x=Dataset,y=Percent)) +
 
 ###### TIME-DEPENDENT ANALYSES ######
 
-all_tax_signal <- rbind(primate_anno_signal,rodent_anno_signal,pecora_anno_signal,combined_anno_signal)
+#all_tax_signal <- rbind(primate_anno_signal,rodent_anno_signal,pecora_anno_signal,combined_anno_signal)
+all_tax_signal <- read_tsv("C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/04_Plot_Data/all_tax_signal.tsv",col_types = "ccicnin" )
 
-#Linear models for %Split versus time
 
-#lm(PercentSplit ~ Median_Node_Age, data=primate_anno_signal[primate_anno_signal$Annotation=="CDS",])
-#lm(PercentSplit ~ Median_Node_Age, data=rodent_anno_signal[rodent_anno_signal$Annotation=="CDS",])$fitted.values
-#lm(PercentSplit ~ Median_Node_Age, data=pecora_anno_signal[pecora_anno_signal$Annotation=="CDS",])
-#lm(PercentSplit ~ Median_Node_Age, data=combined_anno_signal[combined_anno_signal$Annotation=="CDS",])
-
-time_lm_df <- rbind(time_lm(primate_anno_signal,'Primates'),
-                    time_lm(rodent_anno_signal,'Rodents'),
-                    time_lm(pecora_anno_signal,'Pecora'),
-                    time_lm(combined_anno_signal,'Combined'))
+time_lm_df <- rbind(time_lm(all_tax_signal[all_tax_signal$Dataset=="Primates",],'Primates'),
+                    time_lm(all_tax_signal[all_tax_signal$Dataset=="Rodents",],'Rodents'),
+                    time_lm(all_tax_signal[all_tax_signal$Dataset=="Pecora",],'Pecora'),
+                    time_lm(all_tax_signal[all_tax_signal$Dataset=="Combined",],'Combined'))
 
 min_max_time_df <- all_tax_signal %>% group_by(Dataset) %>% summarize(Min_Node=min(Median_Node_Age),Max_Node=max(Median_Node_Age))
 

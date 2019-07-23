@@ -1,0 +1,10 @@
+Split	Taxa_A	Taxa_B	Node	Median_Node_Age
+Root	ColAng,GorGor,HomSap,HylMol,MacMul,MacNem,PanPan,PanTro,PapAnu,PapCyn	AotNan,CalJac	NA	NA
+2	ColAng,MacMul,MacNem,PapAnu,PapCyn	AotNan,CalJac,GorGor,HomSap,HylMol,PanPan,PanTro	15	14.508763416052512
+3	MacMul,MacNem,PapAnu,PapCyn	AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,PanPan,PanTro	16	9.672508934839922
+4	MacMul,MacNem	AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,PanPan,PanTro,PapAnu,PapCyn	17	4.836254469835939
+5	PapAnu,PapCyn	AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,MacMul,MacNem,PanPan,PanTro	18	4.83625446872529
+6	GorGor,HomSap,HylMol,PanPan,PanTro	AotNan,CalJac,ColAng,MacMul,MacNem,PapAnu,PapCyn	19	23.21402146267779
+7	GorGor,HomSap,PanPan,PanTro	AotNan,CalJac,ColAng,HylMol,MacMul,MacNem,PapAnu,PapCyn	20	17.41051608439934
+8	HomSap,PanPan,PanTro	AotNan,CalJac,ColAng,GorGor,HylMol,MacMul,MacNem,PapAnu,PapCyn	21	11.60701072940089
+9	PanPan,PanTro	AotNan,CalJac,ColAng,GorGor,HomSap,HylMol,MacMul,MacNem,PapAnu,PapCyn	22	5.803505362833551
