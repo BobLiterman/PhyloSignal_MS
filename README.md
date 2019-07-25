@@ -403,3 +403,63 @@ The inferred dated trees for each dataset can be found in [**Data_and_Tables/Nod
 | Pseudogene             | 255          | 58,586        | 5,900        | 924            | 80.19%         | 90.29%          | 78.93%         | 69.58%           | 2.65           | 0.70            | 0.00           | 0.00             |
 | Small RNAs             | 412          | 1,047         | 549          | 105            | 81.10%         | 89.41%          | 79.57%         | 75.54%           | 2.04           | **4.64 (-)**             | 1.15           | 2.15             |
 | Three Prime UTR        | 32,916       | 159,884       | 100,727      | 17,423         | 84.86%         | 90.31%          | 78.13%         | 64.72%           | 0.49           | 0.81            | 1.44           | 1.76             |
+
+### 14) Testing proportional signal changes over evolutionary time  
+
+We calculated the proportion of phylogenetic signal from each locus type for each dated node in the reference topology.  
+
+For example, of the sites providing phylogenetic signal that defines the split of (humans + chimps + bonobos) from other great apes, here are the annotation breakdowns:  
+
+1. 47.5% Intronic
+2. 38.9% Intergenic
+3. 35.7% lncRNA
+4. 1.59% 3'UTR
+5. 0.76% CDS
+6. 0.55% Pseudogene
+7. 0.21% 5'UTR
+8. 0.17% Noncoding genes
+9. 0.01% smRNA
+
+**Note:** Percentages add up to >100% due to sites having more than one annotation (e.g. lncRNA within introns)  
+
+Calculating these percentages for each node and running linear models against node age, we were able to determine whether the signal from different locus types were broadly informative, or rather, if they provided disproportionate signal to older or younger nodes.  
+
+**Results of linear models testing for time effects on signal distribution**  
+**Note:** Bold numbers indicate significant results
+
+| Dataset  | Annotation    | Change in Percent Split Support per MY | StdErr   | t_value | p_value  | Adj_R_Sq |
+|----------|---------------|----------------------------------------|----------|---------|----------|----------|
+| **Pecora**   | **CDS**           | 2.38E-02                               | 4.76E-03 | 5.00    | 2.46E-03 | 0.77     |
+| Pecora   | fivePrimeUTR  | 3.14E-04                               | 2.50E-04 | 1.26    | 2.55E-01 | 0.08     |
+| Pecora   | intergenic    | -2.54E-02                              | 2.08E-02 | -1.22   | 2.68E-01 | 0.07     |
+| Pecora   | intronic      | 8.96E-04                               | 1.95E-02 | 0.05    | 9.65E-01 | -0.17    |
+| Pecora   | pseudogene    | 7.14E-05                               | 2.66E-05 | 2.68    | 3.65E-02 | 0.47     |
+| Pecora   | smRNA         | -7.84E-05                              | 6.10E-05 | -1.29   | 2.46E-01 | 0.09     |
+| Pecora   | threePrimeUTR | 8.11E-04                               | 6.32E-04 | 1.28    | 2.47E-01 | 0.08     |
+| Primates | CDS           | -7.74E-03                              | 4.76E-03 | -1.63   | 1.55E-01 | 0.19     |
+| Primates | fivePrimeUTR  | 4.57E-04                               | 7.27E-04 | 0.63    | 5.53E-01 | -0.09    |
+| Primates | intergenic    | -6.47E-02                              | 3.25E-02 | -1.99   | 9.38E-02 | 0.30     |
+| Primates | intronic      | 7.46E-02                               | 3.39E-02 | 2.20    | 7.00E-02 | 0.35     |
+| Primates | lncRNA        | 4.09E-02                               | 1.88E-02 | 2.18    | 7.20E-02 | 0.35     |
+| Primates | ncGenes       | -3.08E-04                              | 5.11E-04 | -0.60   | 5.69E-01 | -0.10    |
+| Primates | pseudogene    | -1.25E-03                              | 7.46E-04 | -1.68   | 1.45E-01 | 0.21     |
+| Primates | smRNA         | 1.25E-05                               | 9.88E-05 | 0.13    | 9.03E-01 | -0.16    |
+| Primates | threePrimeUTR | -2.14E-03                              | 4.46E-03 | -0.48   | 6.49E-01 | -0.12    |
+| **Rodents**  | **CDS**           | 1.68E-01                               | 3.61E-02 | 4.66    | 3.48E-03 | 0.75     |
+| Rodents  | fivePrimeUTR  | 2.71E-03                               | 2.93E-03 | 0.93    | 3.90E-01 | -0.02    |
+| Rodents  | intergenic    | -3.02E-02                              | 2.22E-02 | -1.36   | 2.22E-01 | 0.11     |
+| **Rodents**  | **intronic**      | -1.24E-01                              | 1.90E-02 | -6.55   | 6.04E-04 | 0.86     |
+| Rodents  | lncRNA        | -1.45E-02                              | 9.59E-03 | -1.51   | 1.82E-01 | 0.15     |
+| Rodents  | ncGenes       | -4.80E-04                              | 8.42E-04 | -0.57   | 5.89E-01 | -0.11    |
+| Rodents  | pseudogene    | 4.92E-04                               | 1.09E-03 | 0.45    | 6.67E-01 | -0.13    |
+| Rodents  | smRNA         | -7.12E-05                              | 2.33E-04 | -0.31   | 7.70E-01 | -0.15    |
+| Rodents  | threePrimeUTR | 1.01E-02                               | 4.97E-03 | 2.04    | 8.77E-02 | 0.31     |
+| **Combined** | **CDS**           | 2.37E-01                               | 7.01E-02 | 3.38    | 2.00E-03 | 0.25     |
+| Combined | fivePrimeUTR  | 3.80E-03                               | 5.09E-03 | 0.75    | 4.62E-01 | -0.01    |
+| Combined | intergenic    | -8.15E-02                              | 5.21E-02 | -1.56   | 1.28E-01 | 0.04     |
+| **Combined** | **intronic**      | -8.49E-02                              | 2.51E-02 | -3.38   | 2.00E-03 | 0.25     |
+| Combined | lncRNA        | 1.67E-02                               | 2.31E-02 | 0.72    | 4.75E-01 | -0.02    |
+| Combined | ncGenes       | -5.64E-04                              | 1.63E-03 | -0.35   | 7.32E-01 | -0.03    |
+| Combined | pseudogene    | -1.62E-03                              | 1.40E-03 | -1.16   | 2.54E-01 | 0.01     |
+| Combined | smRNA         | -2.13E-04                              | 5.73E-04 | -0.37   | 7.12E-01 | -0.03    |
+| Combined | threePrimeUTR | 2.84E-02                               | 2.34E-02 | 1.22    | 2.33E-01 | 0.02     |
