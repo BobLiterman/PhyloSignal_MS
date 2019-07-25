@@ -131,13 +131,6 @@ if(!is.ultrametric(primate_timetree)){
   primate_timetree <- force.ultrametric(primate_timetree,"extend")
 }
 
-primate_anno_signal <- primate_anno_count %>% filter(All_Good_Bad=="Good" & Annotation!="SISRS_Sites") %>% 
-  select(-Data_Subset,-All_Good_Bad) %>% 
-  group_by(Split) %>%
-  mutate(PercentSplit=(Count/sum(Count))*100) %>%
-  left_join(select(primate_focal_nodes,Split,Node,Median_Node_Age),by="Split") %>%
-  filter(Split %in% primate_focal_nodes$Split)
-
 primate_good_split_counts <- primate_good_split_counts %>%
   left_join(select(primate_focal_nodes,Split,Median_Node_Age),by="Split") %>%
   mutate(Split = ifelse(Root=="Y","Root",Split))
@@ -199,13 +192,6 @@ if(!is.ultrametric(rodent_timetree)){
   rodent_timetree <- force.ultrametric(rodent_timetree,"extend")
 }
 
-rodent_anno_signal <- rodent_anno_count %>% filter(All_Good_Bad=="Good" & Annotation!="SISRS_Sites") %>% 
-  select(-Data_Subset,-All_Good_Bad) %>% 
-  group_by(Split) %>%
-  mutate(PercentSplit=(Count/sum(Count))*100) %>%
-  left_join(select(rodent_focal_nodes,Split,Node,Median_Node_Age),by="Split") %>%
-  filter(Split %in% rodent_focal_nodes$Split)
-
 rodent_good_split_counts <- rodent_good_split_counts %>%
   left_join(select(rodent_focal_nodes,Split,Median_Node_Age),by="Split") %>%
   mutate(Split = ifelse(Root=="Y","Root",Split))
@@ -266,13 +252,6 @@ pecora_timetree$edge.length <- pecora_median_edge
 if(!is.ultrametric(pecora_timetree)){
   pecora_timetree <- force.ultrametric(pecora_timetree,"extend")
 }
-
-pecora_anno_signal <- pecora_anno_count %>% filter(All_Good_Bad=="Good" & Annotation!="SISRS_Sites") %>% 
-  select(-Data_Subset,-All_Good_Bad) %>% 
-  group_by(Split) %>%
-  mutate(PercentSplit=(Count/sum(Count))*100) %>%
-  left_join(select(pecora_focal_nodes,Split,Node,Median_Node_Age),by="Split") %>%
-  filter(Split %in% pecora_focal_nodes$Split)
 
 pecora_good_split_counts <- pecora_good_split_counts %>%
   left_join(select(pecora_focal_nodes,Split,Median_Node_Age),by="Split") %>%
@@ -341,17 +320,9 @@ if(!is.ultrametric(combined_timetree)){
   combined_timetree <- force.ultrametric(combined_timetree,"extend")
 }
 
-combined_anno_signal <- combined_anno_count %>% filter(All_Good_Bad=="Good" & Annotation!="SISRS_Sites") %>% 
-  select(-Data_Subset,-All_Good_Bad) %>% 
-  group_by(Split) %>%
-  mutate(PercentSplit=(Count/sum(Count))*100) %>%
-  left_join(select(combined_focal_nodes,Split,Node,Median_Node_Age),by="Split") %>%
-  filter(Split %in% combined_focal_nodes$Split)
-
 combined_good_split_counts <- combined_good_split_counts %>%
   left_join(select(combined_focal_nodes,Split,Median_Node_Age),by="Split") %>%
   mutate(Split = ifelse(Root=="Y","Root",Split))
-
 
 ###### PRINT TIME STATS ######
 # write_tsv(primate_good_split_counts %>% select(Split,Taxa_A,Taxa_B,Node,Median_Node_Age),"C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/02_Date_Estimates/Primate_Node_Table.tsv")
@@ -652,13 +623,41 @@ z_figure <- ggplot(z_figure_df,aes(x=Dataset,y=Percent)) +
 
 ###### TIME-DEPENDENT ANALYSES ######
 
-#all_tax_signal <- rbind(primate_anno_signal,rodent_anno_signal,pecora_anno_signal,combined_anno_signal)
-# time_lm_df <- rbind(time_lm(primate_anno_signal,'Primates'),
-#                     time_lm(rodent_anno_signal,'Rodents'),
-#                     time_lm(pecora_anno_signal,'Pecora'),
-#                     time_lm(combined_anno_signal,'Combined'))
+primate_time_data <- primate_good_split_counts %>%
+  filter(Root=="N") %>%
+  select(Dataset,Split,Support,Node,Median_Node_Age) %>%
+  left_join(filter(primate_anno_count,All_Good_Bad=="Good" & Annotation !="SISRS_Sites"),by=c('Dataset','Split')) %>%
+  select(Dataset,Split,Node,Annotation,Support,Count,Median_Node_Age) %>%
+  mutate(PercentSplit = (Count/Support)*100) %>%
+  select(-Support,-Count,-Node)
 
+rodent_time_data <- rodent_good_split_counts %>%
+  filter(Root=="N") %>%
+  select(Dataset,Split,Support,Node,Median_Node_Age) %>%
+  left_join(filter(rodent_anno_count,All_Good_Bad=="Good" & Annotation !="SISRS_Sites"),by=c('Dataset','Split')) %>%
+  select(Dataset,Split,Node,Annotation,Support,Count,Median_Node_Age) %>%
+  mutate(PercentSplit = (Count/Support)*100) %>%
+  select(-Support,-Count,-Node)
+
+pecora_time_data <- pecora_good_split_counts %>%
+  filter(Root=="N") %>%
+  select(Dataset,Split,Support,Node,Median_Node_Age) %>%
+  left_join(filter(pecora_anno_count,All_Good_Bad=="Good" & Annotation !="SISRS_Sites"),by=c('Dataset','Split')) %>%
+  select(Dataset,Split,Node,Annotation,Support,Count,Median_Node_Age) %>%
+  mutate(PercentSplit = (Count/Support)*100) %>%
+  select(-Support,-Count,-Node)
+
+combined_time_data <- combined_good_split_counts %>%
+  filter(Root=="N") %>%
+  select(Dataset,Split,Support,Node,Median_Node_Age) %>%
+  left_join(filter(combined_anno_count,All_Good_Bad=="Good" & Annotation !="SISRS_Sites"),by=c('Dataset','Split')) %>%
+  select(Dataset,Split,Node,Annotation,Support,Count,Median_Node_Age) %>%
+  mutate(PercentSplit = (Count/Support)*100) %>%
+  select(-Support,-Count,-Node)
+
+#all_tax_signal <- rbind(primate_time_data,rodent_time_data,pecora_time_data,combined_time_data)
 all_tax_signal <- read_tsv("C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/04_Plot_Data/all_tax_signal.tsv",col_types = "ccicnin" )
+
 time_lm_df <- rbind(time_lm(all_tax_signal[all_tax_signal$Dataset=="Primates",],'Primates'),
                     time_lm(all_tax_signal[all_tax_signal$Dataset=="Rodents",],'Rodents'),
                     time_lm(all_tax_signal[all_tax_signal$Dataset=="Pecora",],'Pecora'),
