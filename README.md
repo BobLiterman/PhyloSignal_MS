@@ -297,17 +297,17 @@ Alignments of raw SISRS data (e.g. pre-reference mapping) and of each locus type
 
 **Composite Genome Site Annotation**   
 
-| Locus Type             | Pecora Count | Primate Count | Rodent Count | Combined Count | Pecora Percent | Primate Percent | Rodent Percent | Combined Percent | Pecora Z-Score | Primate Z-Score | Rodent Z-Score | Combined Z-Score |
-|------------------------|--------------|---------------|--------------|----------------|----------------|-----------------|----------------|------------------|----------------|-----------------|----------------|------------------|
-| CDS                    | 6,374,618    | 7,991,639     | 6,814,890    | 3,266,450      | 19.71%         | 22.41%          | 18.67%         | 9.16%            | 1.66           | 2.07            | 1.00           | **4.29**             |
-| Five Prime UTR         | 274,524      | 1,509,745     | 1,193,444    | 405,721        | 17.60%         | 14.54%          | 16.09%         | 3.91%            | 1.00           | 0.23            | 0.12           | 0.00             |
-| Intergenic/Unannotated | 234,312,422  | 174,285,472   | 171,476,950  | 39,291,066     | 12.44%         | 11.90%          | 11.26%         | 2.68%            | 0.62           | 1.00            | 2.22           | 1.00             |
-| Intronic               | 105,992,896  | 185,434,227   | 158,008,365  | 46,913,468     | 14.41%         | 15.34%          | 16.37%         | 3.88%            | 0.00           | 0.00            | 0.00           | 0.02             |
-| Long-noncoding RNAs    | NA           | 143,813,362   | 93,661,007   | 36,855,634     | NA             | 15.32%          | 16.38%         | 3.93%            | NA             | 0.00            | 0.01           | 0.02             |
-| Noncoding Gene         | NA           | 671,317       | 1,582,200    | 168,895        | NA             | 15.75%          | 17.48%         | 3.96%            | NA             | 0.12            | 0.48           | 0.04             |
-| Pseudogene             | 38,541       | 3,739,955     | 1,495,032    | 829,961        | 5.63%          | 6.49%           | 5.48%          | 1.44%            | **2.75**           | 2.58            | **4.72**           | 2.02             |
-| Small RNAs             | 55,704       | 113,518       | 86,588       | 25,866         | 13.07%         | 11.34%          | 12.12%         | 2.58%            | 0.42           | 1.16            | 1.84           | 1.08             |
-| Three Prime UTR        | 1,426,542    | 8,472,688     | 6,976,396    | 2,841,301      | 19.15%         | 19.27%          | 19.42%         | 6.46%            | 1.49           | 1.15            | 1.32           | 2.09             |
+**Locus Type**|**Pecora**|**Primates**|**Rodents**|**Combined**
+:-----:|:-----:|:-----:|:-----:|:-----:
+CDS|6,374,618 |7,991,639 |6,814,890 |3,266,450
+Five Prime UTR|274,524 |1,509,745 |1,193,444 |405,721
+Intergenic/Unannotated|234,312,422 |174,285,472 |171,476,950 |39,291,066
+Intronic|105,992,896 |185,434,227 |158,008,365 |46,913,468
+Long-noncoding RNAs|NA|143,813,362 |93,661,007 |36,855,634
+Noncoding Gene|NA|671,317 |1,582,200 |168,895
+Pseudogene|38,541 |3,739,955 |1,495,032 |829,961
+Small RNAs|55,704 |113,518 |86,588 |25,866
+Three Prime UTR|1,426,542 |8,472,688 |6,976,396 |2,841,301
 
 ### 11) Maximum-likelihood tree estimation from SISRS data    
 
@@ -429,7 +429,7 @@ Calculating these percentages for each node and running linear models against no
 
 | Dataset  | Annotation    | Change in Percent Split Support per MY | StdErr   | t_value | p_value  | Adj_R_Sq |
 |----------|---------------|----------------------------------------|----------|---------|----------|----------|
-| **Pecora**   | **CDS**           | 2.38E-02                               | 4.76E-03 | 5.00    | 2.46E-03 | 0.77     |
+| **Pecora**   | **CDS (+Older)**           | 2.38E-02                               | 4.76E-03 | 5.00    | 2.46E-03 | 0.77     |
 | Pecora   | fivePrimeUTR  | 3.14E-04                               | 2.50E-04 | 1.26    | 2.55E-01 | 0.08     |
 | Pecora   | intergenic    | -2.54E-02                              | 2.08E-02 | -1.22   | 2.68E-01 | 0.07     |
 | Pecora   | intronic      | 8.96E-04                               | 1.95E-02 | 0.05    | 9.65E-01 | -0.17    |
@@ -445,19 +445,19 @@ Calculating these percentages for each node and running linear models against no
 | Primates | pseudogene    | -1.25E-03                              | 7.46E-04 | -1.68   | 1.45E-01 | 0.21     |
 | Primates | smRNA         | 1.25E-05                               | 9.88E-05 | 0.13    | 9.03E-01 | -0.16    |
 | Primates | threePrimeUTR | -2.14E-03                              | 4.46E-03 | -0.48   | 6.49E-01 | -0.12    |
-| **Rodents**  | **CDS**           | 1.68E-01                               | 3.61E-02 | 4.66    | 3.48E-03 | 0.75     |
+| **Rodents**  | **CDS (+Older)**           | 1.68E-01                               | 3.61E-02 | 4.66    | 3.48E-03 | 0.75     |
 | Rodents  | fivePrimeUTR  | 2.71E-03                               | 2.93E-03 | 0.93    | 3.90E-01 | -0.02    |
 | Rodents  | intergenic    | -3.02E-02                              | 2.22E-02 | -1.36   | 2.22E-01 | 0.11     |
-| **Rodents**  | **intronic**      | -1.24E-01                              | 1.90E-02 | -6.55   | 6.04E-04 | 0.86     |
+| **Rodents**  | **intronic (+Younger)**      | -1.24E-01                              | 1.90E-02 | -6.55   | 6.04E-04 | 0.86     |
 | Rodents  | lncRNA        | -1.45E-02                              | 9.59E-03 | -1.51   | 1.82E-01 | 0.15     |
 | Rodents  | ncGenes       | -4.80E-04                              | 8.42E-04 | -0.57   | 5.89E-01 | -0.11    |
 | Rodents  | pseudogene    | 4.92E-04                               | 1.09E-03 | 0.45    | 6.67E-01 | -0.13    |
 | Rodents  | smRNA         | -7.12E-05                              | 2.33E-04 | -0.31   | 7.70E-01 | -0.15    |
 | Rodents  | threePrimeUTR | 1.01E-02                               | 4.97E-03 | 2.04    | 8.77E-02 | 0.31     |
-| **Combined** | **CDS**           | 2.37E-01                               | 7.01E-02 | 3.38    | 2.00E-03 | 0.25     |
+| **Combined** | **CDS (+Older)**           | 2.37E-01                               | 7.01E-02 | 3.38    | 2.00E-03 | 0.25     |
 | Combined | fivePrimeUTR  | 3.80E-03                               | 5.09E-03 | 0.75    | 4.62E-01 | -0.01    |
 | Combined | intergenic    | -8.15E-02                              | 5.21E-02 | -1.56   | 1.28E-01 | 0.04     |
-| **Combined** | **intronic**      | -8.49E-02                              | 2.51E-02 | -3.38   | 2.00E-03 | 0.25     |
+| **Combined** | **intronic (+Younger)**      | -8.49E-02                              | 2.51E-02 | -3.38   | 2.00E-03 | 0.25     |
 | Combined | lncRNA        | 1.67E-02                               | 2.31E-02 | 0.72    | 4.75E-01 | -0.02    |
 | Combined | ncGenes       | -5.64E-04                              | 1.63E-03 | -0.35   | 7.32E-01 | -0.03    |
 | Combined | pseudogene    | -1.62E-03                              | 1.40E-03 | -1.16   | 2.54E-01 | 0.01     |
