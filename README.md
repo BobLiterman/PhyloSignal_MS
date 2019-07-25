@@ -1,4 +1,7 @@
-# Code Walkthrough for Literman and Schwartz (2019)  
+# Genome-scale profiling reveals higher proportions of phylogenetic signal in non-coding data  
+## Robert Literman, Rachel S. Schwartz
+## Code Walkthrough
+
 
 ## Please Note:  
 This repo is meant as a specific walkthrough for the analyses performed in Literman and Schwartz (2019).  
