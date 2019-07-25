@@ -113,6 +113,8 @@ $ mpirun -n 160 Ray -k 31 {-s <READ_FILE>} -o <OUTPUT_DIR>
 
 Ray assembly scripts can be found in [**Data_Processing_Scripts/Base_SISRS_Scripts/Ray_Scripts**](Data_Processing_Scripts/Base_SISRS_Scripts/Ray_Scripts)  
 
+**Composite Genome Statistics**  
+
 **Dataset**|**Contigs Assembled**|**N50 (bp)**|**Longest Contig (bp)**|**Composite Bases**
 :-----:|:-----:|:-----:|:-----:|:-----:
 Pecora|3,375,179 |148 |18,508 |524,476,971
@@ -187,6 +189,8 @@ python sisrs_output.py 0
 The output from these scripts can be found in [**Data_and_Tables/SISRS_Alignment_Output**](Data_and_Tables/SISRS_Alignment_Output)  
 
 **Note:** This represents the terminal output of a traditional SISRS run.
+
+**Raw SISRS Output**  
 
 **Dataset**|**Composite Bases**|**Variable Sites**|**Singleton Sites**|**Parsimony-Informative Sites**|**Biallelic P.I. Sites**|**Biallelic P.I. Sites (No indels or missing taxa)**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
@@ -291,6 +295,20 @@ Site annotation output can be found in [**Data_and_Tables/Annotation_Counts**](D
 
 Alignments of raw SISRS data (e.g. pre-reference mapping) and of each locus type can be found in [**Data_and_Tables/Alignments**](Data_and_Tables/Alignments)  
 
+**Composite Genome Site Annotation**   
+
+| Locus Type             | Pecora Count | Primate Count | Rodent Count | Combined Count | Pecora Percent | Primate Percent | Rodent Percent | Combined Percent | Pecora Z-Score | Primate Z-Score | Rodent Z-Score | Combined Z-Score |
+|------------------------|--------------|---------------|--------------|----------------|----------------|-----------------|----------------|------------------|----------------|-----------------|----------------|------------------|
+| CDS                    | 6,374,618    | 7,991,639     | 6,814,890    | 3,266,450      | 19.71%         | 22.41%          | 18.67%         | 9.16%            | 1.66           | 2.07            | 1.00           | **4.29**             |
+| Five Prime UTR         | 274,524      | 1,509,745     | 1,193,444    | 405,721        | 17.60%         | 14.54%          | 16.09%         | 3.91%            | 1.00           | 0.23            | 0.12           | 0.00             |
+| Intergenic/Unannotated | 234,312,422  | 174,285,472   | 171,476,950  | 39,291,066     | 12.44%         | 11.90%          | 11.26%         | 2.68%            | 0.62           | 1.00            | 2.22           | 1.00             |
+| Intronic               | 105,992,896  | 185,434,227   | 158,008,365  | 46,913,468     | 14.41%         | 15.34%          | 16.37%         | 3.88%            | 0.00           | 0.00            | 0.00           | 0.02             |
+| Long-noncoding RNAs    | NA           | 143,813,362   | 93,661,007   | 36,855,634     | NA             | 15.32%          | 16.38%         | 3.93%            | NA             | 0.00            | 0.01           | 0.02             |
+| Noncoding Gene         | NA           | 671,317       | 1,582,200    | 168,895        | NA             | 15.75%          | 17.48%         | 3.96%            | NA             | 0.12            | 0.48           | 0.04             |
+| Pseudogene             | 38,541       | 3,739,955     | 1,495,032    | 829,961        | 5.63%          | 6.49%           | 5.48%          | 1.44%            | **2.75**           | 2.58            | **4.72**           | 2.02             |
+| Small RNAs             | 55,704       | 113,518       | 86,588       | 25,866         | 13.07%         | 11.34%          | 12.12%         | 2.58%            | 0.42           | 1.16            | 1.84           | 1.08             |
+| Three Prime UTR        | 1,426,542    | 8,472,688     | 6,976,396    | 2,841,301      | 19.15%         | 19.27%          | 19.42%         | 6.46%            | 1.49           | 1.15            | 1.32           | 2.09             |
+
 ### 11) Maximum-likelihood tree estimation from SISRS data    
 
 The raw, gapless biallelic site output from SISRS along with concatenated alignments from locus specific subsets were used to infer ML trees using RAxML.  
@@ -329,4 +347,59 @@ The output from these scripts can be found in [**Data_and_Tables/Node_Date_Infor
 
 Using these branch length estimates, divergence times for each focal node in the reference topology were estimated 1000 times using the chronos function in R, from the ape package. The median value for each node age was computed and used for downstream analyses. For each focal group, the root node age was calibrated using minimum and maximum divergence times estimates from the TimeTree.org database (accessed 05.30.2019). For the Combined analysis, we calibrated the root node of the entire tree, as well as the root nodes for each focal group.  
 
-### 12) Assessing assembly biases  
+The median dates for each node can be found in [**Data_and_Tables/Node_Date_Information/02_Date_Estimates**](Data_and_Tables/Node_Date_Information/02_Date_Estimates)  
+
+The inferred dated trees for each dataset can be found in [**Data_and_Tables/Node_Date_Information/03_R_TimeTrees**](Data_and_Tables/Node_Date_Information/03_R_TimeTrees)  
+
+### 13) Assessing biases among locus types using modified Z-score analysis
+
+1. For each locus type in the reference genome, we calculated the percent of those sites identified in the composite genome.  
+2. Using the median percentage for all locus types, we analyzed deviations around the median using the median average deviation (MAD; **Modified Z-Score analysis**)
+3. We performed the same analysis comparing sites from the composite genome that were selected by SISRS  
+4. We then contrasted the proportion of sites carrying phylogenetic signal across locus types
+
+**Results of Z-Score analysis of composite genome assembly**  
+**Note:** Bold numbers indicate significant results  
+
+| Locus Type             | Pecora Count | Primate Count | Rodent Count | Combined Count | Pecora Percent | Primate Percent | Rodent Percent | Combined Percent | Pecora Z-Score | Primate Z-Score | Rodent Z-Score | Combined Z-Score |
+|------------------------|--------------|---------------|--------------|----------------|----------------|-----------------|----------------|------------------|----------------|-----------------|----------------|------------------|
+| CDS                    | 6,374,618    | 7,991,639     | 6,814,890    | 3,266,450      | 19.71%         | 22.41%          | 18.67%         | 9.16%            | 1.66           | 2.07            | 1.00           | **4.29 (+)**             |
+| Five Prime UTR         | 274,524      | 1,509,745     | 1,193,444    | 405,721        | 17.60%         | 14.54%          | 16.09%         | 3.91%            | 1.00           | 0.23            | 0.12           | 0.00             |
+| Intergenic/Unannotated | 234,312,422  | 174,285,472   | 171,476,950  | 39,291,066     | 12.44%         | 11.90%          | 11.26%         | 2.68%            | 0.62           | 1.00            | 2.22           | 1.00             |
+| Intronic               | 105,992,896  | 185,434,227   | 158,008,365  | 46,913,468     | 14.41%         | 15.34%          | 16.37%         | 3.88%            | 0.00           | 0.00            | 0.00           | 0.02             |
+| Long-noncoding RNAs    | NA           | 143,813,362   | 93,661,007   | 36,855,634     | NA             | 15.32%          | 16.38%         | 3.93%            | NA             | 0.00            | 0.01           | 0.02             |
+| Noncoding Gene         | NA           | 671,317       | 1,582,200    | 168,895        | NA             | 15.75%          | 17.48%         | 3.96%            | NA             | 0.12            | 0.48           | 0.04             |
+| Pseudogene             | 38,541       | 3,739,955     | 1,495,032    | 829,961        | 5.63%          | 6.49%           | 5.48%          | 1.44%            | **2.75 (-)**           | 2.58            | **4.72 (-)**           | 2.02             |
+| Small RNAs             | 55,704       | 113,518       | 86,588       | 25,866         | 13.07%         | 11.34%          | 12.12%         | 2.58%            | 0.42           | 1.16            | 1.84           | 1.08             |
+| Three Prime UTR        | 1,426,542    | 8,472,688     | 6,976,396    | 2,841,301      | 19.15%         | 19.27%          | 19.42%         | 6.46%            | 1.49           | 1.15            | 1.32           | 2.09             |
+
+
+**Results of Z-Score analysis of SISRS site selection**  
+**Note:** Bold numbers indicate significant results  
+
+| Locus Type             | Pecora Count | Primate Count | Rodent Count | Combined Count | Pecora Percent | Primate Percent | Rodent Percent | Combined Percent | Pecora Z-Score | Primate Z-Score | Rodent Z-Score | Combined Z-Score |
+|------------------------|--------------|---------------|--------------|----------------|----------------|-----------------|----------------|------------------|----------------|-----------------|----------------|------------------|
+| CDS                    | 156,346      | 94,306        | 284,903      | 80,624         | 2.45%          | 1.18%           | 4.18%          | 2.47%            | 0.00           | 1.30            | **21.13 (+)**          | **8.16 (+)**             |
+| Five Prime UTR         | 5,322        | 24,173        | 19,157       | 4,404          | 1.94%          | 1.60%           | 1.61%          | 1.09%            | 1.00           | 0.70            | **4.60 (+)**           | 2.57             |
+| Intergenic/Unannotated | 6,625,459    | 4,471,169     | 1,258,262    | 80,436         | 2.83%          | 2.57%           | 0.73%          | 0.20%            | 0.73           | 0.68            | 1.00           | 1.00             |
+| Intronic               | 3,253,771    | 5,481,429     | 1,289,450    | 96,267         | 3.07%          | 2.96%           | 0.82%          | 0.21%            | 1.20           | 1.24            | 0.47           | 1.00             |
+| Long-noncoding RNAs    | NA           | 4,119,353     | 886,271      | 127,960        | NA             | 2.86%           | 0.95%          | 0.35%            | NA             | 1.11            | 0.36           | 0.42             |
+| Noncoding Gene         | NA           | 18,708        | 14,074       | 763            | NA             | 2.79%           | 0.89%          | 0.45%            | NA             | 1.00            | 0.00           | 0.00             |
+| Pseudogene             | 318          | 64,884        | 7,475        | 1,328          | 0.83%          | 1.73%           | 0.50%          | 0.16%            | **3.17 (-)**          | 0.51            | 2.50           | 1.18             |
+| Small RNAs             | 508          | 1,171         | 690          | 139            | 0.91%          | 1.03%           | 0.80%          | 0.54%            | **3.00 (-)**           | 1.52            | 0.59           | 0.35             |
+| Three Prime UTR        | 38,788       | 177,037       | 128,916      | 26,921         | 2.72%          | 2.09%           | 1.85%          | 0.95%            | 0.52           | 0.00            | **6.15 (+)**           | 2.01             |
+
+**Results of Z-Score analysis of proportion of sites carrying phylogenetic signal**  
+**Note:** Bold numbers indicate significant results  
+
+| Locus Type             | Pecora Count | Primate Count | Rodent Count | Combined Count | Pecora Percent | Primate Percent | Rodent Percent | Combined Percent | Pecora Z-Score | Primate Z-Score | Rodent Z-Score | Combined Z-Score |
+|------------------------|--------------|---------------|--------------|----------------|----------------|-----------------|----------------|------------------|----------------|-----------------|----------------|------------------|
+| CDS                    | 124,625      | 83,208        | 198,573      | 45,606         | 79.71%         | 88.23%          | 69.70%         | 56.57%           | **2.98 (-)**           | **11.78 (-)**            | **16.66 (-)**           | **4.70 (-)**              |
+| Five Prime UTR         | 4,557        | 21,866        | 15,169       | 2,843          | 85.63%         | 90.46%          | 79.18%         | 64.55%           | 1.00           | 1.69            | 0.46           | 1.82             |
+| Intergenic/Unannotated | 5,601,548    | 4,024,601     | 1,000,114    | 58,153         | 84.55%         | 90.01%          | 79.48%         | 72.30%           | 0.27           | 1.00            | 1.00           | 0.98             |
+| Intronic               | 2,737,659    | 4,940,510     | 1,021,822    | 68,875         | 84.14%         | 90.13%          | 79.24%         | 71.55%           | 0.00           | 0.28            | 0.57           | 0.71             |
+| Long-noncoding RNAs    | NA           | 3,714,726     | 693,810      | 86,601         | NA             | 90.18%          | 78.28%         | 67.68%           | NA             | 0.00            | 1.17           | 0.69             |
+| Noncoding Gene         | NA           | 16,922        | 11,082       | 552            | NA             | 90.45%          | 78.74%         | 72.35%           | NA             | 1.67            | 0.34           | 1.00             |
+| Pseudogene             | 255          | 58,586        | 5,900        | 924            | 80.19%         | 90.29%          | 78.93%         | 69.58%           | 2.65           | 0.70            | 0.00           | 0.00             |
+| Small RNAs             | 412          | 1,047         | 549          | 105            | 81.10%         | 89.41%          | 79.57%         | 75.54%           | 2.04           | **4.64 (-)**             | 1.15           | 2.15             |
+| Three Prime UTR        | 32,916       | 159,884       | 100,727      | 17,423         | 84.86%         | 90.31%          | 78.13%         | 64.72%           | 0.49           | 0.81            | 1.44           | 1.76             |
