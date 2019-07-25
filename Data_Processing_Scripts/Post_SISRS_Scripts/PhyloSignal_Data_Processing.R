@@ -655,8 +655,8 @@ combined_time_data <- combined_good_split_counts %>%
   mutate(PercentSplit = (Count/Support)*100) %>%
   select(-Support,-Count,-Node)
 
-#all_tax_signal <- rbind(primate_time_data,rodent_time_data,pecora_time_data,combined_time_data)
-all_tax_signal <- read_tsv("C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/04_Plot_Data/all_tax_signal.tsv",col_types = "ccicnin" )
+all_tax_signal <- rbind(primate_time_data,rodent_time_data,pecora_time_data,combined_time_data)
+#all_tax_signal <- read_tsv("C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/04_Plot_Data/all_tax_signal.tsv",col_types = "cccnn" )
 
 time_lm_df <- rbind(time_lm(all_tax_signal[all_tax_signal$Dataset=="Primates",],'Primates'),
                     time_lm(all_tax_signal[all_tax_signal$Dataset=="Rodents",],'Rodents'),
