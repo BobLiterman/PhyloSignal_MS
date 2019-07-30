@@ -385,7 +385,8 @@ split_figure <- rbind(primate_support,rodent_support,pecora_support,combined_sup
         panel.grid.minor = element_blank(),
         panel.background = element_blank())
 
-###### Z-SCORE ANALYSIS ######
+
+###### Z-SCORE ANALYSIS (FIGURE 2) ######
 
 #Set up comparison annotation DFs
 
@@ -591,7 +592,7 @@ cds_diff_df <- outlier_df %>%
 
 #Figure
 
-z_facet_names <- c(`Composite` = "Reference to Composite",`SISRS` = "Composite to SISRS",`Concordant` = "Percent Concordance")
+z_facet_names <- c(`Composite` = "Percent Assembled",`SISRS` = "Percent Selected",`Concordant` = "Percent Concordant")
 
 z_figure_df <- outlier_df %>%
   mutate(Test=factor(Test,levels = c('Composite','SISRS','Concordant'))) %>%
@@ -610,7 +611,7 @@ z_figure <- ggplot(z_figure_df,aes(x=Dataset,y=Percent)) +
   coord_flip() +
   ylab("\nPercent of Sites from Previous Pool") +
   theme_bw() +
-  theme(axis.title=element_text(size=14,face="bold"),
+  theme(axis.title=element_text(size=13,face="bold"),
         axis.text.x=element_text(size=13),
         axis.text.y = element_text(size=13,face="bold"),
         axis.title.y = element_blank(),
@@ -618,7 +619,7 @@ z_figure <- ggplot(z_figure_df,aes(x=Dataset,y=Percent)) +
         legend.title = element_text(size=13,face="bold"),
         panel.spacing = unit(1.5, "lines"),
         legend.title.align=0.5,
-        strip.text.x = element_text(size = 12,face="bold")) + 
+        strip.text.x = element_text(size = 13,face="bold")) + 
   guides(shape = guide_legend(override.aes = list(size = 4)))
 
 ###### TIME-DEPENDENT ANALYSES ######
@@ -655,8 +656,8 @@ combined_time_data <- combined_good_split_counts %>%
   mutate(PercentSplit = (Count/Support)*100) %>%
   select(-Support,-Count,-Node)
 
-all_tax_signal <- rbind(primate_time_data,rodent_time_data,pecora_time_data,combined_time_data)
-#all_tax_signal <- read_tsv("C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/04_Plot_Data/all_tax_signal.tsv",col_types = "cccnn" )
+#all_tax_signal <- rbind(primate_time_data,rodent_time_data,pecora_time_data,combined_time_data)
+all_tax_signal <- read_tsv("C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Data_and_Tables/Node_Date_Information/04_Plot_Data/all_tax_signal.tsv",col_types = "cccnn" )
 
 time_lm_df <- rbind(time_lm(all_tax_signal[all_tax_signal$Dataset=="Primates",],'Primates'),
                     time_lm(all_tax_signal[all_tax_signal$Dataset=="Rodents",],'Rodents'),
@@ -712,7 +713,7 @@ ms_time_df <- all_tax_signal %>%
                       "Combined, Not Significant"))))))))
 
 ms_time_figure <- ggplot(ms_time_df,aes(x=Median_Node_Age,y=PercentSplit)) +
-geom_jitter(size=4,aes(shape=Anno_Shape,color=Anno_Shape)) +
+geom_jitter(size=3,aes(shape=Anno_Shape,color=Anno_Shape)) +
 geom_smooth(size=1,method=lm,se=TRUE,aes(color=Anno_Shape),show.legend = FALSE) +
 theme_bw() +
 theme(axis.title=element_text(size=14,face="bold"),
@@ -731,8 +732,7 @@ scale_color_manual(name="Dataset and Signficance",values = c('#D55E00','#D55E00'
 scale_x_reverse() +
 guides(shape = guide_legend(override.aes = list(size = 4)))
 
-
-###### TREE FIGURE ######
+###### TREE FIGURE (FIGURE 1) ######
 combined_ggtree <- combined_good_split_counts %>% 
   filter(Root=="N") %>%
   mutate(Mono_Taxa = ifelse(Mono_A,Taxa_A,Taxa_B)) %>%
@@ -769,42 +769,24 @@ combined_ggtree_df <- ggtree_df %>% filter(Dataset=="Combined" & !(node %in% foc
 ggtree_combo <- combined_timetree
 ggtree_combo$tip.label <- c("Colobus angolensis","Macaca mulatta","Macaca nemestrina","Papio anubis","Papio cynocephalus","Hylobates moloch","Homo sapiens","Pan troglodytes","Pan paniscus","Gorilla gorilla","Peromyscus leucopus","Ellobius lutescens","Psammomys obesus","Meriones unguiculatus","Rattus norvegicus","Rattus nitidus","Apodemus sylvaticus","Apodemus uralensis","Mus musculus","Mus spretus","Mus caroli","Mastomys coucha","Capra aegagrus","Capra hircus","Ovis aries","Bubalis bubalis","Bison bison","Bos taurus","Odocoileus virginianus","Elaphurus davidianus","Okapia johnstoni","Giraffa tippelskirchi","Balaena mysticetus","Hippopotamus amphibius","Callithrix jacchus","Aotus nancymaae")
 
-combo_tree <- ggtree(ggtree_combo,size=1.3,branch.length = "none") + geom_tiplab(fontface="italic",size=6)
+combo_tree <- ggtree(ggtree_combo,size=1.3,branch.length = "none") + geom_tiplab(fontface="italic",size=5)
 
 focal_tree_figure <- combo_tree  %<+% focal_ggtree_df + 
   geom_nodepoint(alpha=0.9,aes(shape=Dataset,size=Support,color=Dataset)) + 
   scale_size_identity() + 
   scale_color_manual(values = c("#56B4E9","#E69F00","#009E73")) + 
-  ggplot2::xlim(0, 12)
+  ggplot2::xlim(0, 20)
 
 # combo_focal_mask <- ggtree(ggtree_combo,branch.length = "none",color="white")  %<+% focal_combined_ggtree_df + 
 #   geom_nodepoint(alpha=0.5,aes(size=Support)) + 
 #   scale_size_identity() + 
 #   ggplot2::xlim(0, 12) 
 
-combo_only_mask <- ggtree(ggtree_combo,branch.length = "none",color="white")  %<+% combined_ggtree_df + 
-  geom_nodepoint(shape=18,alpha=0.9,color="black",aes(size=Support)) + 
-  scale_size_identity() + 
-  ggplot2::xlim(0, 12)
+# combo_only_mask <- ggtree(ggtree_combo,branch.length = "none",color="white")  %<+% combined_ggtree_df +
+#   geom_nodepoint(shape=1,alpha=0.9,color="black",aes(size=Support)) +
+#   scale_size_identity() +
+#   ggplot2::xlim(0, 20)
 
-###### CHECK FIGURES ######
-#Figure 1
-#focal_tree_figure
-#combo_focal_mask
-#combo_only_mask
-
-#Figure 2
-#z_figure
-#ggsave("C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Figures/Figure2.tif",z_figure,device = "tiff",units = "in",width = 15,height=5)
-
-#Figure 3
-ms_time_figure
-#ggsave("C:/Users/User-Pc/Documents/GitHub/PhyloSignal_MS/Figures/Figure3.tif",ms_time_figure,device = "tiff",units = "in",width = 8,height=7)
-
-#all_time_figure
-
-#Figure S1
-#split_figure
 
 
 
